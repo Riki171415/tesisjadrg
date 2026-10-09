@@ -296,6 +296,72 @@ if uploaded_excel:
                         else:
                             st.error("Tidak ada jalur logika yang bisa diekstrak. Pastikan PDF Draw.io sudah diunggah dan terbaca.")
 
+                st.markdown("---")
+                st.subheader("🕵️ Analisis Celah Logika (Error Hunter)")
+                st.markdown("Fitur ini menganalisis secara matematis apakah ada kode di Kamus yang **berujung jalan buntu (Dead End / GAGAL)** di Draw.io, atau sebaliknya.")
+                
+                if st.button("🔍 Mulai Perburuan Error (Dead End)"):
+                    with st.spinner("Menelusuri celah antara Kamus Excel dan Draw.io..."):
+                        error_reports = []
+                        
+                        # Ambil semua Cluster yang ada di Excel
+                        excel_clusters = set(cluster_to_icd.keys())
+                        
+                        # Ambil semua PDC dan AX yang ada di Draw.io
+                        drawio_pdcs = set(flat_mapping.keys()).union(set(decision_tree.keys()))
+                        drawio_axs = set()
+                        for branches in decision_tree.values():
+                            for ax_cond in branches.keys():
+                                if ax_cond != 'default':
+                                    for req_ax in ax_cond.split('&'):
+                                        drawio_axs.add(req_ax.strip())
+                                        
+                        drawio_all_clusters = drawio_pdcs.union(drawio_axs)
+                        
+                        # 1. PDCs di Kamus yang BUNTU (Tidak ada di Draw.io)
+                        for cluster in excel_clusters:
+                            if cluster.startswith('P') or cluster.startswith('D'):
+                                if cluster not in drawio_pdcs:
+                                    icds = cluster_to_icd[cluster]
+                                    error_reports.append({
+                                        "Tipe Error": "PDC Buntu (Dead End)",
+                                        "Cluster Code": cluster,
+                                        "Keterangan": f"PDC ini ada di Excel (untuk ICD: {', '.join(icds[:3])}...), TAPI TIDAK DITEMUKAN di Draw.io! Semua pasien dengan diagnosa ini pasti GAGAL."
+                                    })
+                                    
+                            # 2. AXs di Kamus yang BUNTU (Tidak pernah diwajibkan di Draw.io)
+                            else:
+                                if cluster not in drawio_axs:
+                                    icds = cluster_to_icd[cluster]
+                                    error_reports.append({
+                                        "Tipe Error": "AX Tidak Terpakai (Orphan)",
+                                        "Cluster Code": cluster,
+                                        "Keterangan": f"AX ini ada di Excel (untuk ICD: {', '.join(icds[:3])}...), TAPI tidak pernah dipersyaratkan oleh jalur manapun di Draw.io."
+                                    })
+                                    
+                        # 3. Cluster di Draw.io yang KOSONG (Tidak ada ICD-nya di Kamus)
+                        for draw_cluster in drawio_all_clusters:
+                            if draw_cluster not in excel_clusters:
+                                error_reports.append({
+                                    "Tipe Error": "Missing ICD (Kamus Bolong)",
+                                    "Cluster Code": draw_cluster,
+                                    "Keterangan": f"Draw.io mensyaratkan Cluster ini, TAPI tidak ada satupun Kode ICD di file Excel yang di-mapping ke Cluster ini."
+                                })
+                                
+                        # 4. PDC Draw.io tanpa Default Branch (Risiko GAGAL jika AX tidak terpenuhi)
+                        for pdc, branches in decision_tree.items():
+                            if 'default' not in branches:
+                                error_reports.append({
+                                    "Tipe Error": "Missing Default Branch (Risiko Dead End)",
+                                    "Cluster Code": pdc,
+                                    "Keterangan": f"Draw.io memiliki rute untuk PDC ini, tapi TIDAK ADA jalur 'No/Default'. Jika pasien memiliki PDC ini tapi tidak memiliki AX yang tepat, statusnya pasti GAGAL."
+                                })
+                                
+                        if error_reports:
+                            st.error(f"🚨 Ditemukan **{len(error_reports)} Titik Error / Celah Logika** antara Kamus dan Draw.io!")
+                            st.dataframe(pd.DataFrame(error_reports), use_container_width=True)
+                        else:
+                            st.success("✅ Luar biasa! Tidak ada celah logika, *Dead End*, atau kamus yang terputus antara Excel dan Draw.io.")
             with tab3:
                 st.subheader("Pengecekan Kriteria & Validasi SOP Format Data")
                 
