@@ -46,8 +46,11 @@ def parse_drawio_xml(xml_string):
 
     # Extract PDC codes
     def extract_pdc(text):
-        match = re.search(r'PDC\s+([A-Z0-9]+)', text)
-        return match.group(1).upper() if match else None
+        match = re.search(r'PDC\s+([A-Z0-9\s]+(?:or\s+[A-Z0-9\s]+)*)', text, re.IGNORECASE)
+        if match:
+            raw = match.group(1).upper()
+            return [x.strip() for x in raw.split(' OR ') if x.strip()]
+        return []
 
     # Extract AX codes (could be multiple, e.g., AX 11PEX & 11PFX)
     def extract_ax(text):
@@ -59,13 +62,16 @@ def parse_drawio_xml(xml_string):
 
     # Extract DC (5 digits)
     def is_dc(text):
-        return re.fullmatch(r'\d{5}', text.strip())
+        text = text.strip()
+        if re.fullmatch(r'\d{5}', text): return True
+        if re.match(r'Go\s*to\s*MDC\s*\d+', text, re.IGNORECASE): return True
+        return False
 
     for node_id, node_data in nodes.items():
         text = node_data['val']
-        pdc = extract_pdc(text)
+        pdcs = extract_pdc(text)
         
-        if pdc:
+        for pdc in pdcs:
             # Fungsi BFS untuk mencari target signifikan (DC atau AX) dengan melompati node perantara
             def get_significant_nodes(start_ids):
                 visited = set()
