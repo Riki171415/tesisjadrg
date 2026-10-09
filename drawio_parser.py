@@ -2,11 +2,14 @@ import xml.etree.ElementTree as ET
 import urllib.parse
 import re
 
+import html
+
 def clean_html(raw_html):
     if not raw_html: return ''
     cleanr = re.compile('<.*?>')
     raw_html = raw_html.replace('&nbsp;', ' ')
     cleantext = re.sub(cleanr, ' ', raw_html)
+    cleantext = html.unescape(cleantext)
     return ' '.join(cleantext.split())
 
 def parse_drawio_xml(xml_string):
