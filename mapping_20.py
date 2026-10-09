@@ -1,0 +1,17 @@
+pdf_mapping = [
+    ('P20AA', '20011', 'Pituitary and Thymus Proc.'),
+    ('P20AD', '20011', 'Pituitary and Thymus Proc.'),
+    ('P20AB', '20021', 'Obesity Proc.'),
+    ('P20AC', '20031', 'Adrenal Proc.'),
+    ('P20AE', '20051', 'Neck Disection Proc.'),
+    ('P20AF', '20071', 'Thyroid and Parathyroid Proc.'),
+    ('P20AG', '20071', 'Thyroid and Parathyroid Proc.'),
+    ('P20AH', '20081', 'Other Endocrine, Nutritional & Metabolic OR Proc.'),
+    ('P20AJ', '20091', 'Thyroglosus Proc.'),
+    ('D20AA', '20611', 'Diabetes with Complicated PDx'),
+    ('D20AC', '20631', 'Nutritional and Misc. Metabolic Disorders'),
+    ('D20AE', '20651', 'Metabolic Disorder'),
+    ('D20AB', '20651', 'Metabolic Disorder'),
+    ('D20AF', '20661', 'Endocrine Disorders'),
+    ('D20AG', '20671', 'Diabetes without Complicated PDx'),
+]

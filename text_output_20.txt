@@ -1,0 +1,60 @@
+Major Diagnostic Category 20
+Endocrine, Nutrisional and Methabolic Diseases and Disorders
+Start
+Surgical Partitioning
+Pituitary and
+Thymus Proc.
+Proc. in PDC P20AA or P20AD
+Obesity Proc.
+Proc. in PDC P20AB
+Adrenal Proc.
+Proc. in PDC P20AC
+ Neck Disection Proc.
+Proc. in PDC P20AE
+ Thyroid and Parathyroid
+Proc.
+Proc. in PDC P20AF or P20AG
+ Other Endocrine,
+Nutritional & 
+Metabolic OR Proc.
+Proc. in PDC P20AH
+ Thyroglosus Proc.
+Proc. in PDC P20AJ
+1
+20011
+20021
+20031
+20051
+20071
+20081
+20091
+Inpatient
+Medical Partitioning
+Stop
+1
+Endocrine, Nutritional and
+Metabolic Neoplasms
+Diabetes with
+Complicated PDx
+PDx in PDC D20AA
+OR Procedures
+Nutritional and Misc. Metabolic
+Disorders
+PDx in PDC D20AC
+Metabolic Disorder
+PDx in PDC D20AE
+or PDC D20AB
+Endocrine Disorders
+PDx in PDC D20AF
+Diabetes without Complicated
+PDx
+PDx in PDC D20AG
+Go to 
+Neoplasm Logic
+20646
+20611
+Go to MDC 36
+20631
+20651
+20661
+20671

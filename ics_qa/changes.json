@@ -1,0 +1,3998 @@
+[
+  [
+    20,
+    "chapter",
+    "CHAPTER I INDONESIAN DIAGNOSIS RELATED GROUP (iDRG)",
+    "INDONESIAN DIAGNOSIS RELATED GROUP (iDRG)"
+  ],
+  [
+    24,
+    "caption",
+    "Gambar 1.1. Penulisan kode iDRG",
+    "Gambar A.1. Penulisan kode iDRG"
+  ],
+  [
+    34,
+    "heading",
+    "Struktur Kode iDRG",
+    "Struktur Kode iDRG"
+  ],
+  [
+    35,
+    "heading",
+    "Major Diagnostic Category (MDC) ",
+    "Major Diagnostic Category (MDC) "
+  ],
+  [
+    40,
+    "caption",
+    "Tabel 1.1. Daftar Major Diagnostic Categories (MDC) ",
+    "Tabel A.1. Daftar Major Diagnostic Categories (MDC) "
+  ],
+  [
+    43,
+    "heading",
+    "Disease Cluster (DC)",
+    "Disease Cluster (DC)"
+  ],
+  [
+    45,
+    "caption",
+    "Tabel 1.2. Deskripsi Jenis Treatment Partition",
+    "Tabel A.2. Deskripsi Jenis Treatment Partition"
+  ],
+  [
+    47,
+    "heading",
+    "Patient Type Designation (PTD)",
+    "Patient Type Designation (PTD)"
+  ],
+  [
+    49,
+    "caption",
+    "Tabel 1.3. Deskripsi Jenis Layanan yang diterima (PTD)",
+    "Tabel A.3. Deskripsi Jenis Layanan yang diterima (PTD)"
+  ],
+  [
+    51,
+    "heading",
+    "Complexity Level (CL)",
+    "Complexity Level (CL)"
+  ],
+  [
+    53,
+    "caption",
+    "Tabel 1.4. Deskripsi Pengelompokkan Complexity Level  (CL)",
+    "Tabel A.4. Deskripsi Pengelompokkan Complexity Level  (CL)"
+  ],
+  [
+    59,
+    "chapter",
+    "CHAPTER II KETENTUAN UMUM KODING iDRG",
+    "KETENTUAN UMUM KODING iDRG"
+  ],
+  [
+    60,
+    "heading",
+    "2.1 Ketentuan Umum Pengkodean (Coding) iDRG",
+    "Ketentuan Umum Pengkodean (Coding) iDRG"
+  ],
+  [
+    69,
+    "caption",
+    "Tabel 2.1. Contoh Kasus Penetapan Diagnosis Utama",
+    "Tabel B.1. Contoh Kasus Penetapan Diagnosis Utama"
+  ],
+  [
+    71,
+    "heading",
+    "2.1.1 Diagnosis Utama",
+    "Diagnosis Utama"
+  ],
+  [
+    73,
+    "heading",
+    "2.1.1.1 Elemen-elemen penting diagnosis utama",
+    "Elemen-elemen penting diagnosis utama"
+  ],
+  [
+    88,
+    "caption",
+    "Tabel 2.2. Contoh Kasus Penetapan Diagnosis Utama",
+    "Tabel B.2. Contoh Kasus Penetapan Diagnosis Utama"
+  ],
+  [
+    108,
+    "caption",
+    "Tabel 2.3. Contoh Kasus Penentuan Kode Diagnosis Utama",
+    "Tabel B.3. Contoh Kasus Penentuan Kode Diagnosis Utama"
+  ],
+  [
+    110,
+    "caption",
+    "Tabel 2.4. Contoh Kasus Penentuan Kode Diagnosis Utama",
+    "Tabel B.4. Contoh Kasus Penentuan Kode Diagnosis Utama"
+  ],
+  [
+    112,
+    "heading",
+    "2.1.2 Diagnosis Sekunder",
+    "Diagnosis Sekunder"
+  ],
+  [
+    114,
+    "heading",
+    "2.1.2.1 Diagnosis Komorbid (Pre-Admission Comorbidity)",
+    "Diagnosis Komorbid (Pre-Admission Comorbidity)"
+  ],
+  [
+    134,
+    "heading",
+    "2.1.2.2 Komplikasi (Post-Admission Comorbidity)",
+    "Komplikasi (Post-Admission Comorbidity)"
+  ],
+  [
+    150,
+    "caption",
+    "Tabel 2.5. Contoh Kasus Penentuan Diagnosis Komplikasi",
+    "Tabel B.5. Contoh Kasus Penentuan Diagnosis Komplikasi"
+  ],
+  [
+    155,
+    "caption",
+    "Tabel 2.6. Contoh Kasus Penentuan Diagnosis Komplikasi",
+    "Tabel B.6. Contoh Kasus Penentuan Diagnosis Komplikasi"
+  ],
+  [
+    161,
+    "heading",
+    "2.1.3 Sumber Daya",
+    "Sumber Daya"
+  ],
+  [
+    174,
+    "heading",
+    "2.1.4 Penyebab Luar (External Cause)",
+    "Penyebab Luar (External Cause)"
+  ],
+  [
+    199,
+    "caption",
+    "Tabel 2.7. Contoh Kasus Diagnosis Penyebab Eksternal untuk Cedera Kronis",
+    "Tabel B.7. Contoh Kasus Diagnosis Penyebab Eksternal untuk Cedera Kronis"
+  ],
+  [
+    201,
+    "heading",
+    "2.2 Aturan Koding Morbiditas ICD-10 Versi Tahun 2010: ",
+    "Aturan Koding Morbiditas ICD-10 Versi Tahun 2010: "
+  ],
+  [
+    203,
+    "heading",
+    "2.2.1 Rule MB1 ",
+    "Rule MB1 "
+  ],
+  [
+    210,
+    "heading",
+    "2.2.2 Rule MB2 ",
+    "Rule MB2 "
+  ],
+  [
+    221,
+    "heading",
+    "2.2.3 Rule MB3 ",
+    "Rule MB3 "
+  ],
+  [
+    236,
+    "heading",
+    "2.2.4 Rule MB4 ",
+    "Rule MB4 "
+  ],
+  [
+    243,
+    "heading",
+    "2.2.5 Rule MB5 ",
+    "Rule MB5 "
+  ],
+  [
+    255,
+    "heading",
+    "2.2.6  Aturan Koding Spesifik",
+    "Aturan Koding Spesifik"
+  ],
+  [
+    256,
+    "heading",
+    "2.2.6.1 Pengodean kondisi dugaan/suspek, gejala, penemuan abnormal, dan situasi tanpa penyakit",
+    "Pengodean kondisi dugaan/suspek, gejala, penemuan abnormal, dan situasi tanpa penyakit"
+  ],
+  [
+    282,
+    "heading",
+    "2.2.6.2 Pengodean kondisi multipel",
+    "Pengodean kondisi multipel"
+  ],
+  [
+    300,
+    "heading",
+    "2.2.6.3 Pengodean kategori kombinasi",
+    "Pengodean kategori kombinasi"
+  ],
+  [
+    324,
+    "heading",
+    "2.2.6.4 Pengodean sekuele kondisi tertentu",
+    "Pengodean sekuele kondisi tertentu"
+  ],
+  [
+    337,
+    "heading",
+    " 2.2.6.5 Pengodean kondisi-kondisi akut dan kronis",
+    "Pengodean kondisi-kondisi akut dan kronis"
+  ],
+  [
+    348,
+    "heading",
+    "2.2.6.6  Pengodean kondisi pasca-prosedur dan komplikasinya ",
+    "Pengodean kondisi pasca-prosedur dan komplikasinya "
+  ],
+  [
+    359,
+    "heading",
+    "2.2.6.7 Pengodean untuk penyakit Human Immunodeficiency Virus (HIV) (B20-B24)",
+    "Pengodean untuk penyakit Human Immunodeficiency Virus (HIV) (B20-B24)"
+  ],
+  [
+    373,
+    "heading",
+    "2.2.6.8 Pengodean Neoplasma",
+    "Pengodean Neoplasma"
+  ],
+  [
+    384,
+    "heading",
+    "2.2.6.9 Pengodean diabetes mellitus (E10-E14).",
+    "Pengodean diabetes mellitus (E10-E14)."
+  ],
+  [
+    400,
+    "heading",
+    "2.2.6.10 Pengodean Persalinan (O80-O84).",
+    "Pengodean Persalinan (O80-O84)."
+  ],
+  [
+    414,
+    "heading",
+    "2.3 Pengodean Prosedur / Tindakan",
+    "Pengodean Prosedur / Tindakan"
+  ],
+  [
+    416,
+    "heading",
+    "2.3.1 Aturan dalam pengodean Tindakan / Prosedur",
+    "Aturan dalam pengodean Tindakan / Prosedur"
+  ],
+  [
+    417,
+    "heading",
+    " 2.3.1.1  Kata “See, See also” (lihat, lihat juga);",
+    "Kata “See, See also” (lihat, lihat juga);"
+  ],
+  [
+    430,
+    "heading",
+    "2.3.1.2  Kata “omit code” (tidak dikoding);",
+    "Kata “omit code” (tidak dikoding);"
+  ],
+  [
+    453,
+    "heading",
+    "2.3.1.3 Kata “code also” (dikoding juga);",
+    "Kata “code also” (dikoding juga);"
+  ],
+  [
+    461,
+    "heading",
+    "2.3.1.4. Kata “exclude” (tidak termasuk)",
+    "Kata “exclude” (tidak termasuk)"
+  ],
+  [
+    466,
+    "heading",
+    "2.3.1.5 Kata “includes” (termasuk).",
+    "Kata “includes” (termasuk)."
+  ],
+  [
+    471,
+    "heading",
+    "2.3.2 Kode Tindakan / Prosedur Operasi",
+    "Kode Tindakan / Prosedur Operasi"
+  ],
+  [
+    485,
+    "heading",
+    "2.4 Pendokumentasian Klinis",
+    "Pendokumentasian Klinis"
+  ],
+  [
+    490,
+    "heading",
+    "2.4.1 Gunakan Istilah Diagnosis Paling Spesifik",
+    "Gunakan Istilah Diagnosis Paling Spesifik"
+  ],
+  [
+    497,
+    "heading",
+    "2.4.2 Hindari Penggunaan Singkatan",
+    "Hindari Penggunaan Singkatan"
+  ],
+  [
+    500,
+    "heading",
+    "2.5 Hal - Hal yang harus dilakukan Pengode dalam memberikan kode diagnosis atau tindakan/prosedur",
+    "Hal - Hal yang harus dilakukan Pengode dalam memberikan kode diagnosis atau tindakan/prosedur"
+  ],
+  [
+    501,
+    "heading",
+    "2.5.1 Prinsip Pengodean Diagnosis",
+    "Prinsip Pengodean Diagnosis"
+  ],
+  [
+    508,
+    "caption",
+    "Tabel 2.8. Contoh prinsip pengodean diagnosis",
+    "Tabel B.8. Contoh prinsip pengodean diagnosis"
+  ],
+  [
+    515,
+    "heading",
+    "2.5.2 Penentuan Kode Berdasarkan Dokumentasi",
+    "Penentuan Kode Berdasarkan Dokumentasi"
+  ],
+  [
+    532,
+    "heading",
+    "2.5.3 Bukti Pendukung yang sah saat menentukan kode diagnosis: ",
+    "Bukti Pendukung yang sah saat menentukan kode diagnosis: "
+  ],
+  [
+    543,
+    "heading",
+    "2.5.4 Bukti pendukung yang Tidak Sah untuk menentukan kode diagnosis: ",
+    "Bukti pendukung yang Tidak Sah untuk menentukan kode diagnosis: "
+  ],
+  [
+    549,
+    "heading",
+    "2.6 Penentuan aturan etiologi & manifestasi ",
+    "Penentuan aturan etiologi & manifestasi "
+  ],
+  [
+    585,
+    "heading",
+    "2.7  Indonesian Modification (IM) Pada ICD-10 dan ICD 9 CM",
+    "Indonesian Modification (IM) Pada ICD-10 dan ICD 9 CM"
+  ],
+  [
+    593,
+    "caption",
+    "Gambar 2.1. Contoh kode (IM) dan Prosedur Include",
+    "Gambar B.1. Contoh kode (IM) dan Prosedur Include"
+  ],
+  [
+    596,
+    "chapter",
+    "CHAPTER III KETENTUAN & PERHATIAN KHUSUS KODING iDRG",
+    "KETENTUAN & PERHATIAN KHUSUS KODING iDRG"
+  ],
+  [
+    599,
+    "heading",
+    "3.1 Penggunaan Kode Lateralisasi Posisi Anatomi Tubuh",
+    "Penggunaan Kode Lateralisasi Posisi Anatomi Tubuh"
+  ],
+  [
+    603,
+    "heading",
+    "3.1.1 Prinsip Dasar Penggunaan",
+    "Prinsip Dasar Penggunaan"
+  ],
+  [
+    609,
+    "caption",
+    "Tabel 3.1  Contoh Penerapan Kode Lateralisasi untuk Diagnosis",
+    "Tabel C.1. Contoh Penerapan Kode Lateralisasi untuk Diagnosis"
+  ],
+  [
+    610,
+    "heading",
+    "3.2 Aturan Pencatatan Tindakan Berulang dan Sesi Operasi (Setting dan Multiplicity)",
+    "Aturan Pencatatan Tindakan Berulang dan Sesi Operasi (Setting dan Multiplicity)"
+  ],
+  [
+    613,
+    "heading",
+    "3.2.1 Definisi Setting dan Multiplicity",
+    "Definisi Setting dan Multiplicity"
+  ],
+  [
+    621,
+    "heading",
+    "3.2 Pencatatan Sesi Tindakan (Setting) dan Jumlah Lokasi (Multiplicity)",
+    "Pencatatan Sesi Tindakan (Setting) dan Jumlah Lokasi (Multiplicity)"
+  ],
+  [
+    623,
+    "heading",
+    "1. Setting (Perbedaan Waktu/Sesi tindakan)",
+    "Setting (Perbedaan Waktu/Sesi tindakan)"
+  ],
+  [
+    626,
+    "heading",
+    "2. Multiplicity (Jumlah Lokasi pada Sesi yang Sama)",
+    "Multiplicity (Jumlah Lokasi pada Sesi yang Sama)"
+  ],
+  [
+    632,
+    "caption",
+    "Gambar 3.1 Setting dan Multiplicity",
+    "Gambar C.1. Setting dan Multiplicity"
+  ],
+  [
+    633,
+    "heading",
+    " 3.3 Tata cara pengkodingan multi speciality consultation dan persiapan operasi",
+    "Tata cara pengkodingan multi speciality consultation dan persiapan operasi"
+  ],
+  [
+    635,
+    "caption",
+    "Tabel 3.2. Contoh kasus multi speciality consultation dan pre op",
+    "Tabel C.2. Contoh kasus multi speciality consultation dan pre op"
+  ],
+  [
+    637,
+    "caption",
+    "Tabel 3.3. Contoh kasus multi speciality consultation dan pre op",
+    "Tabel C.3. Contoh kasus multi speciality consultation dan pre op"
+  ],
+  [
+    666,
+    "heading",
+    "3.3 MDC 10 Pre-MDC",
+    "MDC 10 Pre-MDC"
+  ],
+  [
+    672,
+    "heading",
+    "3.4MDC 11 Sistem Syaraf",
+    "MDC 11 Sistem Syaraf"
+  ],
+  [
+    674,
+    "heading",
+    "PENJELASAN KODE ICD DALAM KATEGORI MDC 11",
+    "PENJELASAN KODE ICD DALAM KATEGORI MDC 11"
+  ],
+  [
+    675,
+    "heading",
+    "3.4.1Meningitis (G00-G03)",
+    "Meningitis (G00-G03)"
+  ],
+  [
+    680,
+    "heading",
+    "3.4.2Encephalitis And Myelitis (G04-G05)",
+    "Encephalitis And Myelitis (G04-G05)"
+  ],
+  [
+    686,
+    "heading",
+    "3.4.3Intracranial And Intraspinal Abscess And Granuloma (G06-G07)",
+    "Intracranial And Intraspinal Abscess And Granuloma (G06-G07)"
+  ],
+  [
+    690,
+    "heading",
+    "3.4.4Sequelae of inflammatory diseases of central nervous system (G09)",
+    "Sequelae of inflammatory diseases of central nervous system (G09)"
+  ],
+  [
+    696,
+    "heading",
+    "3.4.5Parkinsonism (G20-G22)",
+    "Parkinsonism (G20-G22)"
+  ],
+  [
+    704,
+    "heading",
+    "3.4.6Dystonia (G24)",
+    "Dystonia (G24)"
+  ],
+  [
+    708,
+    "heading",
+    "3.4.7Alzheimer’s Disease (G30)",
+    "Alzheimer’s Disease (G30)"
+  ],
+  [
+    710,
+    "heading",
+    "3.4.8Epilepsy and Status Epilepticus (G40-G41)",
+    "Epilepsy and Status Epilepticus (G40-G41)"
+  ],
+  [
+    714,
+    "caption",
+    "Tabel 3.4. Contoh kasus untuk epilepsi umum",
+    "Tabel C.4. Contoh kasus untuk epilepsi umum"
+  ],
+  [
+    715,
+    "caption",
+    "Tabel 3.5. Contoh kasus untuk epilepsi fokal",
+    "Tabel C.5. Contoh kasus untuk epilepsi fokal"
+  ],
+  [
+    716,
+    "caption",
+    "Tabel 3.6. Contoh kasus untuk epidural haemorrhage",
+    "Tabel C.6. Contoh kasus untuk epidural haemorrhage"
+  ],
+  [
+    718,
+    "heading",
+    "3.4.9Migraine and Headache (G43-G44)",
+    "Migraine and Headache (G43-G44)"
+  ],
+  [
+    722,
+    "heading",
+    "3.4.10Transient Ischaemic Attack (TIA) (G45)",
+    "Transient Ischaemic Attack (TIA) (G45)"
+  ],
+  [
+    725,
+    "heading",
+    "3.4.11Sleep Apnoea (G47.3)",
+    "Sleep Apnoea (G47.3)"
+  ],
+  [
+    729,
+    "caption",
+    "Tabel 3.7. Contoh kasus sleep apnoea and snoring",
+    "Tabel C.7. Contoh kasus sleep apnoea and snoring"
+  ],
+  [
+    731,
+    "heading",
+    "3.4.12Cranial Nerve Disorders (G50-G53)",
+    "Cranial Nerve Disorders (G50-G53)"
+  ],
+  [
+    734,
+    "caption",
+    "Tabel 3.8. Contoh kasus cranial nerve disorders",
+    "Tabel C.8. Contoh kasus cranial nerve disorders"
+  ],
+  [
+    736,
+    "caption",
+    "Tabel 3.9. Contoh kasus cranial nerve disorders",
+    "Tabel C.9. Contoh kasus cranial nerve disorders"
+  ],
+  [
+    738,
+    "heading",
+    "3.4.13Polyneuropathy (G61-G63)",
+    "Polyneuropathy (G61-G63)"
+  ],
+  [
+    743,
+    "heading",
+    "3.4.14Myopathy (G70-G73)",
+    "Myopathy (G70-G73)"
+  ],
+  [
+    746,
+    "caption",
+    "Tabel 3.10. Contoh kasus myopathy",
+    "Tabel C.10. Contoh kasus myopathy"
+  ],
+  [
+    747,
+    "heading",
+    "3.4.15Sindrom Paralitik (G81–G83)",
+    "Sindrom Paralitik (G81–G83)"
+  ],
+  [
+    754,
+    "caption",
+    "Tabel 3.11. Contoh kasus sindrom paralitik",
+    "Tabel C.11. Contoh kasus sindrom paralitik"
+  ],
+  [
+    755,
+    "caption",
+    "Tabel 3.12. Contoh kasus sindrom paralitik",
+    "Tabel C.12. Contoh kasus sindrom paralitik"
+  ],
+  [
+    757,
+    "heading",
+    "3.4.16Hydrocephalus (G91, G94, Q03)  ",
+    "Hydrocephalus (G91, G94, Q03)  "
+  ],
+  [
+    763,
+    "heading",
+    "3.4.17Cerebrovascular Accident (CVA) (I60-I64)",
+    "Cerebrovascular Accident (CVA) (I60-I64)"
+  ],
+  [
+    772,
+    "heading",
+    "3.4.18Other Cerebrovascular Disease (I65-I68)",
+    "Other Cerebrovascular Disease (I65-I68)"
+  ],
+  [
+    776,
+    "heading",
+    "3.4.19Sequelae of Cerebrovascular Diseases (I69.-)",
+    "Sequelae of Cerebrovascular Diseases (I69.-)"
+  ],
+  [
+    779,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 11",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 11"
+  ],
+  [
+    788,
+    "heading",
+    "3.5MDC 12 MATA & ADNEXA",
+    "MDC 12 MATA & ADNEXA"
+  ],
+  [
+    789,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 12",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 12"
+  ],
+  [
+    790,
+    "heading",
+    "3.5.1Conjunctivitis (H10.-)",
+    "Conjunctivitis (H10.-)"
+  ],
+  [
+    796,
+    "heading",
+    "3.5.2 Pinguecula and Pterygium (H11.0–H11.1)",
+    "Pinguecula and Pterygium (H11.0–H11.1)"
+  ],
+  [
+    799,
+    "caption",
+    "Tabel 3.13. Contoh kasus pinguecula dan pterygium",
+    "Tabel C.13. Contoh kasus pinguecula dan pterygium"
+  ],
+  [
+    800,
+    "caption",
+    "Tabel 3.14. Contoh kasus pinguecula dan pterygium",
+    "Tabel C.14. Contoh kasus pinguecula dan pterygium"
+  ],
+  [
+    801,
+    "heading",
+    "3.5.3Corneal Scar (H17)",
+    "Corneal Scar (H17)"
+  ],
+  [
+    805,
+    "heading",
+    "3.5.4  Contact Lens Intolerance",
+    "Contact Lens Intolerance"
+  ],
+  [
+    811,
+    "heading",
+    "3.5.5Uveitis (H20-H22, H30, H32)",
+    "Uveitis (H20-H22, H30, H32)"
+  ],
+  [
+    833,
+    "heading",
+    "3.5.6Retinal Procedures",
+    "Retinal Procedures"
+  ],
+  [
+    835,
+    "caption",
+    "Tabel 3.15. Contoh kasus retinal procedures",
+    "Tabel C.15. Contoh kasus retinal procedures"
+  ],
+  [
+    836,
+    "caption",
+    "Tabel 3.16. Catatan operasi dokter pada resume medis pada kasus retinal procedures beserta kode bedah ",
+    "Tabel C.16. Catatan operasi dokter pada resume medis pada kasus retinal procedures beserta kode bedah "
+  ],
+  [
+    837,
+    "heading",
+    "3.5.7Cataract (H25-H26)",
+    "Cataract (H25-H26)"
+  ],
+  [
+    839,
+    "caption",
+    "Tabel 3.17. Catatan operasi dokter pada resume medis pada kasus cataract beserta kode bedah ",
+    "Tabel C.17. Catatan operasi dokter pada resume medis pada kasus cataract beserta kode bedah "
+  ],
+  [
+    841,
+    "heading",
+    "3.5.8Aphakia (H27.0)",
+    "Aphakia (H27.0)"
+  ],
+  [
+    844,
+    "caption",
+    "Tabel 3.18. Contoh kasus aphakia",
+    "Tabel C.18. Contoh kasus aphakia"
+  ],
+  [
+    846,
+    "heading",
+    "3.5.9Refractive Error (H52)",
+    "Refractive Error (H52)"
+  ],
+  [
+    848,
+    "heading",
+    "3.5.10Visual Impairment (H54.-)",
+    "Visual Impairment (H54.-)"
+  ],
+  [
+    850,
+    "caption",
+    "Tabel 3.19. Contoh kasus visual impairment",
+    "Tabel C.19. Contoh kasus visual impairment"
+  ],
+  [
+    853,
+    "caption",
+    "Tabel 3.20. Contoh kasus visual impairment",
+    "Tabel C.20. Contoh kasus visual impairment"
+  ],
+  [
+    854,
+    "caption",
+    "Tabel 3.21. Contoh kasus visual impairment",
+    "Tabel C.21. Contoh kasus visual impairment"
+  ],
+  [
+    856,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 12",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 12"
+  ],
+  [
+    862,
+    "caption",
+    "Tabel 3.22. Contoh kasus kontrol post vitrectomy",
+    "Tabel C.22. Contoh kasus kontrol post vitrectomy"
+  ],
+  [
+    864,
+    "heading",
+    "3.6MDC 13 TELINGA, MULUT,  TENGGOROKAN",
+    "MDC 13 TELINGA, MULUT,  TENGGOROKAN"
+  ],
+  [
+    865,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 13",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 13"
+  ],
+  [
+    929,
+    "caption",
+    "Tabel 3.23. Contoh kasus Pulpitis",
+    "Tabel C.23. Contoh kasus Pulpitis"
+  ],
+  [
+    930,
+    "heading",
+    "3.6.1Otitis Externa (H60.-)",
+    "Otitis Externa (H60.-)"
+  ],
+  [
+    934,
+    "caption",
+    "Tabel 3.24. Contoh kasus otitis externa",
+    "Tabel C.24. Contoh kasus otitis externa"
+  ],
+  [
+    935,
+    "heading",
+    "3.6.2Cholesteatoma (H71)",
+    "Cholesteatoma (H71)"
+  ],
+  [
+    940,
+    "caption",
+    "Tabel 3.25. Contoh kasus cholesteatoma",
+    "Tabel C.25. Contoh kasus cholesteatoma"
+  ],
+  [
+    941,
+    "heading",
+    "3.6.3Perforation Of Tympanic Membrane (H72.-)",
+    "Perforation Of Tympanic Membrane (H72.-)"
+  ],
+  [
+    946,
+    "caption",
+    "Tabel 3.26. Contoh kasus perforation of tympanic membrane",
+    "Tabel C.26. Contoh kasus perforation of tympanic membrane"
+  ],
+  [
+    947,
+    "heading",
+    "3.6.4Vertigo (H81, R42)",
+    "Vertigo (H81, R42)"
+  ],
+  [
+    953,
+    "caption",
+    "Tabel 3.27. Contoh kasus vertigo",
+    "Tabel C.27. Contoh kasus vertigo"
+  ],
+  [
+    954,
+    "heading",
+    "3.6.5Hearing Loss (H90-H91)",
+    "Hearing Loss (H90-H91)"
+  ],
+  [
+    959,
+    "caption",
+    "Tabel 3.28. Contoh kasus hearing loss",
+    "Tabel C.28. Contoh kasus hearing loss"
+  ],
+  [
+    960,
+    "caption",
+    "Tabel 3.29. Contoh kasus hearing loss",
+    "Tabel C.29. Contoh kasus hearing loss"
+  ],
+  [
+    963,
+    "heading",
+    "3.6.6Embedded and Impacted Teeth (K01.-)",
+    "Embedded and Impacted Teeth (K01.-)"
+  ],
+  [
+    967,
+    "heading",
+    "3.6.7Dental Caries  (K02.-)",
+    "Dental Caries  (K02.-)"
+  ],
+  [
+    970,
+    "caption",
+    "Tabel 3.30. Subkategori sesuai diagnosa dokter yang spesifik pada kasus dental caries beserta kode ICD-10",
+    "Tabel C.30. Subkategori sesuai diagnosa dokter yang spesifik pada kasus dental caries beserta kode ICD-10"
+  ],
+  [
+    973,
+    "caption",
+    "Tabel 3.31. Subkategori sesuai diagnosa dokter yang spesifik pada kasus dental caries beserta kode ICD-10",
+    "Tabel C.31. Subkategori sesuai diagnosa dokter yang spesifik pada kasus dental caries beserta kode ICD-10"
+  ],
+  [
+    975,
+    "heading",
+    "3.6.8Diseases Of Pulp And Periapical Tissues (K04.-)",
+    "Diseases Of Pulp And Periapical Tissues (K04.-)"
+  ],
+  [
+    981,
+    "heading",
+    "3.6.9Cellulitis and Abscess of  Mouth  (K12.2)",
+    "Cellulitis and Abscess of  Mouth  (K12.2)"
+  ],
+  [
+    983,
+    "caption",
+    "Tabel 3.32. Klasifikasi lokasi infeksi beserta kode spesifik",
+    "Tabel C.32. Klasifikasi lokasi infeksi beserta kode spesifik"
+  ],
+  [
+    989,
+    "heading",
+    "3.6.10Rhinitis (J00, J30, J31.0)",
+    "Rhinitis (J00, J30, J31.0)"
+  ],
+  [
+    991,
+    "heading",
+    "3.6.11Sinusitis (J01, J32)",
+    "Sinusitis (J01, J32)"
+  ],
+  [
+    1002,
+    "heading",
+    "3.6.12Tonsillectomy",
+    "Tonsillectomy"
+  ],
+  [
+    1009,
+    "caption",
+    "Tabel 3.33. Contoh kasus tonsillectomy",
+    "Tabel C.33. Contoh kasus tonsillectomy"
+  ],
+  [
+    1010,
+    "heading",
+    "3.6.13Hoarseness",
+    "Hoarseness"
+  ],
+  [
+    1021,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 13",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 13"
+  ],
+  [
+    1093,
+    "heading",
+    "3.7MDC 14 SISTEM PERNAFASAN",
+    "MDC 14 SISTEM PERNAFASAN"
+  ],
+  [
+    1094,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 14",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 14"
+  ],
+  [
+    1095,
+    "heading",
+    "3.7.1Influenza (J09-J11)",
+    "Influenza (J09-J11)"
+  ],
+  [
+    1101,
+    "heading",
+    "3.7.2Pneumonia (J12-J18, J69)",
+    "Pneumonia (J12-J18, J69)"
+  ],
+  [
+    1150,
+    "heading",
+    "3.7.3Bronchitis (J20, J40-J42)",
+    "Bronchitis (J20, J40-J42)"
+  ],
+  [
+    1157,
+    "heading",
+    "3.7.4Stenosis Laryngotracheal (J38.6, J39.8, J95.5)",
+    "Stenosis Laryngotracheal (J38.6, J39.8, J95.5)"
+  ],
+  [
+    1162,
+    "heading",
+    "3.7.5Chronic Obstructive Pulmonary Disease (COPD) (J44.-)",
+    "Chronic Obstructive Pulmonary Disease (COPD) (J44.-)"
+  ],
+  [
+    1169,
+    "heading",
+    "3.7.6Asthma (J45-J46)",
+    "Asthma (J45-J46)"
+  ],
+  [
+    1172,
+    "heading",
+    "3.7.7Bronchiectasis (J47)",
+    "Bronchiectasis (J47)"
+  ],
+  [
+    1176,
+    "heading",
+    "3.7.8Lung Diseases Due To External Agents (J60-J66)",
+    "Lung Diseases Due To External Agents (J60-J66)"
+  ],
+  [
+    1179,
+    "heading",
+    "3.7.9Hypersensitivity Pneumonitis Due To Organic Dust (J67.-)",
+    "Hypersensitivity Pneumonitis Due To Organic Dust (J67.-)"
+  ],
+  [
+    1181,
+    "heading",
+    "3.7.10Respiratory Conditions Due To External Agents (J68.-, J70.-)",
+    "Respiratory Conditions Due To External Agents (J68.-, J70.-)"
+  ],
+  [
+    1184,
+    "heading",
+    "3.7.11Adult Respiratory Distress Syndrome (ARDS) (J80)",
+    "Adult Respiratory Distress Syndrome (ARDS) (J80)"
+  ],
+  [
+    1186,
+    "heading",
+    "3.7.12Pulmonary oedema (J81)",
+    "Pulmonary oedema (J81)"
+  ],
+  [
+    1189,
+    "heading",
+    "3.7.12Abscess Of Lung (J85)Jika dokter mendiagnosis abses paru disertai pneumonia, dan pneumonia tersebut tidak disebabkan oleh organisme spesifik yang termasuk dalam kode J09–J16, gunakan kode J85.1 (Abscess of lung with pneumonia). Namun, jika pneumonia disebabkan oleh organisme tertentu yang sudah diklasifikasikan dalam kode J09 sampai J16 (misalnya pneumonia akibat virus influenza, bakteri spesifik, atau organisme lain yang telah ditentukan), maka cukup gunakan kode pneumonia spesifik dari J09–J16.",
+    "Abscess Of Lung (J85)Jika dokter mendiagnosis abses paru disertai pneumonia, dan pneumonia tersebut tidak disebabkan oleh organisme spesifik yang termasuk dalam kode J09–J16, gunakan kode J85.1 (Abscess of lung with pneumonia). Namun, jika pneumonia disebabkan oleh organisme tertentu yang sudah diklasifikasikan dalam kode J09 sampai J16 (misalnya pneumonia akibat virus influenza, bakteri spesifik, atau organisme lain yang telah ditentukan), maka cukup gunakan kode pneumonia spesifik dari J09–J16."
+  ],
+  [
+    1191,
+    "heading",
+    "3.7.13Pleural Effusion (J90-J91)",
+    "Pleural Effusion (J90-J91)"
+  ],
+  [
+    1196,
+    "heading",
+    "3.7.14Pneumothorax (J93.-)",
+    "Pneumothorax (J93.-)"
+  ],
+  [
+    1200,
+    "heading",
+    "3.7.15Other Pleural Conditions (J94.-)",
+    "Other Pleural Conditions (J94.-)"
+  ],
+  [
+    1207,
+    "heading",
+    "3.7.17Postprocedural respiratory disorders (J95)",
+    "Postprocedural respiratory disorders (J95)"
+  ],
+  [
+    1216,
+    "heading",
+    "3.7.18Respiratory Failure (J96.-)",
+    "Respiratory Failure (J96.-)"
+  ],
+  [
+    1222,
+    "heading",
+    "3.7.19Interstitial emphysema  (J98.2) & Subcutaneous emphysema (T79.-)",
+    "Interstitial emphysema  (J98.2) & Subcutaneous emphysema (T79.-)"
+  ],
+  [
+    1230,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 14",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 14"
+  ],
+  [
+    1251,
+    "heading",
+    "3.8MDC 15 JANTUNG DAN PEMBULUH DARAH",
+    "MDC 15 JANTUNG DAN PEMBULUH DARAH"
+  ],
+  [
+    1252,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 15",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 15"
+  ],
+  [
+    1253,
+    "heading",
+    "3.8.1Heart Valve Disease (I05-I09, I34-I39)",
+    "Heart Valve Disease (I05-I09, I34-I39)"
+  ],
+  [
+    1260,
+    "heading",
+    "3.8.2Primary and Secondary Hypertension (I10 dan I15)",
+    "Primary and Secondary Hypertension (I10 dan I15)"
+  ],
+  [
+    1261,
+    "heading",
+    "3.8.2.1 Primary Hypertension",
+    "Primary Hypertension"
+  ],
+  [
+    1265,
+    "heading",
+    "3.8.2.2Secondary hypertension (I15.-)",
+    "Secondary hypertension (I15.-)"
+  ],
+  [
+    1272,
+    "heading",
+    "3.8.3Hypertensive Heart and Renal Disease (I11-I13)",
+    "Hypertensive Heart and Renal Disease (I11-I13)"
+  ],
+  [
+    1291,
+    "heading",
+    "3.8.4Acute Myocardial Infarction (I21-I22)",
+    "Acute Myocardial Infarction (I21-I22)"
+  ],
+  [
+    1294,
+    "heading",
+    "3.8.5Complications Following Acute Myocardial Infarction (I23.-)",
+    "Complications Following Acute Myocardial Infarction (I23.-)"
+  ],
+  [
+    1301,
+    "heading",
+    "3.8.6Chronic Ischaemic Heart Disease  (I25.-)",
+    "Chronic Ischaemic Heart Disease  (I25.-)"
+  ],
+  [
+    1309,
+    "heading",
+    "3.8.7Pulmonary Heart Disease (I27.-)",
+    "Pulmonary Heart Disease (I27.-)"
+  ],
+  [
+    1311,
+    "heading",
+    "3.8.8Pericarditis (I30-I32)",
+    "Pericarditis (I30-I32)"
+  ],
+  [
+    1314,
+    "heading",
+    "3.8.9Endocarditis (I33, I38, I39)",
+    "Endocarditis (I33, I38, I39)"
+  ],
+  [
+    1323,
+    "heading",
+    "3.8.10Myocarditis (I40-I41) ",
+    "Myocarditis (I40-I41) "
+  ],
+  [
+    1332,
+    "heading",
+    "3.8.11Cardiomyopathy (I42-I43)",
+    "Cardiomyopathy (I42-I43)"
+  ],
+  [
+    1336,
+    "heading",
+    "3.8.12Heart Block (I44-I45)",
+    "Heart Block (I44-I45)"
+  ],
+  [
+    1341,
+    "heading",
+    "3.8.13Cardiac Arrest (I46)",
+    "Cardiac Arrest (I46)"
+  ],
+  [
+    1346,
+    "heading",
+    "3.8.14Ventricular Fibrillation and Flutter (I49.0)",
+    "Ventricular Fibrillation and Flutter (I49.0)"
+  ],
+  [
+    1351,
+    "heading",
+    "3.8.15Heart Failure (I50.-).",
+    "Heart Failure (I50.-)."
+  ],
+  [
+    1355,
+    "heading",
+    "3.8.16Peripheral Vascular Disease (I70, I73)",
+    "Peripheral Vascular Disease (I70, I73)"
+  ],
+  [
+    1357,
+    "heading",
+    "3.8.17Arterial Embolism and Thrombosis (I74.-)",
+    "Arterial Embolism and Thrombosis (I74.-)"
+  ],
+  [
+    1359,
+    "heading",
+    "3.8.18Phlebitis and Thrombophlebitis (I80.-)",
+    "Phlebitis and Thrombophlebitis (I80.-)"
+  ],
+  [
+    1361,
+    "heading",
+    "3.8.19Oesophageal Varices (I85.-, I98.2 - I98.3)",
+    "Oesophageal Varices (I85.-, I98.2 - I98.3)"
+  ],
+  [
+    1368,
+    "heading",
+    "3.8.20Gastric Varices (I86.4)",
+    "Gastric Varices (I86.4)"
+  ],
+  [
+    1375,
+    "heading",
+    "3.8.21Circulatory Disease Procedures ",
+    "Circulatory Disease Procedures "
+  ],
+  [
+    1403,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 15",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 15"
+  ],
+  [
+    1407,
+    "caption",
+    "Gambar 3.2. Pedoman koding dalam iDRG terkait jantung dan pembuluh darah",
+    "Gambar C.2. Pedoman koding dalam iDRG terkait jantung dan pembuluh darah"
+  ],
+  [
+    1410,
+    "caption",
+    "Gambar 3.3. Pedoman koding dalam iDRG terkait jantung dan pembuluh darah",
+    "Gambar C.3. Pedoman koding dalam iDRG terkait jantung dan pembuluh darah"
+  ],
+  [
+    1412,
+    "caption",
+    "Gambar 3.5.1 Alur Koding Stent Coronary & Non Coronary",
+    "Gambar C.4. Alur Koding Stent Coronary & Non Coronary"
+  ],
+  [
+    1414,
+    "caption",
+    "Tabel 3.34. Kode ICD dan DC khusus yang berhubungan pada MDC 15",
+    "Tabel C.34. Kode ICD dan DC khusus yang berhubungan pada MDC 15"
+  ],
+  [
+    1427,
+    "caption",
+    "Tabel 3.35. Contoh kasus disorder of arteries and arterioles",
+    "Tabel C.35. Contoh kasus disorder of arteries and arterioles"
+  ],
+  [
+    1432,
+    "heading",
+    "3.9MDC 16 SALURAN PENCERNAAN",
+    "MDC 16 SALURAN PENCERNAAN"
+  ],
+  [
+    1433,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 16",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 16"
+  ],
+  [
+    1434,
+    "heading",
+    "3.9.1Oesophagitis And Oesophageal Ulcer (K20, K22.1)",
+    "Oesophagitis And Oesophageal Ulcer (K20, K22.1)"
+  ],
+  [
+    1438,
+    "heading",
+    "3.9.2Oesophageal Obstruction (K22.2)",
+    "Oesophageal Obstruction (K22.2)"
+  ],
+  [
+    1442,
+    "heading",
+    "3.9.3Perforation Of Oesophagus (K22.3)",
+    "Perforation Of Oesophagus (K22.3)"
+  ],
+  [
+    1447,
+    "heading",
+    "3.9.4Dyskinesia Of Oesophagus (K22.4)",
+    "Dyskinesia Of Oesophagus (K22.4)"
+  ],
+  [
+    1449,
+    "heading",
+    "3.9.5Diverticulum Of Oesophagus (K22.5)",
+    "Diverticulum Of Oesophagus (K22.5)"
+  ],
+  [
+    1451,
+    "heading",
+    "3.9.6Gastro-Oesophageal Laceration-Haemorrhage Syndrome  (K22.6)  ",
+    "Gastro-Oesophageal Laceration-Haemorrhage Syndrome  (K22.6)  "
+  ],
+  [
+    1453,
+    "heading",
+    "3.9.7Disorders of oesophagus (K23.-)",
+    "Disorders of oesophagus (K23.-)"
+  ],
+  [
+    1457,
+    "heading",
+    "3.9.8Gastritis And Duodenitis (K29.- )",
+    "Gastritis And Duodenitis (K29.- )"
+  ],
+  [
+    1463,
+    "heading",
+    "3.9.9Dyspepsia (K30)",
+    "Dyspepsia (K30)"
+  ],
+  [
+    1468,
+    "heading",
+    "3.9.10Other Diseases Of Stomach And Duodenum (K31.-)",
+    "Other Diseases Of Stomach And Duodenum (K31.-)"
+  ],
+  [
+    1472,
+    "heading",
+    "3.9.11Appendicitis (K35-K37)",
+    "Appendicitis (K35-K37)"
+  ],
+  [
+    1478,
+    "heading",
+    "3.9.12Hernia (K40-K46)",
+    "Hernia (K40-K46)"
+  ],
+  [
+    1482,
+    "heading",
+    "3.9.13Noninfective Enteritis And Colitis (K50-K52)",
+    "Noninfective Enteritis And Colitis (K50-K52)"
+  ],
+  [
+    1484,
+    "heading",
+    "3.9.14Allergic And Dietetic Gastroenteritis And Colitis Due To Cow’s Milk Protein (K52.20)  ",
+    "Allergic And Dietetic Gastroenteritis And Colitis Due To Cow’s Milk Protein (K52.20)  "
+  ],
+  [
+    1487,
+    "heading",
+    "3.9.15Vascular Disorders Of Intestine (K55.- )",
+    "Vascular Disorders Of Intestine (K55.- )"
+  ],
+  [
+    1491,
+    "heading",
+    "3.9.16Paralytic Ileus And Intestinal Obstruction Without Hernia  (K56.-)  ",
+    "Paralytic Ileus And Intestinal Obstruction Without Hernia  (K56.-)  "
+  ],
+  [
+    1494,
+    "heading",
+    "3.9.17Diverticular Disease Of Intestine (K57.- )",
+    "Diverticular Disease Of Intestine (K57.- )"
+  ],
+  [
+    1497,
+    "heading",
+    "3.9.18Other Functional Intestinal Disorders (K59.- )",
+    "Other Functional Intestinal Disorders (K59.- )"
+  ],
+  [
+    1500,
+    "heading",
+    "3.9.19Diseases Of Anus And Rectum (K60-K62)  ",
+    "Diseases Of Anus And Rectum (K60-K62)  "
+  ],
+  [
+    1502,
+    "heading",
+    "3.9.20Other Diseases Of Intestine (K63.-)",
+    "Other Diseases Of Intestine (K63.-)"
+  ],
+  [
+    1511,
+    "heading",
+    "3.9.21Peritonitis (K65, K67)",
+    "Peritonitis (K65, K67)"
+  ],
+  [
+    1519,
+    "heading",
+    "3.9.22Hemoperitoneum (K66.1) ",
+    "Hemoperitoneum (K66.1) "
+  ],
+  [
+    1523,
+    "heading",
+    "3.9.23Intestinal Malabsorption (K90.-)",
+    "Intestinal Malabsorption (K90.-)"
+  ],
+  [
+    1525,
+    "heading",
+    "3.9.24Postprocedural Disorders Of Digestive System (K91.-)",
+    "Postprocedural Disorders Of Digestive System (K91.-)"
+  ],
+  [
+    1528,
+    "heading",
+    "3.9.25Gastrointestinal Haemorrhage  (K92.0-K92.2)  ",
+    "Gastrointestinal Haemorrhage  (K92.0-K92.2)  "
+  ],
+  [
+    1532,
+    "heading",
+    "3.9.26Gastrointestinal Procedures",
+    "Gastrointestinal Procedures"
+  ],
+  [
+    1535,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 16",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 16"
+  ],
+  [
+    1550,
+    "caption",
+    "Gambar 3.4. Peritoneal Adhesiolysis Proc",
+    "Gambar C.5. Peritoneal Adhesiolysis Proc"
+  ],
+  [
+    1554,
+    "heading",
+    "3.10MDC 17 HEPATOBILIER DAN PANKREAS",
+    "MDC 17 HEPATOBILIER DAN PANKREAS"
+  ],
+  [
+    1555,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 17",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 17"
+  ],
+  [
+    1556,
+    "heading",
+    "3.10.1Toxic Liver Disease (K71.- )",
+    "Toxic Liver Disease (K71.- )"
+  ],
+  [
+    1561,
+    "heading",
+    "3.10.2 Hepatic Failure, not elsewhere classified (K72.-)",
+    "Hepatic Failure, not elsewhere classified (K72.-)"
+  ],
+  [
+    1563,
+    "heading",
+    "3.10.3Fibrosis and cirrhosis of liver (K74) ",
+    "Fibrosis and cirrhosis of liver (K74) "
+  ],
+  [
+    1570,
+    "heading",
+    "3.10.4Abscess Of Liver (K75.0)",
+    "Abscess Of Liver (K75.0)"
+  ],
+  [
+    1573,
+    "heading",
+    "3.10.5Other diseases of liver (K76.-)  ",
+    "Other diseases of liver (K76.-)  "
+  ],
+  [
+    1576,
+    "heading",
+    "3.10.6Liver Disorders In Diseases Classified Elsewhere (K77.-*)  ",
+    "Liver Disorders In Diseases Classified Elsewhere (K77.-*)  "
+  ],
+  [
+    1578,
+    "heading",
+    "3.10.7Cholelithiasis And Diseases Of Biliary Tract (K80-K83)  ",
+    "Cholelithiasis And Diseases Of Biliary Tract (K80-K83)  "
+  ],
+  [
+    1583,
+    "heading",
+    "3.10.8Pancreatitis (K85, K86.0, K86.1, K87)",
+    "Pancreatitis (K85, K86.0, K86.1, K87)"
+  ],
+  [
+    1592,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 17",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 17"
+  ],
+  [
+    1613,
+    "heading",
+    "3.11MDC 18 MUSKULOSKELETAL DAN JARINGAN IKAT",
+    "MDC 18 MUSKULOSKELETAL DAN JARINGAN IKAT"
+  ],
+  [
+    1614,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 18",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 18"
+  ],
+  [
+    1615,
+    "heading",
+    "3.11.1Pyogenic Arthritis (M00.-)",
+    "Pyogenic Arthritis (M00.-)"
+  ],
+  [
+    1620,
+    "heading",
+    "3.11.2 Direct infections of joint in infectious and parasitic diseases classified elsewhere (M01.-)",
+    "Direct infections of joint in infectious and parasitic diseases classified elsewhere (M01.-)"
+  ],
+  [
+    1623,
+    "heading",
+    "3.11.3Reactive Arthropathies (M02)",
+    "Reactive Arthropathies (M02)"
+  ],
+  [
+    1627,
+    "heading",
+    "3.11.4Postinfective and reactive arthropathies in diseases classified elsewheres (M03)",
+    "Postinfective and reactive arthropathies in diseases classified elsewheres (M03)"
+  ],
+  [
+    1630,
+    "heading",
+    "3.11.5Rheumatoid Arthritis (M05-M06)",
+    "Rheumatoid Arthritis (M05-M06)"
+  ],
+  [
+    1634,
+    "heading",
+    "3.11.6Psoriatic And Enteropathic Arthropathies (M07)",
+    "Psoriatic And Enteropathic Arthropathies (M07)"
+  ],
+  [
+    1637,
+    "heading",
+    "3.11.7Juvenile Arthritis (M08)",
+    "Juvenile Arthritis (M08)"
+  ],
+  [
+    1644,
+    "heading",
+    "3.11.8Gout And Crystal Arthropathies (M10-M11)",
+    "Gout And Crystal Arthropathies (M10-M11)"
+  ],
+  [
+    1651,
+    "heading",
+    "3.11.9 Other Arthritis (M13.-)Polyarthritis And Monoarthritis (M13.0 - M13.1)",
+    "Other Arthritis (M13.-)Polyarthritis And Monoarthritis (M13.0 - M13.1)"
+  ],
+  [
+    1663,
+    "heading",
+    "3.11.10Coxarthrosis [Arthrosis Of Hip] (M16)",
+    "Coxarthrosis [Arthrosis Of Hip] (M16)"
+  ],
+  [
+    1684,
+    "heading",
+    "3.11.11Gonarthrosis [Arthritis Of Knee] (M17)",
+    "Gonarthrosis [Arthritis Of Knee] (M17)"
+  ],
+  [
+    1699,
+    "heading",
+    "3.11.12Acquired Clawhand, Clubhand, Clawfoot, And Clubfoot (M21, Q66.0)",
+    "Acquired Clawhand, Clubhand, Clawfoot, And Clubfoot (M21, Q66.0)"
+  ],
+  [
+    1705,
+    "heading",
+    "3.11.13Disorders Of Patella (M22)",
+    "Disorders Of Patella (M22)"
+  ],
+  [
+    1711,
+    "heading",
+    "3.11.14Chronic Instability Of Knee (M23.5)",
+    "Chronic Instability Of Knee (M23.5)"
+  ],
+  [
+    1727,
+    "heading",
+    "3.11.15Haemarthrosis (M25.0)  ",
+    "Haemarthrosis (M25.0)  "
+  ],
+  [
+    1730,
+    "heading",
+    "3.11.16Polyarteritis Nodosa And Vasculopathies (M30-M31)",
+    "Polyarteritis Nodosa And Vasculopathies (M30-M31)"
+  ],
+  [
+    1732,
+    "heading",
+    "3.11.17Systemic Lupus Erythematosus (M32)",
+    "Systemic Lupus Erythematosus (M32)"
+  ],
+  [
+    1741,
+    "heading",
+    "3.11.18Systemic Sclerosis (M34)",
+    "Systemic Sclerosis (M34)"
+  ],
+  [
+    1744,
+    "heading",
+    "3.11.19Scoliosis (M41)",
+    "Scoliosis (M41)"
+  ],
+  [
+    1768,
+    "heading",
+    "3.11.20Spondylolisthesis (M43.1, Q76.2)",
+    "Spondylolisthesis (M43.1, Q76.2)"
+  ],
+  [
+    1778,
+    "heading",
+    "3.11.21Spondylosis (M47)",
+    "Spondylosis (M47)"
+  ],
+  [
+    1784,
+    "heading",
+    "3.11.22Intervertebral Disc Disorders (M50-M51)",
+    "Intervertebral Disc Disorders (M50-M51)"
+  ],
+  [
+    1801,
+    "heading",
+    "3.11.23Spine Fusion And Instrumentation",
+    "Spine Fusion And Instrumentation"
+  ],
+  [
+    1805,
+    "heading",
+    "3.11.24Spontaneous Fracture (M48.4, M48.5, M80, M84.3, M84.4)",
+    "Spontaneous Fracture (M48.4, M48.5, M80, M84.3, M84.4)"
+  ],
+  [
+    1814,
+    "heading",
+    "3.11.25Fracture In Neoplastic Disease (M49.5, M90.7)",
+    "Fracture In Neoplastic Disease (M49.5, M90.7)"
+  ],
+  [
+    1816,
+    "heading",
+    "3.11.26Rhabdomyolysis (M62.8)",
+    "Rhabdomyolysis (M62.8)"
+  ],
+  [
+    1818,
+    "heading",
+    "3.11.27Radial Styloid Tenosynovitis [De Quervain] (M65.4)",
+    "Radial Styloid Tenosynovitis [De Quervain] (M65.4)"
+  ],
+  [
+    1820,
+    "heading",
+    "3.11.28Necrotizing Fasciitis (M72.6)",
+    "Necrotizing Fasciitis (M72.6)"
+  ],
+  [
+    1822,
+    "heading",
+    "3.11.29Fibromyalgia (M79.7)",
+    "Fibromyalgia (M79.7)"
+  ],
+  [
+    1824,
+    "heading",
+    "3.11.30Myofascial Pain Syndrome (M79.8)",
+    "Myofascial Pain Syndrome (M79.8)"
+  ],
+  [
+    1826,
+    "heading",
+    "3.11.31Osteoporosis (M80-M82)",
+    "Osteoporosis (M80-M82)"
+  ],
+  [
+    1829,
+    "heading",
+    "3.11.32Nonunion Of Fracture [Pseudarthrosis] (M84.1, M96.0)",
+    "Nonunion Of Fracture [Pseudarthrosis] (M84.1, M96.0)"
+  ],
+  [
+    1832,
+    "heading",
+    "3.11.33Periprosthetic Fracture (M96.6)",
+    "Periprosthetic Fracture (M96.6)"
+  ],
+  [
+    1834,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 18",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 18"
+  ],
+  [
+    1858,
+    "heading",
+    "3.12MDC 19 KULIT DAN SUBKUTAN",
+    "MDC 19 KULIT DAN SUBKUTAN"
+  ],
+  [
+    1859,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 19",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 19"
+  ],
+  [
+    1861,
+    "heading",
+    "3.12.1Impetigo (L01.-) ",
+    "Impetigo (L01.-) "
+  ],
+  [
+    1864,
+    "heading",
+    "3.12.2Cutaneous Abscess, Furuncle, and Carbuncle (L02.-)  ",
+    "Cutaneous Abscess, Furuncle, and Carbuncle (L02.-)  "
+  ],
+  [
+    1875,
+    "heading",
+    "3.12.3Cellulitis (L03.-) ",
+    "Cellulitis (L03.-) "
+  ],
+  [
+    1880,
+    "heading",
+    "3.12.4Pemphigus dan Pemphigoid (L10.- dan L12.-) ",
+    "Pemphigus dan Pemphigoid (L10.- dan L12.-) "
+  ],
+  [
+    1886,
+    "heading",
+    "3.12.5Atopic Dermatitis (L20.-) ",
+    "Atopic Dermatitis (L20.-) "
+  ],
+  [
+    1890,
+    "heading",
+    "3.12.6Irritant Contact Dermatitis (L24.-)  ",
+    "Irritant Contact Dermatitis (L24.-)  "
+  ],
+  [
+    1895,
+    "heading",
+    "3.12.7Dermatitis due to Substances Taken Internally (L27.-)",
+    "Dermatitis due to Substances Taken Internally (L27.-)"
+  ],
+  [
+    1900,
+    "heading",
+    "3.12.8Psoriasis (L40.-)  ",
+    "Psoriasis (L40.-)  "
+  ],
+  [
+    1903,
+    "heading",
+    "3.12.9Lichen Planus (L43.-)  ",
+    "Lichen Planus (L43.-)  "
+  ],
+  [
+    1908,
+    "heading",
+    "3.12.10Erythema Multiforme (L51.-) ",
+    "Erythema Multiforme (L51.-) "
+  ],
+  [
+    1912,
+    "caption",
+    "Tabel 3.36. Contoh kasus erythema multiforme",
+    "Tabel C.36. Contoh kasus erythema multiforme"
+  ],
+  [
+    1913,
+    "caption",
+    "Tabel 3.37. Contoh kasus erythema multiforme",
+    "Tabel C.37. Contoh kasus erythema multiforme"
+  ],
+  [
+    1914,
+    "heading",
+    "3.12.11Erythema Nodosum (L52)  ",
+    "Erythema Nodosum (L52)  "
+  ],
+  [
+    1918,
+    "heading",
+    "3.12.12Other Erythematous Conditions (L53-L54) ",
+    "Other Erythematous Conditions (L53-L54) "
+  ],
+  [
+    1921,
+    "heading",
+    "3.12.13Alopecia (L63-L66)  ",
+    "Alopecia (L63-L66)  "
+  ],
+  [
+    1924,
+    "heading",
+    "3.12.14Hypertrichosis (L68.-) ",
+    "Hypertrichosis (L68.-) "
+  ],
+  [
+    1932,
+    "heading",
+    "3.12.15Vitiligo and Other Disorders of Pigmentation (L81-L81)",
+    "Vitiligo and Other Disorders of Pigmentation (L81-L81)"
+  ],
+  [
+    1935,
+    "heading",
+    "3.12.16Epidermal Thickening  (L82-L86)",
+    "Epidermal Thickening  (L82-L86)"
+  ],
+  [
+    1942,
+    "heading",
+    "3.12.17Transepidermal Elimination Disorders dan Pyoderma Gangrenosum (L87 - L88)",
+    "Transepidermal Elimination Disorders dan Pyoderma Gangrenosum (L87 - L88)"
+  ],
+  [
+    1945,
+    "heading",
+    "3.12.18Decubitus Ulcer and Pressure Area (L89)",
+    "Decubitus Ulcer and Pressure Area (L89)"
+  ],
+  [
+    1951,
+    "heading",
+    "3.12.19Atrophic Disorders of Skin (L90)",
+    "Atrophic Disorders of Skin (L90)"
+  ],
+  [
+    1954,
+    "heading",
+    "3.12.20Hypertropic Scar (L91.0)",
+    "Hypertropic Scar (L91.0)"
+  ],
+  [
+    1957,
+    "heading",
+    "3.12.21Granulomatous Disorders (L92)",
+    "Granulomatous Disorders (L92)"
+  ],
+  [
+    1960,
+    "heading",
+    "3.12.21Lupus Erythematosus (L93)",
+    "Lupus Erythematosus (L93)"
+  ],
+  [
+    1962,
+    "heading",
+    "3.12.23Localized Connective Tissue Disorders (L94)",
+    "Localized Connective Tissue Disorders (L94)"
+  ],
+  [
+    1966,
+    "heading",
+    "3.12.24Vasculitis Limited to Skin (L95)",
+    "Vasculitis Limited to Skin (L95)"
+  ],
+  [
+    1968,
+    "heading",
+    "3.12.25Ulcer of Lower Limb (L97)",
+    "Ulcer of Lower Limb (L97)"
+  ],
+  [
+    1971,
+    "heading",
+    "3.12.26Disorders of Skin and Subcutaneous Tissue (L98)",
+    "Disorders of Skin and Subcutaneous Tissue (L98)"
+  ],
+  [
+    1973,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 19",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 19"
+  ],
+  [
+    1990,
+    "caption",
+    "Tabel 3.38. Contoh kasus radical excision of skin lession",
+    "Tabel C.38. Contoh kasus radical excision of skin lession"
+  ],
+  [
+    1991,
+    "caption",
+    "Tabel 3.39. Contoh kasus unilateral radical mastectomy",
+    "Tabel C.39. Contoh kasus unilateral radical mastectomy"
+  ],
+  [
+    1993,
+    "heading",
+    "3.13MDC 20 ENDOKRIN, NUTRISI DAN METABOLIK",
+    "MDC 20 ENDOKRIN, NUTRISI DAN METABOLIK"
+  ],
+  [
+    1995,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 20",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 20"
+  ],
+  [
+    1996,
+    "heading",
+    "3.13.1Hypothyroidism (E03.-)",
+    "Hypothyroidism (E03.-)"
+  ],
+  [
+    1998,
+    "heading",
+    "3.13.2Thyrotoxicosis [Hyperthyroidism] (E05.-)",
+    "Thyrotoxicosis [Hyperthyroidism] (E05.-)"
+  ],
+  [
+    2004,
+    "heading",
+    "3.13.3Thyroiditis (E06.-) ",
+    "Thyroiditis (E06.-) "
+  ],
+  [
+    2006,
+    "heading",
+    "3.13.3.1Procedural Codes for Thyroid Disorders",
+    "Procedural Codes for Thyroid Disorders"
+  ],
+  [
+    2016,
+    "heading",
+    "3.13.4Diabetes Mellitus (E10-E14)",
+    "Diabetes Mellitus (E10-E14)"
+  ],
+  [
+    2026,
+    "heading",
+    "3.13.4.1Pemberian Kode untuk Komplikasi Diabetes:",
+    "Pemberian Kode untuk Komplikasi Diabetes:"
+  ],
+  [
+    2048,
+    "heading",
+    "3.13.4.2Penyakit Lain pada Pasien Diabetes",
+    "Penyakit Lain pada Pasien Diabetes"
+  ],
+  [
+    2052,
+    "heading",
+    "3.13.5Disorder of Pancreatic Internal Secretion (E16.3-E16.9)",
+    "Disorder of Pancreatic Internal Secretion (E16.3-E16.9)"
+  ],
+  [
+    2056,
+    "heading",
+    "3.13.6Hyperparathyroidism (E21.0-E21.3, E83.5)",
+    "Hyperparathyroidism (E21.0-E21.3, E83.5)"
+  ],
+  [
+    2061,
+    "heading",
+    "3.13.7Hyperfunction of Pituitary Gland (E22, E24.0)",
+    "Hyperfunction of Pituitary Gland (E22, E24.0)"
+  ],
+  [
+    2064,
+    "heading",
+    "3.13.8Cushing’ Syndrome (E24.-)",
+    "Cushing’ Syndrome (E24.-)"
+  ],
+  [
+    2069,
+    "heading",
+    "3.13.9Hyperaldosteronism (E26.-)",
+    "Hyperaldosteronism (E26.-)"
+  ],
+  [
+    2072,
+    "heading",
+    "3.13.10Primary Adrenocortical Insufficiency (E27.1)",
+    "Primary Adrenocortical Insufficiency (E27.1)"
+  ],
+  [
+    2075,
+    "heading",
+    "3.13.11Adrenomedullary Hyperfunction (E27.5)",
+    "Adrenomedullary Hyperfunction (E27.5)"
+  ],
+  [
+    2077,
+    "heading",
+    "3.13.12Androgen Excess (E28.1)",
+    "Androgen Excess (E28.1)"
+  ],
+  [
+    2080,
+    "heading",
+    "3.13.13Testicular Hypofunction (E29.1)",
+    "Testicular Hypofunction (E29.1)"
+  ],
+  [
+    2084,
+    "heading",
+    "3.13.14Disorders of Puberty (E30.-)",
+    "Disorders of Puberty (E30.-)"
+  ],
+  [
+    2087,
+    "heading",
+    "3.13.15  Disorders of Lipoprotein Metabolism (E78.-)",
+    "Disorders of Lipoprotein Metabolism (E78.-)"
+  ],
+  [
+    2097,
+    "heading",
+    "3.13.16Hyperuricemia (E79.0)",
+    "Hyperuricemia (E79.0)"
+  ],
+  [
+    2100,
+    "heading",
+    "3.13.17Disorders of Calcium Metabolism (E83.5)",
+    "Disorders of Calcium Metabolism (E83.5)"
+  ],
+  [
+    2103,
+    "heading",
+    "3.13.18Amyloidosis (E85.-)",
+    "Amyloidosis (E85.-)"
+  ],
+  [
+    2108,
+    "heading",
+    "3.13.19Volume Depletion and Fluid Overload (E86, E87.7)",
+    "Volume Depletion and Fluid Overload (E86, E87.7)"
+  ],
+  [
+    2113,
+    "heading",
+    "3.13.20Hypernatremia and Hyponatremia (E87.0-E87.1)",
+    "Hypernatremia and Hyponatremia (E87.0-E87.1)"
+  ],
+  [
+    2115,
+    "heading",
+    "3.13.21Acidosis (E87.2)",
+    "Acidosis (E87.2)"
+  ],
+  [
+    2118,
+    "heading",
+    "3.13.22Alkalosis (E87.3)",
+    "Alkalosis (E87.3)"
+  ],
+  [
+    2121,
+    "heading",
+    "3.13.23Hyperkalemia and Hypokalemia (E87.5-E87.6)",
+    "Hyperkalemia and Hypokalemia (E87.5-E87.6)"
+  ],
+  [
+    2128,
+    "heading",
+    "3.13.24Lipodystrophy (E88.1)",
+    "Lipodystrophy (E88.1)"
+  ],
+  [
+    2130,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 20",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 20"
+  ],
+  [
+    2135,
+    "heading",
+    "3.14MDC 21 DISEASE AND DISORDERS OF THE KIDNEY AND URINARY TRACT ",
+    "MDC 21 DISEASE AND DISORDERS OF THE KIDNEY AND URINARY TRACT "
+  ],
+  [
+    2136,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 21",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 21"
+  ],
+  [
+    2137,
+    "heading",
+    "3.14.1Glomerular diseases (N00-N08)",
+    "Glomerular diseases (N00-N08)"
+  ],
+  [
+    2142,
+    "heading",
+    "3.14.2Obstructive And Reflux Uropathy (N13.-)",
+    "Obstructive And Reflux Uropathy (N13.-)"
+  ],
+  [
+    2146,
+    "heading",
+    "3.14.3Renal Tubulo-Interstitial Disorders (N14-N16)",
+    "Renal Tubulo-Interstitial Disorders (N14-N16)"
+  ],
+  [
+    2153,
+    "caption",
+    "Tabel 3.40. Contoh kasus renal tubulo-interstitial disorders",
+    "Tabel C.40. Contoh kasus renal tubulo-interstitial disorders"
+  ],
+  [
+    2155,
+    "heading",
+    "3.14.4Acute Kidney Injury (N17.3-)(IM)",
+    "Acute Kidney Injury (N17.3-)(IM)"
+  ],
+  [
+    2162,
+    "heading",
+    "3.14.5Chronic Kidney Disease (N18.-)",
+    "Chronic Kidney Disease (N18.-)"
+  ],
+  [
+    2165,
+    "caption",
+    "Tabel 3.41. Contoh kasus chronic kidney disease",
+    "Tabel C.41. Contoh kasus chronic kidney disease"
+  ],
+  [
+    2168,
+    "caption",
+    "Tabel 3.42. Contoh kasus lupus nefritis",
+    "Tabel C.42. Contoh kasus lupus nefritis"
+  ],
+  [
+    2171,
+    "heading",
+    "3.14.6Urolithiasis N20-N23",
+    "Urolithiasis N20-N23"
+  ],
+  [
+    2182,
+    "heading",
+    "3.14.7Contracted And Small Kidney (N26-N27)",
+    "Contracted And Small Kidney (N26-N27)"
+  ],
+  [
+    2187,
+    "heading",
+    "3.14.8Cyst Of Kidney (N28.1)",
+    "Cyst Of Kidney (N28.1)"
+  ],
+  [
+    2190,
+    "heading",
+    "3.14.10Bladder-Neck Obstruction  (N32.0)",
+    "Bladder-Neck Obstruction  (N32.0)"
+  ],
+  [
+    2192,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 21",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 21"
+  ],
+  [
+    2209,
+    "heading",
+    "3.15MDC 22 SISTEM REPRODUKSI PRIA",
+    "MDC 22 SISTEM REPRODUKSI PRIA"
+  ],
+  [
+    2210,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 22",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 22"
+  ],
+  [
+    2211,
+    "heading",
+    "3.15.1Hyperplasia of Prostate (N40)",
+    "Hyperplasia of Prostate (N40)"
+  ],
+  [
+    2213,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 22",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 22"
+  ],
+  [
+    2234,
+    "heading",
+    "3.16MDC 23 SISTEM REPRODUKSI WANITA",
+    "MDC 23 SISTEM REPRODUKSI WANITA"
+  ],
+  [
+    2235,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 23",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 23"
+  ],
+  [
+    2236,
+    "heading",
+    "3.16.1Inflammatory Disease Of Female Pelvic Organs  (N70-N74)",
+    "Inflammatory Disease Of Female Pelvic Organs  (N70-N74)"
+  ],
+  [
+    2238,
+    "caption",
+    "Tabel 3.43. Kode diagnosis untuk peradangan dan infeksi pada organ daerah panggul wanita",
+    "Tabel C.43. Kode diagnosis untuk peradangan dan infeksi pada organ daerah panggul wanita"
+  ],
+  [
+    2241,
+    "caption",
+    "Tabel 3.44. Contoh kasus tuberculous infection of cervix uteri",
+    "Tabel C.44. Contoh kasus tuberculous infection of cervix uteri"
+  ],
+  [
+    2242,
+    "caption",
+    "Tabel 3.45. Contoh kasus acute pelvic inflammatory disease",
+    "Tabel C.45. Contoh kasus acute pelvic inflammatory disease"
+  ],
+  [
+    2244,
+    "heading",
+    "3.16.2Female Pelvic Peritoneal Adhesions (N73.6)",
+    "Female Pelvic Peritoneal Adhesions (N73.6)"
+  ],
+  [
+    2250,
+    "heading",
+    "3.16.3Disease of Bartholin’s Gland (N75)",
+    "Disease of Bartholin’s Gland (N75)"
+  ],
+  [
+    2254,
+    "caption",
+    "Tabel 3.46. Contoh kasus disease of bartholin’s gland",
+    "Tabel C.46. Contoh kasus disease of bartholin’s gland"
+  ],
+  [
+    2256,
+    "caption",
+    "Tabel 3.47. Contoh kasus disease of bartholin’s gland",
+    "Tabel C.47. Contoh kasus disease of bartholin’s gland"
+  ],
+  [
+    2257,
+    "caption",
+    "Tabel 3.48. Contoh kasus disease of bartholin’s gland",
+    "Tabel C.48. Contoh kasus disease of bartholin’s gland"
+  ],
+  [
+    2259,
+    "heading",
+    "3.16.4Other Inflammation of Vagina and Vulva  (N76-N77)",
+    "Other Inflammation of Vagina and Vulva  (N76-N77)"
+  ],
+  [
+    2271,
+    "heading",
+    "3.16.5Endometriosis (N80.-)",
+    "Endometriosis (N80.-)"
+  ],
+  [
+    2276,
+    "heading",
+    "3.16.6Prolapsus Genital (N81)",
+    "Prolapsus Genital (N81)"
+  ],
+  [
+    2284,
+    "heading",
+    "3.16.7Cyst Of Ovary (N83.0-N83.2)",
+    "Cyst Of Ovary (N83.0-N83.2)"
+  ],
+  [
+    2288,
+    "heading",
+    "3.16.8Hyperplasia Endometrial (N85.0-N85.1)",
+    "Hyperplasia Endometrial (N85.0-N85.1)"
+  ],
+  [
+    2291,
+    "heading",
+    "3.16.9Leukorrhea (N89.8)",
+    "Leukorrhea (N89.8)"
+  ],
+  [
+    2294,
+    "caption",
+    "Tabel 3.49. Contoh kasus leukorrhea",
+    "Tabel C.49. Contoh kasus leukorrhea"
+  ],
+  [
+    2295,
+    "heading",
+    "3.16.10Postcoital And Contact Bleeding (N93.0)",
+    "Postcoital And Contact Bleeding (N93.0)"
+  ],
+  [
+    2299,
+    "caption",
+    "Tabel 3.50. Contoh kasus postcoital bleeding",
+    "Tabel C.50. Contoh kasus postcoital bleeding"
+  ],
+  [
+    2302,
+    "caption",
+    "Tabel 3.51. Contoh kasus postcoital and contact bleeding",
+    "Tabel C.51. Contoh kasus postcoital and contact bleeding"
+  ],
+  [
+    2303,
+    "heading",
+    "3.16.11Vaginal Bleeding (N93.8-N93.9)",
+    "Vaginal Bleeding (N93.8-N93.9)"
+  ],
+  [
+    2308,
+    "heading",
+    "3.16.12Menopause (N95)",
+    "Menopause (N95)"
+  ],
+  [
+    2313,
+    "heading",
+    "3.16.13Habitual Aborter (N96)",
+    "Habitual Aborter (N96)"
+  ],
+  [
+    2317,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 23",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 23"
+  ],
+  [
+    2326,
+    "heading",
+    "3.17MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS"
+  ],
+  [
+    2327,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 24",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 24"
+  ],
+  [
+    2328,
+    "heading",
+    "3.17.1Ectopic Pregnancy  (O00)",
+    "Ectopic Pregnancy  (O00)"
+  ],
+  [
+    2338,
+    "caption",
+    "Tabel 3.52. Contoh kasus tubal pregnancy",
+    "Tabel C.52. Contoh kasus tubal pregnancy"
+  ],
+  [
+    2340,
+    "heading",
+    "3.17.2Abortion (O03-O07)",
+    "Abortion (O03-O07)"
+  ],
+  [
+    2345,
+    "caption",
+    "Tabel 3.53. Contoh kasus abortion",
+    "Tabel C.53. Contoh kasus abortion"
+  ],
+  [
+    2346,
+    "caption",
+    "Tabel 3.56. Contoh kasus abortion",
+    "Tabel C.54. Contoh kasus abortion"
+  ],
+  [
+    2349,
+    "caption",
+    "Tabel 3.57. Contoh kasus abortion",
+    "Tabel C.55. Contoh kasus abortion"
+  ],
+  [
+    2350,
+    "caption",
+    "Tabel 3.58. Contoh kasus abortion",
+    "Tabel C.56. Contoh kasus abortion"
+  ],
+  [
+    2352,
+    "caption",
+    "Tabel 3.59. Contoh kasus abortion",
+    "Tabel C.57. Contoh kasus abortion"
+  ],
+  [
+    2353,
+    "caption",
+    "Tabel 3.60. Contoh kasus abortion",
+    "Tabel C.58. Contoh kasus abortion"
+  ],
+  [
+    2357,
+    "caption",
+    "Tabel 3.61. Contoh kasus abortion",
+    "Tabel C.59. Contoh kasus abortion"
+  ],
+  [
+    2359,
+    "caption",
+    "Tabel 3.62. Contoh kasus abortion",
+    "Tabel C.60. Contoh kasus abortion"
+  ],
+  [
+    2360,
+    "heading",
+    "3.17.3Hypertensive in Pregnancy (O10-O16)",
+    "Hypertensive in Pregnancy (O10-O16)"
+  ],
+  [
+    2374,
+    "heading",
+    "3.17.4Excessive Vomiting in Pregnancy  (O21,-)",
+    "Excessive Vomiting in Pregnancy  (O21,-)"
+  ],
+  [
+    2378,
+    "heading",
+    "3.17.5Infections in Pregnancy (O23, O41.1, O85, O86, O98)",
+    "Infections in Pregnancy (O23, O41.1, O85, O86, O98)"
+  ],
+  [
+    2392,
+    "caption",
+    "Tabel 3.63. Contoh kasus infection in pregnancy",
+    "Tabel C.61. Contoh kasus infection in pregnancy"
+  ],
+  [
+    2393,
+    "caption",
+    "Tabel 3.64. Contoh kasus infection in pregnancy",
+    "Tabel C.62. Contoh kasus infection in pregnancy"
+  ],
+  [
+    2394,
+    "caption",
+    "Tabel 3.65. Contoh kasus infection in pregnancy",
+    "Tabel C.63. Contoh kasus infection in pregnancy"
+  ],
+  [
+    2395,
+    "caption",
+    "Tabel 3.66. Contoh kasus infection in pregnancy",
+    "Tabel C.64. Contoh kasus infection in pregnancy"
+  ],
+  [
+    2396,
+    "caption",
+    "Tabel 3.67. Contoh kasus infection in pregnancy",
+    "Tabel C.65. Contoh kasus infection in pregnancy"
+  ],
+  [
+    2397,
+    "heading",
+    "3.17.6Diabetes Mellitus in Pregnancy (O24)",
+    "Diabetes Mellitus in Pregnancy (O24)"
+  ],
+  [
+    2401,
+    "heading",
+    "3.17.7Maternal Care for Known or Suspected Malpresentation of Fetus (O32,-)",
+    "Maternal Care for Known or Suspected Malpresentation of Fetus (O32,-)"
+  ],
+  [
+    2404,
+    "caption",
+    "Tabel 3.68. Contoh kasus maternal care for known or susp malpresentation of fetus",
+    "Tabel C.66. Contoh kasus maternal care for known or susp malpresentation of fetus"
+  ],
+  [
+    2405,
+    "caption",
+    "Tabel 3.69. Contoh kasus maternal care for known or susp malpresentation of fetus",
+    "Tabel C.67. Contoh kasus maternal care for known or susp malpresentation of fetus"
+  ],
+  [
+    2406,
+    "heading",
+    "3.17.8Maternal Care for Known or Suspected Disproportion (O33.-, O64-O66)",
+    "Maternal Care for Known or Suspected Disproportion (O33.-, O64-O66)"
+  ],
+  [
+    2412,
+    "caption",
+    "Tabel 3.70. Contoh kasus maternal care for known or suspected disproportion",
+    "Tabel C.68. Contoh kasus maternal care for known or suspected disproportion"
+  ],
+  [
+    2418,
+    "caption",
+    "Tabel 3.71. Contoh kasus maternal care for known or suspected disproportion",
+    "Tabel C.69. Contoh kasus maternal care for known or suspected disproportion"
+  ],
+  [
+    2419,
+    "caption",
+    "Tabel 3.72. Contoh kasus maternal care for known or suspected disproportion",
+    "Tabel C.70. Contoh kasus maternal care for known or suspected disproportion"
+  ],
+  [
+    2420,
+    "caption",
+    "Tabel 3.73. Contoh kasus maternal care for known or suspected disproportion",
+    "Tabel C.71. Contoh kasus maternal care for known or suspected disproportion"
+  ],
+  [
+    2421,
+    "heading",
+    "3.17.9Maternal Care for Tumour of Corpus Uteri (O34.1)",
+    "Maternal Care for Tumour of Corpus Uteri (O34.1)"
+  ],
+  [
+    2424,
+    "caption",
+    "Tabel 3.74. Contoh kasus maternal care for tumour of corpus uteri",
+    "Tabel C.72. Contoh kasus maternal care for tumour of corpus uteri"
+  ],
+  [
+    2425,
+    "caption",
+    "Tabel 3.75. Contoh kasus maternal care for tumour of corpus uteri",
+    "Tabel C.73. Contoh kasus maternal care for tumour of corpus uteri"
+  ],
+  [
+    2426,
+    "heading",
+    "3.17.10Maternal Care for Other Abnormalities of Cervix (O34.4)",
+    "Maternal Care for Other Abnormalities of Cervix (O34.4)"
+  ],
+  [
+    2427,
+    "caption",
+    "Tabel 3.76. Contoh kasus maternal care for other abnormalities of cervix",
+    "Tabel C.74. Contoh kasus maternal care for other abnormalities of cervix"
+  ],
+  [
+    2429,
+    "heading",
+    "3.17.11Premature Rupture of Membranes (O42.-)",
+    "Premature Rupture of Membranes (O42.-)"
+  ],
+  [
+    2436,
+    "heading",
+    "3.17.12False Labour (O47,-)",
+    "False Labour (O47,-)"
+  ],
+  [
+    2439,
+    "heading",
+    "3.17.13Preterm Labour and Delivery (O60.-)",
+    "Preterm Labour and Delivery (O60.-)"
+  ],
+  [
+    2444,
+    "caption",
+    "Tabel 3.77. Contoh kasus Preterm Labour and Delivery",
+    "Tabel C.75. Contoh kasus Preterm Labour and Delivery"
+  ],
+  [
+    2445,
+    "caption",
+    "Tabel 3.78. Contoh kasus Preterm Labour and Delivery",
+    "Tabel C.76. Contoh kasus Preterm Labour and Delivery"
+  ],
+  [
+    2446,
+    "caption",
+    "Tabel 3.79. Contoh kasus Preterm Labour and Delivery",
+    "Tabel C.77. Contoh kasus Preterm Labour and Delivery"
+  ],
+  [
+    2447,
+    "caption",
+    "Tabel 3.80. Contoh kasus Preterm Labour and Delivery",
+    "Tabel C.78. Contoh kasus Preterm Labour and Delivery"
+  ],
+  [
+    2448,
+    "heading",
+    "3.17.14Intrapartum Haemorrhage , Postpartum Haemorrhage (O67.- , O72.-)",
+    "Intrapartum Haemorrhage , Postpartum Haemorrhage (O67.- , O72.-)"
+  ],
+  [
+    2458,
+    "heading",
+    "3.17.15Labour and delivery complicated by fetal stress [distress]  (O68.-)",
+    "Labour and delivery complicated by fetal stress [distress]  (O68.-)"
+  ],
+  [
+    2462,
+    "caption",
+    "Tabel 3.81. Contoh kasus Labour and delivery complicated by fetal stress [distress] ",
+    "Tabel C.79. Contoh kasus Labour and delivery complicated by fetal stress [distress] "
+  ],
+  [
+    2464,
+    "heading",
+    "3.17.16Perineal and Vaginal Laceration during Delivery, Obstetric high vaginal laceration alone (O70.-, O71.4)",
+    "Perineal and Vaginal Laceration during Delivery, Obstetric high vaginal laceration alone (O70.-, O71.4)"
+  ],
+  [
+    2467,
+    "heading",
+    "3.17.17Delivery (O80-O84)",
+    "Delivery (O80-O84)"
+  ],
+  [
+    2471,
+    "caption",
+    "Tabel 3.82. Contoh kasus Delivery",
+    "Tabel C.80. Contoh kasus Delivery"
+  ],
+  [
+    2472,
+    "caption",
+    "Tabel 3.83. Contoh kasus Delivery",
+    "Tabel C.81. Contoh kasus Delivery"
+  ],
+  [
+    2473,
+    "caption",
+    "Tabel 3.84. Contoh kasus Delivery",
+    "Tabel C.82. Contoh kasus Delivery"
+  ],
+  [
+    2474,
+    "heading",
+    "3.17.18Caesarean section (O82.-)",
+    "Caesarean section (O82.-)"
+  ],
+  [
+    2478,
+    "caption",
+    "Tabel 3.85. Contoh kasus Caesarean section ",
+    "Tabel C.83. Contoh kasus Caesarean section "
+  ],
+  [
+    2479,
+    "caption",
+    "Tabel 3.86. Contoh kasus Caesarean section ",
+    "Tabel C.84. Contoh kasus Caesarean section "
+  ],
+  [
+    2481,
+    "heading",
+    "3.17.19Maternal Diseases Classifiable Elsewhere but Complicating Pregnancy, Childbirth and The Puerperium (O98.-,O99.-)",
+    "Maternal Diseases Classifiable Elsewhere but Complicating Pregnancy, Childbirth and The Puerperium (O98.-,O99.-)"
+  ],
+  [
+    2484,
+    "heading",
+    "Perhatian khusus pada kode eksklusi O99.- (Other maternal diseases classifiable elsewhere but complicating pregnancy, childbirth and the puerperium): ",
+    "Perhatian khusus pada kode eksklusi O99.- (Other maternal diseases classifiable elsewhere but complicating pregnancy, childbirth and the puerperium): "
+  ],
+  [
+    2489,
+    "heading",
+    "Perhatian khusus pada kode eksklusi dalam kategori O99.-. Sebagai contoh, kode O99.1 (Other diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism  complicating pregnancy, childbirth and the puerperium) memiliki kondisi eksklusi untuk hemoragik dengan koagulasi defek (O46.0, O67.0, O72.3). ",
+    "Perhatian khusus pada kode eksklusi dalam kategori O99.-. Sebagai contoh, kode O99.1 (Other diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism  complicating pregnancy, childbirth and the puerperium) memiliki kondisi eksklusi untuk hemoragik dengan koagulasi defek (O46.0, O67.0, O72.3). "
+  ],
+  [
+    2492,
+    "caption",
+    "Tabel 3.87. Contoh kasus Maternal Diseases Classifiable Elsewhere but Complicating Pregnancy, Childbirth and The Puerperium",
+    "Tabel C.85. Contoh kasus Maternal Diseases Classifiable Elsewhere but Complicating Pregnancy, Childbirth and The Puerperium"
+  ],
+  [
+    2493,
+    "caption",
+    "Tabel 3.88. Contoh kasus Maternal Diseases Classifiable Elsewhere but Complicating Pregnancy, Childbirth and The Puerperium",
+    "Tabel C.86. Contoh kasus Maternal Diseases Classifiable Elsewhere but Complicating Pregnancy, Childbirth and The Puerperium"
+  ],
+  [
+    2495,
+    "caption",
+    "Tabel 3.90. Contoh kasus Maternal Diseases Classifiable Elsewhere but Complicating Pregnancy, Childbirth and The Puerperium",
+    "Tabel C.87. Contoh kasus Maternal Diseases Classifiable Elsewhere but Complicating Pregnancy, Childbirth and The Puerperium"
+  ],
+  [
+    2496,
+    "caption",
+    "Tabel 3.91. Contoh kasus Maternal Diseases Classifiable Elsewhere but Complicating Pregnancy, Childbirth and The Puerperium",
+    "Tabel C.88. Contoh kasus Maternal Diseases Classifiable Elsewhere but Complicating Pregnancy, Childbirth and The Puerperium"
+  ],
+  [
+    2498,
+    "heading",
+    "3.17.20Solusi Unacceptable obs. diag. comb. 0-12 pada MDC 24",
+    "Solusi Unacceptable obs. diag. comb. 0-12 pada MDC 24"
+  ],
+  [
+    2824,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 24",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 24"
+  ],
+  [
+    2854,
+    "heading",
+    "3.18MDC 25 PERINATOLOGI",
+    "MDC 25 PERINATOLOGI"
+  ],
+  [
+    2855,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 25",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 25"
+  ],
+  [
+    2856,
+    "heading",
+    "3.18.1Neonatus (Bayi baru lahir)",
+    "Neonatus (Bayi baru lahir)"
+  ],
+  [
+    2858,
+    "caption",
+    "Tabel 3.92. Contoh kasus Neonatus",
+    "Tabel C.89. Contoh kasus Neonatus"
+  ],
+  [
+    2860,
+    "caption",
+    "Tabel 3.93. Contoh kasus Neonatus",
+    "Tabel C.90. Contoh kasus Neonatus"
+  ],
+  [
+    2862,
+    "heading",
+    "3.18.2Fetus and Newborn Affected by Maternal Factors and by Complications of Pregnancy, Labour and Delivery (P00-P04)",
+    "Fetus and Newborn Affected by Maternal Factors and by Complications of Pregnancy, Labour and Delivery (P00-P04)"
+  ],
+  [
+    2865,
+    "caption",
+    "Tabel 3.94. Contoh kasus Fetus and Newborn Affected by Maternal Factors and by Complications of Pregnancy, Labour and Delivery ",
+    "Tabel C.91. Contoh kasus Fetus and Newborn Affected by Maternal Factors and by Complications of Pregnancy, Labour and Delivery "
+  ],
+  [
+    2866,
+    "heading",
+    "3.18.3      Slow Fetal Growth and Fetal Malnutrition (P05)",
+    "Slow Fetal Growth and Fetal Malnutrition (P05)"
+  ],
+  [
+    2872,
+    "heading",
+    "3.18.4Disorders Related to Short Gestation and Low Birth Weight, Not Elsewhere Classified (P07.-)",
+    "Disorders Related to Short Gestation and Low Birth Weight, Not Elsewhere Classified (P07.-)"
+  ],
+  [
+    2879,
+    "caption",
+    "Tabel 3.95. Contoh kasus Disorders Related to Short Gestation and Low Birth Weight, Not Elsewhere Classified ",
+    "Tabel C.92. Contoh kasus Disorders Related to Short Gestation and Low Birth Weight, Not Elsewhere Classified "
+  ],
+  [
+    2883,
+    "caption",
+    "Tabel 3.96. Contoh kasus Disorders Related to Short Gestation and Low Birth Weight, Not Elsewhere Classified ",
+    "Tabel C.93. Contoh kasus Disorders Related to Short Gestation and Low Birth Weight, Not Elsewhere Classified "
+  ],
+  [
+    2885,
+    "heading",
+    "3.16.5Birth Injury to Skeleton (P13)",
+    "Birth Injury to Skeleton (P13)"
+  ],
+  [
+    2887,
+    "heading",
+    "3.18.6Birth Asphyxia (P21.-)",
+    "Birth Asphyxia (P21.-)"
+  ],
+  [
+    2893,
+    "caption",
+    "Tabel 3.97. Contoh kasus Birth Asphyxia",
+    "Tabel C.94. Contoh kasus Birth Asphyxia"
+  ],
+  [
+    2894,
+    "heading",
+    "3.18.7Congenital Pneumonia (P23.-)",
+    "Congenital Pneumonia (P23.-)"
+  ],
+  [
+    2896,
+    "heading",
+    "3.18.8Neonatal Aspiration Syndromes  (P24.-)",
+    "Neonatal Aspiration Syndromes  (P24.-)"
+  ],
+  [
+    2902,
+    "heading",
+    "3.18.9Haemolytic Diseases of Fetus and Newborn; Neonatal Jaundice (P55; P58-P59)",
+    "Haemolytic Diseases of Fetus and Newborn; Neonatal Jaundice (P55; P58-P59)"
+  ],
+  [
+    2904,
+    "heading",
+    "3.18.10Transitory disorders of carbohydrate metabolism specific to fetus and newborn (P70.-)",
+    "Transitory disorders of carbohydrate metabolism specific to fetus and newborn (P70.-)"
+  ],
+  [
+    2907,
+    "caption",
+    "Tabel 3.98. Contoh kasus Transitory disorders of carbohydrate metabolism specific to fetus and newborn",
+    "Tabel C.95. Contoh kasus Transitory disorders of carbohydrate metabolism specific to fetus and newborn"
+  ],
+  [
+    2909,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 25",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 25"
+  ],
+  [
+    2911,
+    "heading",
+    "3.19MDC 26 PENYAKIT PADA DARAH DAN ORGAN PEMBENTUK DARAH",
+    "MDC 26 PENYAKIT PADA DARAH DAN ORGAN PEMBENTUK DARAH"
+  ],
+  [
+    2912,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 26",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 26"
+  ],
+  [
+    2914,
+    "caption",
+    "Tabel 3.100. Contoh kasus Penjelasan Khusus Kode ICD dalam Kategori MDC 26",
+    "Tabel C.96. Contoh kasus Penjelasan Khusus Kode ICD dalam Kategori MDC 26"
+  ],
+  [
+    2915,
+    "heading",
+    "3.19.1Stem Cell / Bone Marrow Harvesting and Transplantation",
+    "Stem Cell / Bone Marrow Harvesting and Transplantation"
+  ],
+  [
+    2924,
+    "caption",
+    "Tabel 3.101. Contoh kasus Stem Cell / Bone Marrow Harvesting and Transplantation",
+    "Tabel C.97. Contoh kasus Stem Cell / Bone Marrow Harvesting and Transplantation"
+  ],
+  [
+    2925,
+    "caption",
+    "Tabel 3.102 Contoh kasus Stem Cell / Bone Marrow Harvesting and Transplantation",
+    "Tabel C.98. Contoh kasus Stem Cell / Bone Marrow Harvesting and Transplantation"
+  ],
+  [
+    2927,
+    "caption",
+    "Tabel 3.103. Contoh kasus Stem Cell / Bone Marrow Harvesting and Transplantation",
+    "Tabel C.99. Contoh kasus Stem Cell / Bone Marrow Harvesting and Transplantation"
+  ],
+  [
+    2934,
+    "caption",
+    "Tabel 3.104. Contoh kasus Stem Cell / Bone Marrow Harvesting and Transplantation",
+    "Tabel C.100. Contoh kasus Stem Cell / Bone Marrow Harvesting and Transplantation"
+  ],
+  [
+    2935,
+    "heading",
+    "3.19.2Anemia (D50-D64)",
+    "Anemia (D50-D64)"
+  ],
+  [
+    2951,
+    "heading",
+    "3.19.3Other Aplastic Anaemias (D61.)-",
+    "Other Aplastic Anaemias (D61.)-"
+  ],
+  [
+    2955,
+    "heading",
+    "3.19.4Coagulation Disorders  (D65-D69)",
+    "Coagulation Disorders  (D65-D69)"
+  ],
+  [
+    2959,
+    "caption",
+    "Tabel 3.105. Contoh kasus Coagulation Disorders",
+    "Tabel C.101. Contoh kasus Coagulation Disorders"
+  ],
+  [
+    2961,
+    "heading",
+    "3.19.5Non-Thrombocytopenic Purpura (D69.0-D69.2)",
+    "Non-Thrombocytopenic Purpura (D69.0-D69.2)"
+  ],
+  [
+    2965,
+    "heading",
+    "3.19.6Agranulocytosis",
+    "Agranulocytosis"
+  ],
+  [
+    2967,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 26",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 26"
+  ],
+  [
+    2980,
+    "heading",
+    "3.20MDC 27 MYELOPROLIFERATIVE DISEASES AND DISORDERS, POORLY DIFFERENTIATED NEOPLASMS ",
+    "MDC 27 MYELOPROLIFERATIVE DISEASES AND DISORDERS, POORLY DIFFERENTIATED NEOPLASMS "
+  ],
+  [
+    2981,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 27",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 27"
+  ],
+  [
+    2982,
+    "heading",
+    "3.20.1Malignant neoplasms, stated or presumed to be primary, of lymphoid, haematopoietic and related tissue (C81-C96)",
+    "Malignant neoplasms, stated or presumed to be primary, of lymphoid, haematopoietic and related tissue (C81-C96)"
+  ],
+  [
+    2987,
+    "heading",
+    "3.21MDC 28 PENYAKIT INFEKSI DAN PARASIT",
+    "MDC 28 PENYAKIT INFEKSI DAN PARASIT"
+  ],
+  [
+    2988,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 28",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 28"
+  ],
+  [
+    2989,
+    "heading",
+    "3.21.1Other Salmonella Infections (A01-A02) ",
+    "Other Salmonella Infections (A01-A02) "
+  ],
+  [
+    2998,
+    "heading",
+    "3.21.2Enteroinvasive Escherichia Coli Infection (A04.0-A04.4) ",
+    "Enteroinvasive Escherichia Coli Infection (A04.0-A04.4) "
+  ],
+  [
+    3004,
+    "heading",
+    "3.21.3Botulism (A05.1)",
+    "Botulism (A05.1)"
+  ],
+  [
+    3007,
+    "heading",
+    "3.21.4Amoebiasis  (A06.-) ",
+    "Amoebiasis  (A06.-) "
+  ],
+  [
+    3012,
+    "heading",
+    "3.21.5Tuberculosis  (A15-A19)",
+    "Tuberculosis  (A15-A19)"
+  ],
+  [
+    3037,
+    "heading",
+    "3.21.9Infection Due To Other Mycobacteria (A31.-) ",
+    "Infection Due To Other Mycobacteria (A31.-) "
+  ],
+  [
+    3039,
+    "heading",
+    "3.19.10Listeriosis (A32.-)",
+    "Listeriosis (A32.-)"
+  ],
+  [
+    3043,
+    "heading",
+    "3.21.11Diphtheria (A36.-)",
+    "Diphtheria (A36.-)"
+  ],
+  [
+    3050,
+    "heading",
+    "3.21.12Meningcoccal Infection (A39.-)",
+    "Meningcoccal Infection (A39.-)"
+  ],
+  [
+    3055,
+    "heading",
+    "3.21.13Sepsis (A40-A41)",
+    "Sepsis (A40-A41)"
+  ],
+  [
+    3057,
+    "caption",
+    "Tabel 3.106. Contoh kasus Sepsis",
+    "Tabel C.102. Contoh kasus Sepsis"
+  ],
+  [
+    3061,
+    "caption",
+    "Tabel 3.107. Contoh kasus Sepsis",
+    "Tabel C.103. Contoh kasus Sepsis"
+  ],
+  [
+    3062,
+    "caption",
+    "Tabel 3.108. Contoh kasus Sepsis",
+    "Tabel C.104. Contoh kasus Sepsis"
+  ],
+  [
+    3063,
+    "heading",
+    "3.21.14Congenital Syphilis (A50.-)",
+    "Congenital Syphilis (A50.-)"
+  ],
+  [
+    3070,
+    "heading",
+    "3.21.15Anogenital Herpesviral [Herpes Simplex] Infection (A60.-)",
+    "Anogenital Herpesviral [Herpes Simplex] Infection (A60.-)"
+  ],
+  [
+    3073,
+    "heading",
+    "3.21.16Viral Meningitis (A87.-)",
+    "Viral Meningitis (A87.-)"
+  ],
+  [
+    3075,
+    "heading",
+    "3.21.17Dengue Fever [Classical Dengue] (A90-A91)",
+    "Dengue Fever [Classical Dengue] (A90-A91)"
+  ],
+  [
+    3079,
+    "heading",
+    "3.21.18Measles (B05.-)",
+    "Measles (B05.-)"
+  ],
+  [
+    3083,
+    "heading",
+    "3.21.19Human Immunodeficiency Virus [HIV] Disease (B20-B24)",
+    "Human Immunodeficiency Virus [HIV] Disease (B20-B24)"
+  ],
+  [
+    3090,
+    "caption",
+    "Tabel 3.109. Contoh kasus Human Immunodeficiency Virus [HIV] Disease",
+    "Tabel C.105. Contoh kasus Human Immunodeficiency Virus [HIV] Disease"
+  ],
+  [
+    3091,
+    "caption",
+    "Tabel 3.110. Contoh kasus Human Immunodeficiency Virus [HIV] Disease",
+    "Tabel C.106. Contoh kasus Human Immunodeficiency Virus [HIV] Disease"
+  ],
+  [
+    3094,
+    "caption",
+    "Tabel 3.111. Contoh kasus Human Immunodeficiency Virus [HIV] Disease",
+    "Tabel C.107. Contoh kasus Human Immunodeficiency Virus [HIV] Disease"
+  ],
+  [
+    3096,
+    "caption",
+    "Tabel 3.112. Contoh kasus Human Immunodeficiency Virus [HIV] Disease",
+    "Tabel C.108. Contoh kasus Human Immunodeficiency Virus [HIV] Disease"
+  ],
+  [
+    3100,
+    "heading",
+    "3.21.20Aspergillosis (B44.-)",
+    "Aspergillosis (B44.-)"
+  ],
+  [
+    3104,
+    "heading",
+    "3.21.21Malaria (B50-B54)",
+    "Malaria (B50-B54)"
+  ],
+  [
+    3107,
+    "heading",
+    "3.21.22Toxoplasmosis (B58.-)",
+    "Toxoplasmosis (B58.-)"
+  ],
+  [
+    3111,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 28",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 28"
+  ],
+  [
+    3129,
+    "heading",
+    "3.22MDC 29 PENYAKIT DAN GANGGUAN MENTAL",
+    "MDC 29 PENYAKIT DAN GANGGUAN MENTAL"
+  ],
+  [
+    3130,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 29",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 29"
+  ],
+  [
+    3131,
+    "heading",
+    "3.22.1Dementia (F00-F03)",
+    "Dementia (F00-F03)"
+  ],
+  [
+    3133,
+    "caption",
+    "Tabel 3.113. Contoh kasus Dementia in Alzheimer’s Disease",
+    "Tabel C.109. Contoh kasus Dementia in Alzheimer’s Disease"
+  ],
+  [
+    3134,
+    "heading",
+    "3.22.2Delirium, Not Induced by Alcohol and Other Psychoactive Substances (F05)",
+    "Delirium, Not Induced by Alcohol and Other Psychoactive Substances (F05)"
+  ],
+  [
+    3136,
+    "caption",
+    "Tabel 3.114. Contoh kasus Delirium, Not Induced by Alcohol and Other Psychoactive Substances",
+    "Tabel C.110. Contoh kasus Delirium, Not Induced by Alcohol and Other Psychoactive Substances"
+  ],
+  [
+    3137,
+    "heading",
+    "3.22.3Other Mental Disorders due to Brain Damage and Dysfunction and to Physical Disease (F06.-)",
+    "Other Mental Disorders due to Brain Damage and Dysfunction and to Physical Disease (F06.-)"
+  ],
+  [
+    3139,
+    "caption",
+    "Tabel 3.115. Contoh kasus Other Mental Disorders due to Brain Damage and Dysfunction and to Physical Disease",
+    "Tabel C.111. Contoh kasus Other Mental Disorders due to Brain Damage and Dysfunction and to Physical Disease"
+  ],
+  [
+    3140,
+    "heading",
+    "3.22.4Skizofrenia (F20.-)",
+    "Skizofrenia (F20.-)"
+  ],
+  [
+    3142,
+    "caption",
+    "Tabel 3.116. Contoh kasus Skizofrenia",
+    "Tabel C.112. Contoh kasus Skizofrenia"
+  ],
+  [
+    3143,
+    "heading",
+    "3.22.5Acute and transient psychotic disorders  (F23.-)",
+    "Acute and transient psychotic disorders  (F23.-)"
+  ],
+  [
+    3145,
+    "caption",
+    "Tabel 3.117. Contoh kasus Acute and transient psychotic disorders",
+    "Tabel C.113. Contoh kasus Acute and transient psychotic disorders"
+  ],
+  [
+    3146,
+    "heading",
+    "3.22.6  Schizoaffective disorders (F25.-) ",
+    "Schizoaffective disorders (F25.-) "
+  ],
+  [
+    3148,
+    "caption",
+    "Tabel 3.118. Contoh kasus Schizoaffective disorders",
+    "Tabel C.114. Contoh kasus Schizoaffective disorders"
+  ],
+  [
+    3149,
+    "heading",
+    "3.22.7Bipolar affective disorder  (F31-)",
+    "Bipolar affective disorder  (F31-)"
+  ],
+  [
+    3151,
+    "caption",
+    "Tabel 3.119. Contoh kasus Bipolar affective disorder",
+    "Tabel C.115. Contoh kasus Bipolar affective disorder"
+  ],
+  [
+    3152,
+    "heading",
+    "3.22.8Somatoform Disorders (F45-)",
+    "Somatoform Disorders (F45-)"
+  ],
+  [
+    3154,
+    "caption",
+    "Tabel 3.120. Contoh kasus Somatoform Disorders",
+    "Tabel C.116. Contoh kasus Somatoform Disorders"
+  ],
+  [
+    3155,
+    "heading",
+    "3.22.9Eating Disorders (F50.-)",
+    "Eating Disorders (F50.-)"
+  ],
+  [
+    3161,
+    "heading",
+    "3.22.10 Sleep Disorders (G47.-, F51.-)",
+    "Sleep Disorders (G47.-, F51.-)"
+  ],
+  [
+    3164,
+    "heading",
+    "3.22.11Mental and Behavioural Disorders Associated with The Puerpeium, Not Elsewhere Classified (F53.-)",
+    "Mental and Behavioural Disorders Associated with The Puerpeium, Not Elsewhere Classified (F53.-)"
+  ],
+  [
+    3166,
+    "heading",
+    "3.22.12Specific Personality Disorders (F60.-)",
+    "Specific Personality Disorders (F60.-)"
+  ],
+  [
+    3168,
+    "caption",
+    "Tabel 3.121. Contoh kasus Specific Personality Disorders",
+    "Tabel C.117. Contoh kasus Specific Personality Disorders"
+  ],
+  [
+    3169,
+    "heading",
+    "3.22.13Enduring Personality Changes, Not Attributable to Brain Damage and Disease (F62.-)",
+    "Enduring Personality Changes, Not Attributable to Brain Damage and Disease (F62.-)"
+  ],
+  [
+    3171,
+    "heading",
+    "3.22.14Retardasi Mental (F70-F79)",
+    "Retardasi Mental (F70-F79)"
+  ],
+  [
+    3178,
+    "heading",
+    "3.22.16Other behavioural and emotional disorders with onset usually occurring in childhood and adolescence (F98.-)",
+    "Other behavioural and emotional disorders with onset usually occurring in childhood and adolescence (F98.-)"
+  ],
+  [
+    3180,
+    "caption",
+    "Tabel 3.122. Contoh kasus Other behavioural and emotional disorders with onset usually occurring in childhood and adolescence",
+    "Tabel C.118. Contoh kasus Other behavioural and emotional disorders with onset usually occurring in childhood and adolescence"
+  ],
+  [
+    3181,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 29",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 29"
+  ],
+  [
+    3187,
+    "heading",
+    "3.23MDC 30 FAKTOR YANG MEMPENGARUHI STATUS KESEHATAN",
+    "MDC 30 FAKTOR YANG MEMPENGARUHI STATUS KESEHATAN"
+  ],
+  [
+    3188,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 30",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 30"
+  ],
+  [
+    3189,
+    "heading",
+    "3.23.1Encounter For General Medical Examination (Z00-Z01)",
+    "Encounter For General Medical Examination (Z00-Z01)"
+  ],
+  [
+    3211,
+    "heading",
+    "3.23.2Examination And Encounter For Administrative Purposes (Z02)",
+    "Examination And Encounter For Administrative Purposes (Z02)"
+  ],
+  [
+    3223,
+    "heading",
+    "3.23.3Medical Observation And Evaluation For Suspected Diseases And Conditions (Z03)",
+    "Medical Observation And Evaluation For Suspected Diseases And Conditions (Z03)"
+  ],
+  [
+    3226,
+    "heading",
+    "3.23.4Follow-Up Examination After Treatment (Z08-Z09)",
+    "Follow-Up Examination After Treatment (Z08-Z09)"
+  ],
+  [
+    3229,
+    "caption",
+    "Tabel 3.123. Contoh kasus Follow-Up Examination After Treatment",
+    "Tabel C.119. Contoh kasus Follow-Up Examination After Treatment"
+  ],
+  [
+    3231,
+    "caption",
+    "Tabel 3.124. Contoh kasus Follow-Up Examination After Treatment",
+    "Tabel C.120. Contoh kasus Follow-Up Examination After Treatment"
+  ],
+  [
+    3232,
+    "heading",
+    "3.23.5Contact With And Exposure To Communicable Diseases (Z20.-)",
+    "Contact With And Exposure To Communicable Diseases (Z20.-)"
+  ],
+  [
+    3237,
+    "heading",
+    "3.23.6Asymptomatic Human Immunodeficiency Virus [HIV] Infection Status (Z21)",
+    "Asymptomatic Human Immunodeficiency Virus [HIV] Infection Status (Z21)"
+  ],
+  [
+    3239,
+    "heading",
+    "3.23.7Contraceptive Management (Z30.-)",
+    "Contraceptive Management (Z30.-)"
+  ],
+  [
+    3254,
+    "heading",
+    "3.23.8Supervision Of Normal Pregnancy (Z34-Z35)",
+    "Supervision Of Normal Pregnancy (Z34-Z35)"
+  ],
+  [
+    3259,
+    "heading",
+    "3.23.9Outcome Of Delivery (Z37.-)",
+    "Outcome Of Delivery (Z37.-)"
+  ],
+  [
+    3261,
+    "heading",
+    "3.23.10Liveborn Infants According To Place Of Birth (Z38.-)",
+    "Liveborn Infants According To Place Of Birth (Z38.-)"
+  ],
+  [
+    3263,
+    "heading",
+    "3.23.11Postpartum Care And Examination (Z39.-)",
+    "Postpartum Care And Examination (Z39.-)"
+  ],
+  [
+    3266,
+    "heading",
+    "3.23.12Other Surgical Follow-Up Care (Z42-Z48)",
+    "Other Surgical Follow-Up Care (Z42-Z48)"
+  ],
+  [
+    3276,
+    "heading",
+    "3.23.13Care Involving Use Of Rehabilitation Procedures (Z50.-)",
+    "Care Involving Use Of Rehabilitation Procedures (Z50.-)"
+  ],
+  [
+    3278,
+    "heading",
+    "3.23.14Other medical care (Z51.-)",
+    "Other medical care (Z51.-)"
+  ],
+  [
+    3284,
+    "heading",
+    "3.23.15 Donors Of Organs And Tissues (Z52.-)",
+    "Donors Of Organs And Tissues (Z52.-)"
+  ],
+  [
+    3286,
+    "heading",
+    "3.23.16Persons Encountering Health Services For Specific Procedures, Not Carried Out (Z53.-)",
+    "Persons Encountering Health Services For Specific Procedures, Not Carried Out (Z53.-)"
+  ],
+  [
+    3290,
+    "caption",
+    "Tabel 3.125. Contoh kasus Persons Encountering Health Services For Specific Procedures, Not Carried Out",
+    "Tabel C.121. Contoh kasus Persons Encountering Health Services For Specific Procedures, Not Carried Out"
+  ],
+  [
+    3292,
+    "caption",
+    "Tabel 3.126. Contoh kasus Persons Encountering Health Services For Specific Procedures, Not Carried Out",
+    "Tabel C.122. Contoh kasus Persons Encountering Health Services For Specific Procedures, Not Carried Out"
+  ],
+  [
+    3293,
+    "heading",
+    "3.23.17Problems related to physical environment (Z58)",
+    "Problems related to physical environment (Z58)"
+  ],
+  [
+    3295,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 30",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 30"
+  ],
+  [
+    3322,
+    "heading",
+    "3.24MDC 31 MULTIPLE SIGNIFICANT TRAUMA",
+    "MDC 31 MULTIPLE SIGNIFICANT TRAUMA"
+  ],
+  [
+    3323,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 31",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 31"
+  ],
+  [
+    3413,
+    "caption",
+    "Tabel 3.127. Contoh kasus Penjelasan Khusus Kode ICD dalam Kategori MDC 31",
+    "Tabel C.123. Contoh kasus Penjelasan Khusus Kode ICD dalam Kategori MDC 31"
+  ],
+  [
+    3415,
+    "caption",
+    "Tabel 3.128. Contoh kasus Penjelasan Khusus Kode ICD dalam Kategori MDC 31",
+    "Tabel C.124. Contoh kasus Penjelasan Khusus Kode ICD dalam Kategori MDC 31"
+  ],
+  [
+    3418,
+    "caption",
+    "Tabel 3.129. Contoh kasus Penjelasan Khusus Kode ICD dalam Kategori MDC 31",
+    "Tabel C.125. Contoh kasus Penjelasan Khusus Kode ICD dalam Kategori MDC 31"
+  ],
+  [
+    3424,
+    "caption",
+    "Tabel 3.130. Contoh kasus Penjelasan Khusus Kode ICD dalam Kategori MDC 31",
+    "Tabel C.126. Contoh kasus Penjelasan Khusus Kode ICD dalam Kategori MDC 31"
+  ],
+  [
+    3426,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 31",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 31"
+  ],
+  [
+    3438,
+    "heading",
+    "3.25MDC 32 LUKA BAKAR",
+    "MDC 32 LUKA BAKAR"
+  ],
+  [
+    3439,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 32",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 32"
+  ],
+  [
+    3440,
+    "heading",
+    "3.25.1Burns And Corrosions Of External Body Surface, Specified By Site (T20-T25)",
+    "Burns And Corrosions Of External Body Surface, Specified By Site (T20-T25)"
+  ],
+  [
+    3442,
+    "caption",
+    "Tabel 3.131. Contoh kasus Burns And Corrosions Of External Body Surface, Specified By Site ",
+    "Tabel C.127. Contoh kasus Burns And Corrosions Of External Body Surface, Specified By Site "
+  ],
+  [
+    3443,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 32",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 32"
+  ],
+  [
+    3449,
+    "heading",
+    "3.26MDC 33 INJURIES, POISONING & CERTAIN OTHER CONSEQUENCES OF EXTERNAL CAUSES",
+    "MDC 33 INJURIES, POISONING & CERTAIN OTHER CONSEQUENCES OF EXTERNAL CAUSES"
+  ],
+  [
+    3450,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 33",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 33"
+  ],
+  [
+    3452,
+    "heading",
+    "3.26.1 Poisoning By Drugs, Medicaments And Biological Substances (T36-T50)",
+    "Poisoning By Drugs, Medicaments And Biological Substances (T36-T50)"
+  ],
+  [
+    3455,
+    "caption",
+    "Tabel 3.132. Contoh kasus Poisoning By Drugs, Medicaments And Biological Substances",
+    "Tabel C.128. Contoh kasus Poisoning By Drugs, Medicaments And Biological Substances"
+  ],
+  [
+    3456,
+    "heading",
+    "3.26.2Post-Traumatic Wound Infection, Not Elsewhere Classified (T79.3)",
+    "Post-Traumatic Wound Infection, Not Elsewhere Classified (T79.3)"
+  ],
+  [
+    3458,
+    "heading",
+    "3.26.3Compartment Syndrome (T79.6, M62.2)",
+    "Compartment Syndrome (T79.6, M62.2)"
+  ],
+  [
+    3461,
+    "heading",
+    "3.26.4Infection following a procedure not elsewhere classified (T79.6) & Infection and inflammatory reaction due to other internal prosthetic devices, implants and grafts, not elsewhere classified (T85.7)",
+    "Infection following a procedure not elsewhere classified (T79.6) & Infection and inflammatory reaction due to other internal prosthetic devices, implants and grafts, not elsewhere classified (T85.7)"
+  ],
+  [
+    3463,
+    "heading",
+    "3.26.5Mechanical Complication of Internal Fixation Device of Bones (T84.1 & T84.2 )",
+    "Mechanical Complication of Internal Fixation Device of Bones (T84.1 & T84.2 )"
+  ],
+  [
+    3465,
+    "caption",
+    "Tabel 3.133. Contoh kasus Mechanical Complication of Internal Fixation Device of Bones",
+    "Tabel C.129. Contoh kasus Mechanical Complication of Internal Fixation Device of Bones"
+  ],
+  [
+    3466,
+    "heading",
+    "3.26.6Infection and Inflammatory Reaction due to Internal Fixation Device [Any Site] (T84.6)",
+    "Infection and Inflammatory Reaction due to Internal Fixation Device [Any Site] (T84.6)"
+  ],
+  [
+    3469,
+    "heading",
+    "3.26.7Complications of other internal prosthetic devices, implants and grafts (T85,-)",
+    "Complications of other internal prosthetic devices, implants and grafts (T85,-)"
+  ],
+  [
+    3472,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 33",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 33"
+  ],
+  [
+    3476,
+    "heading",
+    "3.27MDC 34 NEOPLASMA",
+    "MDC 34 NEOPLASMA"
+  ],
+  [
+    3478,
+    "heading",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 34",
+    "PENJELASAN KHUSUS KODE ICD DALAM KATEGORI MDC 34"
+  ],
+  [
+    3479,
+    "heading",
+    "3.27.1Prosedur Terapi Kanker (Kemoterapi, Radioterapi)",
+    "Prosedur Terapi Kanker (Kemoterapi, Radioterapi)"
+  ],
+  [
+    3486,
+    "caption",
+    "Tabel 3.134. Contoh kasus Prosedur Terapi Kanker",
+    "Tabel C.130. Contoh kasus Prosedur Terapi Kanker"
+  ],
+  [
+    3488,
+    "caption",
+    "Tabel 3.135. Contoh kasus Prosedur Terapi Kanker",
+    "Tabel C.131. Contoh kasus Prosedur Terapi Kanker"
+  ],
+  [
+    3490,
+    "caption",
+    "Tabel 3.136. Contoh kasus Prosedur Terapi Kanker",
+    "Tabel C.132. Contoh kasus Prosedur Terapi Kanker"
+  ],
+  [
+    3491,
+    "heading",
+    "3.27.2Komplikasi Terkait dengan Keganasan",
+    "Komplikasi Terkait dengan Keganasan"
+  ],
+  [
+    3493,
+    "caption",
+    "Tabel 3.137. Contoh kasus Komplikasi Terkait dengan Keganasan",
+    "Tabel C.133. Contoh kasus Komplikasi Terkait dengan Keganasan"
+  ],
+  [
+    3495,
+    "heading",
+    "3.27.3Kode Morfologi Neoplasma",
+    "Kode Morfologi Neoplasma"
+  ],
+  [
+    3497,
+    "caption",
+    "Tabel 3.138. Kode Morfologi Neoplasma",
+    "Tabel C.134. Kode Morfologi Neoplasma"
+  ],
+  [
+    3499,
+    "heading",
+    " 3.27.4Periampullary Carcinoma (C17.0, C24.0, C24.1, C25.0)",
+    "Periampullary Carcinoma (C17.0, C24.0, C24.1, C25.0)"
+  ],
+  [
+    3504,
+    "heading",
+    "3.27.5Liver Carcinoma (C22.-)",
+    "Liver Carcinoma (C22.-)"
+  ],
+  [
+    3509,
+    "heading",
+    "3.27.6Ewing’s Sarcoma (C40-C41)",
+    "Ewing’s Sarcoma (C40-C41)"
+  ],
+  [
+    3515,
+    "heading",
+    "3.27.7Carcinoma Mammae (C50.-)",
+    "Carcinoma Mammae (C50.-)"
+  ],
+  [
+    3518,
+    "heading",
+    "3.27.8Carcinoma of cervix (C53.-)",
+    "Carcinoma of cervix (C53.-)"
+  ],
+  [
+    3523,
+    "heading",
+    "3.27.9Malignant neoplasm of corpus uteri (C54-C55)",
+    "Malignant neoplasm of corpus uteri (C54-C55)"
+  ],
+  [
+    3531,
+    "heading",
+    "3.27.10Neoplasm of ovary (C56, D27, D39.1)",
+    "Neoplasm of ovary (C56, D27, D39.1)"
+  ],
+  [
+    3536,
+    "heading",
+    "3.27.11 Primary and Secondary Neoplasm Coding",
+    "Primary and Secondary Neoplasm Coding"
+  ],
+  [
+    3539,
+    "heading",
+    "3.27.12Benign neoplasm of bone and articular cartilage (D16)",
+    "Benign neoplasm of bone and articular cartilage (D16)"
+  ],
+  [
+    3542,
+    "heading",
+    "3.27.13Leiomyoma of Uterus (D25.-)",
+    "Leiomyoma of Uterus (D25.-)"
+  ],
+  [
+    3545,
+    "heading",
+    "3.27.14Craniopharyngioma (D35.3, D44.4)",
+    "Craniopharyngioma (D35.3, D44.4)"
+  ],
+  [
+    3548,
+    "heading",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 34",
+    "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 34"
+  ],
+  [
+    3568,
+    "heading",
+    "3.28MDC 35 REHABILITASI MEDIK",
+    "MDC 35 REHABILITASI MEDIK"
+  ],
+  [
+    3570,
+    "caption",
+    "Gambar 3.5. Alur Rehabilitasi Medik",
+    "Gambar C.6. Alur Rehabilitasi Medik"
+  ],
+  [
+    3577,
+    "caption",
+    "Tabel 3.139. Contoh kasus Terapi Rehabilitasi",
+    "Tabel C.135. Contoh kasus Terapi Rehabilitasi"
+  ],
+  [
+    3578,
+    "heading",
+    "3.29MDC 36 UNGROUPABLE ATAU UNRELATED",
+    "MDC 36 UNGROUPABLE ATAU UNRELATED"
+  ],
+  [
+    3581,
+    "heading",
+    "3.29.1Error Codes",
+    "Error Codes"
+  ],
+  [
+    3582,
+    "heading",
+    "3611199Primary Diagnosis code is not valid for Female or Male",
+    "3611199Primary Diagnosis code is not valid for Female or Male"
+  ],
+  [
+    3586,
+    "caption",
+    "Gambar 3.6. Contoh error codes pada Primary Diagnosis code is not valid for Male",
+    "Gambar C.7. Contoh error codes pada Primary Diagnosis code is not valid for Male"
+  ],
+  [
+    3590,
+    "caption",
+    "Gambar 3.7. Contoh error codes pada Primary Diagnosis code is not valid for Female",
+    "Gambar C.8. Contoh error codes pada Primary Diagnosis code is not valid for Female"
+  ],
+  [
+    3595,
+    "heading",
+    "3611299Diagnosis code is not valid for patient's age",
+    "3611299Diagnosis code is not valid for patient's age"
+  ],
+  [
+    3599,
+    "caption",
+    "Gambar 3.8. Contoh error codes pada Diagnosis code is not valid for patient's age",
+    "Gambar C.9. Contoh error codes pada Diagnosis code is not valid for patient's age"
+  ],
+  [
+    3603,
+    "heading",
+    "3600019Unrelated OR Procedure",
+    "3600019Unrelated OR Procedure"
+  ],
+  [
+    3609,
+    "caption",
+    "Gambar 3.9. Contoh error codes pada Unrelated OR Procedure",
+    "Gambar C.10. Contoh error codes pada Unrelated OR Procedure"
+  ],
+  [
+    3613,
+    "caption",
+    "Gambar 3.10. Contoh Unrelated OR Procedure yang benar",
+    "Gambar C.11. Contoh Unrelated OR Procedure yang benar"
+  ],
+  [
+    3614,
+    "heading",
+    "3614129 Error: Respiratory Drug Resistance TB w/o Drug Type",
+    "3614129 Error: Respiratory Drug Resistance TB w/o Drug Type"
+  ],
+  [
+    3627,
+    "caption",
+    "Gambar 3.11. Contoh error codes pada Error: Respiratory Drug Resistance TB w/o Drug Type",
+    "Gambar C.12. Contoh error codes pada Error: Respiratory Drug Resistance TB w/o Drug Type"
+  ],
+  [
+    3633,
+    "caption",
+    "Gambar 3.12. Contoh Error: Respiratory Drug Resistance TB w/o Drug Type yang benar",
+    "Gambar C.13. Contoh Error: Respiratory Drug Resistance TB w/o Drug Type yang benar"
+  ],
+  [
+    3634,
+    "heading",
+    "3614229Error: Respiratory Drug Resistance TB w/o Episode Type",
+    "3614229Error: Respiratory Drug Resistance TB w/o Episode Type"
+  ],
+  [
+    3645,
+    "caption",
+    "Gambar 3.13. Contoh error codes pada Error: Respiratory Drug Resistance TB w/o Episode Type",
+    "Gambar C.14. Contoh error codes pada Error: Respiratory Drug Resistance TB w/o Episode Type"
+  ],
+  [
+    3649,
+    "caption",
+    "Gambar 3.14. Contoh Error: Respiratory Drug Resistance TB w/o Episode Type yang benar",
+    "Gambar C.15. Contoh Error: Respiratory Drug Resistance TB w/o Episode Type yang benar"
+  ],
+  [
+    3650,
+    "heading",
+    "3615029 Error: Missing Code Also: Angiocardiography Proc. ",
+    "3615029 Error: Missing Code Also: Angiocardiography Proc. "
+  ],
+  [
+    3661,
+    "heading",
+    "3615129 Error: Missing Code Also: Catheterization Proc.",
+    "3615129 Error: Missing Code Also: Catheterization Proc."
+  ],
+  [
+    3667,
+    "heading",
+    "3615229 Error: Stent Insertion wo/ Number of Stent or Number of Vessels",
+    "3615229 Error: Stent Insertion wo/ Number of Stent or Number of Vessels"
+  ],
+  [
+    3683,
+    "caption",
+    "Gambar 3.15. Contoh error codes pada Error: Stent Insertion wo/ Number of Stent or Number of Vessels",
+    "Gambar C.16. Contoh error codes pada Error: Stent Insertion wo/ Number of Stent or Number of Vessels"
+  ],
+  [
+    3688,
+    "caption",
+    "Gambar 3.16. Contoh Error: Stent Insertion wo/ Number of Stent or Number of Vessels yang benar",
+    "Gambar C.17. Contoh Error: Stent Insertion wo/ Number of Stent or Number of Vessels yang benar"
+  ],
+  [
+    3691,
+    "caption",
+    "Gambar 3.17. Contoh Error: Stent Insertion wo/ Number of Stent or Number of Vessels yang benar",
+    "Gambar C.18. Contoh Error: Stent Insertion wo/ Number of Stent or Number of Vessels yang benar"
+  ],
+  [
+    3692,
+    "heading",
+    "3615329 Error: Number of Stent wo/ Insertion Proc.",
+    "3615329 Error: Number of Stent wo/ Insertion Proc."
+  ],
+  [
+    3697,
+    "heading",
+    "3615429 Error: Angioplasty wo/ Number of Vessels",
+    "3615429 Error: Angioplasty wo/ Number of Vessels"
+  ],
+  [
+    3704,
+    "heading",
+    "3615529Error: Missing code also (00.56 or 00.57)",
+    "3615529Error: Missing code also (00.56 or 00.57)"
+  ],
+  [
+    3709,
+    "heading",
+    "3634819Error blood transfusion for neoplasm without anemia",
+    "3634819Error blood transfusion for neoplasm without anemia"
+  ],
+  [
+    3714,
+    "caption",
+    "Gambar 3.18. Contoh error codes pada Error blood transfusion for neoplasm without anemia",
+    "Gambar C.19. Contoh error codes pada Error blood transfusion for neoplasm without anemia"
+  ],
+  [
+    3719,
+    "caption",
+    "Gambar 3.19. Contoh Error blood transfusion for neoplasm without anemia yang benar",
+    "Gambar C.20. Contoh Error blood transfusion for neoplasm without anemia yang benar"
+  ],
+  [
+    3720,
+    "heading",
+    "36001x9Ungroupable: Radiotherapy Session w/o Radiotherapy Proc",
+    "36001x9Ungroupable: Radiotherapy Session w/o Radiotherapy Proc"
+  ],
+  [
+    3735,
+    "caption",
+    "Gambar 3.20. Contoh error codes pada Ungroupable: Radiotherapy Session w/o Radiotherapy Proc",
+    "Gambar C.21. Contoh error codes pada Ungroupable: Radiotherapy Session w/o Radiotherapy Proc"
+  ],
+  [
+    3739,
+    "caption",
+    "Gambar 3.21. Contoh Ungroupable: Radiotherapy Session w/o Radiotherapy Proc yang benar",
+    "Gambar C.22. Contoh Ungroupable: Radiotherapy Session w/o Radiotherapy Proc yang benar"
+  ],
+  [
+    3741,
+    "heading",
+    "36002x9Ungroupable: Radiotherapy w/o Z51.0",
+    "36002x9Ungroupable: Radiotherapy w/o Z51.0"
+  ],
+  [
+    3746,
+    "caption",
+    "Gambar 3.22. Contoh error codes pada Ungroupable: Radiotherapy w/o Z51.0",
+    "Gambar C.23. Contoh error codes pada Ungroupable: Radiotherapy w/o Z51.0"
+  ],
+  [
+    3748,
+    "heading",
+    "36003x9Ungroupable: Chemotherapy Proc. without Z51.1",
+    "36003x9Ungroupable: Chemotherapy Proc. without Z51.1"
+  ],
+  [
+    3753,
+    "caption",
+    "Gambar 3.23. Contoh error codes pada Ungroupable: Chemotherapy Proc. without Z51.1",
+    "Gambar C.24. Contoh error codes pada Ungroupable: Chemotherapy Proc. without Z51.1"
+  ],
+  [
+    3758,
+    "caption",
+    "Gambar 3.24. Contoh Ungroupable: Chemotherapy Proc. without Z51.1 yang benar",
+    "Gambar C.25. Contoh Ungroupable: Chemotherapy Proc. without Z51.1 yang benar"
+  ],
+  [
+    3759,
+    "heading",
+    "3635129Ungroupable: Rehabilitation without Procedures",
+    "3635129Ungroupable: Rehabilitation without Procedures"
+  ],
+  [
+    3856,
+    "caption",
+    "Gambar 3.25. Contoh error codes pada Ungroupable: Rehabilitation without Procedures",
+    "Gambar C.26. Contoh error codes pada Ungroupable: Rehabilitation without Procedures"
+  ],
+  [
+    3860,
+    "caption",
+    "Gambar 3.25. Contoh Ungroupable: Rehabilitation without Procedures yang benar",
+    "Gambar C.27. Contoh Ungroupable: Rehabilitation without Procedures yang benar"
+  ],
+  [
+    3862,
+    "heading",
+    "3.30MDC 90 PROSEDUR DIAGNOSIS",
+    "MDC 90 PROSEDUR DIAGNOSIS"
+  ]
+]

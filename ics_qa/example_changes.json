@@ -1,0 +1,1406 @@
+[
+  {
+    "type": "table",
+    "section": "Ketentuan Umum Pengkodean (Coding) iDRG",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "body",
+    "topic": "Elemen-elemen penting diagnosis utama",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "table",
+    "section": "Ketentuan Umum Pengkodean (Coding) iDRG",
+    "old": "Contoh 2",
+    "new": "Contoh 2"
+  },
+  {
+    "type": "body",
+    "topic": "Elemen-elemen penting diagnosis utama",
+    "old": "Contoh 2: ",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "table",
+    "section": "Ketentuan Umum Pengkodean (Coding) iDRG",
+    "old": "Contoh 3",
+    "new": "Contoh 3"
+  },
+  {
+    "type": "table",
+    "section": "Ketentuan Umum Pengkodean (Coding) iDRG",
+    "old": "Contoh 4",
+    "new": "Contoh 4"
+  },
+  {
+    "type": "table",
+    "section": "Ketentuan Umum Pengkodean (Coding) iDRG",
+    "old": "Contoh 5",
+    "new": "Contoh 5"
+  },
+  {
+    "type": "table",
+    "section": "Ketentuan Umum Pengkodean (Coding) iDRG",
+    "old": "Contoh 6",
+    "new": "Contoh 6"
+  },
+  {
+    "type": "body",
+    "topic": "Penyebab Luar (External Cause)",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "table",
+    "section": "Ketentuan Umum Pengkodean (Coding) iDRG",
+    "old": "Contoh 7",
+    "new": "Contoh 7"
+  },
+  {
+    "type": "body",
+    "topic": "Rule MB1",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Rule MB1",
+    "old": "Contoh 2: ",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Rule MB2",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Rule MB2",
+    "old": "Contoh 2: ",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Rule MB2",
+    "old": "Contoh 3: ",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "body",
+    "topic": "Rule MB3",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Rule MB3",
+    "old": "Contoh 2: ",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Rule MB3",
+    "old": "Contoh 3: ",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "body",
+    "topic": "Rule MB4",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Rule MB4",
+    "old": "Contoh 2: ",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Rule MB5",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Rule MB5",
+    "old": "Contoh 2:",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean kondisi dugaan/suspek, gejala, penemuan abnormal, dan situasi tanpa penyakit",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean kondisi dugaan/suspek, gejala, penemuan abnormal, dan situasi tanpa penyakit",
+    "old": "Contoh 2:",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean kondisi dugaan/suspek, gejala, penemuan abnormal, dan situasi tanpa penyakit",
+    "old": "Contoh 3:",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean kondisi multipel",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean kondisi multipel",
+    "old": "Contoh 2:",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean kondisi multipel",
+    "old": "Contoh 3:",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean kategori kombinasi",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean kategori kombinasi",
+    "old": "Contoh 2:",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean kategori kombinasi",
+    "old": "Contoh 3:",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean kategori kombinasi",
+    "old": "Contoh 4:",
+    "new": "Contoh 4: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean sekuele kondisi tertentu",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean sekuele kondisi tertentu",
+    "old": "Contoh 2:",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean sekuele kondisi tertentu",
+    "old": "Contoh 3:",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean sekuele kondisi tertentu",
+    "old": "Contoh 4:",
+    "new": "Contoh 4: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean kondisi-kondisi akut dan kronis",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean kondisi-kondisi akut dan kronis",
+    "old": "Contoh 2:",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean kondisi-kondisi akut dan kronis",
+    "old": "Contoh 3:",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean kondisi pasca-prosedur dan komplikasinya",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean kondisi pasca-prosedur dan komplikasinya",
+    "old": "Contoh 2:",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean kondisi pasca-prosedur dan komplikasinya",
+    "old": "Contoh 3:",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean untuk penyakit Human Immunodeficiency Virus (HIV) (B20-B24)",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean untuk penyakit Human Immunodeficiency Virus (HIV) (B20-B24)",
+    "old": "Contoh 2:",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean untuk penyakit Human Immunodeficiency Virus (HIV) (B20-B24)",
+    "old": "Contoh 3:",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean untuk penyakit Human Immunodeficiency Virus (HIV) (B20-B24)",
+    "old": "Contoh 4:",
+    "new": "Contoh 4: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean Neoplasma",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean Neoplasma",
+    "old": "Contoh 2:",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean Neoplasma",
+    "old": "Contoh 3:",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean diabetes mellitus (E10-E14).",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean diabetes mellitus (E10-E14).",
+    "old": "Contoh 2:",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean diabetes mellitus (E10-E14).",
+    "old": "Contoh 3:",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean diabetes mellitus (E10-E14).",
+    "old": "Contoh 4:",
+    "new": "Contoh 4: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean diabetes mellitus (E10-E14).",
+    "old": "Contoh 5:",
+    "new": "Contoh 5: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean Persalinan (O80-O84).",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean Persalinan (O80-O84).",
+    "old": "Contoh 2:",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean Persalinan (O80-O84).",
+    "old": "Contoh 3:",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean Persalinan (O80-O84).",
+    "old": "Contoh 4:",
+    "new": "Contoh 4: "
+  },
+  {
+    "type": "body",
+    "topic": "Pengodean Persalinan (O80-O84).",
+    "old": "Contoh 5:",
+    "new": "Contoh 5: "
+  },
+  {
+    "type": "body",
+    "topic": "Kata “See, See also” (lihat, lihat juga);",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Kata “See, See also” (lihat, lihat juga);",
+    "old": "Contoh 2: ",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Kata “omit code” (tidak dikoding);",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Kata “omit code” (tidak dikoding);",
+    "old": "Contoh 2: ",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Kata “omit code” (tidak dikoding);",
+    "old": "Contoh 3:",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "body",
+    "topic": "Kata “code also” (dikoding juga);",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Kata “exclude” (tidak termasuk)",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Kata “includes” (termasuk).",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Kode Tindakan / Prosedur Operasi",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Prinsip Pengodean Diagnosis",
+    "old": "Contoh Kasus",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Penentuan Kode Berdasarkan Dokumentasi",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Bukti Pendukung yang sah saat menentukan kode diagnosis:",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Penentuan aturan etiologi & manifestasi",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Penentuan aturan etiologi & manifestasi",
+    "old": "Contoh 2:",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Penentuan aturan etiologi & manifestasi",
+    "old": "Contoh 3:",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "body",
+    "topic": "Penentuan aturan etiologi & manifestasi",
+    "old": "Contoh 4:",
+    "new": "Contoh 4: "
+  },
+  {
+    "type": "body",
+    "topic": "Penentuan aturan etiologi & manifestasi",
+    "old": "Contoh 5:",
+    "new": "Contoh 5: "
+  },
+  {
+    "type": "table",
+    "section": "Tata cara pengkodingan multi speciality consultation dan persiapan operasi",
+    "old": "Contoh",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "table",
+    "section": "Tata cara pengkodingan multi speciality consultation dan persiapan operasi",
+    "old": "Contoh",
+    "new": "Contoh 2"
+  },
+  {
+    "type": "body",
+    "topic": "Sequelae of inflammatory diseases of central nervous system (G09)",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Sequelae of inflammatory diseases of central nervous system (G09)",
+    "old": "Contoh 2:",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Sequelae of inflammatory diseases of central nervous system (G09)",
+    "old": "Contoh 3:",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "body",
+    "topic": "Parkinsonism (G20-G22)",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Parkinsonism (G20-G22)",
+    "old": "Contoh 2:",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Parkinsonism (G20-G22)",
+    "old": "Contoh 3:",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "table",
+    "section": "MDC 11 Sistem Syaraf",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "table",
+    "section": "MDC 11 Sistem Syaraf",
+    "old": "Contoh 2",
+    "new": "Contoh 2"
+  },
+  {
+    "type": "table",
+    "section": "MDC 11 Sistem Syaraf",
+    "old": "Contoh 3",
+    "new": "Contoh 3"
+  },
+  {
+    "type": "table",
+    "section": "MDC 11 Sistem Syaraf",
+    "old": "Contoh 4",
+    "new": "Contoh 4"
+  },
+  {
+    "type": "table",
+    "section": "MDC 11 Sistem Syaraf",
+    "old": "Contoh 5",
+    "new": "Contoh 5"
+  },
+  {
+    "type": "table",
+    "section": "MDC 11 Sistem Syaraf",
+    "old": "Contoh 6",
+    "new": "Contoh 6"
+  },
+  {
+    "type": "body",
+    "topic": "Polyneuropathy (G61-G63)",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Polyneuropathy (G61-G63)",
+    "old": "Contoh 2:",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "table",
+    "section": "MDC 11 Sistem Syaraf",
+    "old": "Contoh 7",
+    "new": "Contoh 7"
+  },
+  {
+    "type": "body",
+    "topic": "Sindrom Paralitik (G81–G83)",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Sindrom Paralitik (G81–G83)",
+    "old": "Contoh 2: ",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Sindrom Paralitik (G81–G83)",
+    "old": "Contoh 3: ",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "table",
+    "section": "MDC 11 Sistem Syaraf",
+    "old": "Contoh 8",
+    "new": "Contoh 8"
+  },
+  {
+    "type": "table",
+    "section": "MDC 11 Sistem Syaraf",
+    "old": "Contoh 9",
+    "new": "Contoh 9"
+  },
+  {
+    "type": "body",
+    "topic": "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 11",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "table",
+    "section": "MDC 12 MATA & ADNEXA",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "table",
+    "section": "MDC 12 MATA & ADNEXA",
+    "old": "Contoh 2",
+    "new": "Contoh 2"
+  },
+  {
+    "type": "table",
+    "section": "MDC 12 MATA & ADNEXA",
+    "old": "Contoh 3",
+    "new": "Contoh 3"
+  },
+  {
+    "type": "table",
+    "section": "MDC 12 MATA & ADNEXA",
+    "old": "Contoh 4",
+    "new": "Contoh 4"
+  },
+  {
+    "type": "table",
+    "section": "MDC 12 MATA & ADNEXA",
+    "old": "Contoh 5",
+    "new": "Contoh 5"
+  },
+  {
+    "type": "table",
+    "section": "MDC 12 MATA & ADNEXA",
+    "old": "Contoh 6",
+    "new": "Contoh 6"
+  },
+  {
+    "type": "table",
+    "section": "MDC 12 MATA & ADNEXA",
+    "old": "Contoh 7",
+    "new": "Contoh 7"
+  },
+  {
+    "type": "table",
+    "section": "MDC 12 MATA & ADNEXA",
+    "old": "Contoh 8",
+    "new": "Contoh 8"
+  },
+  {
+    "type": "table",
+    "section": "MDC 13 TELINGA, MULUT,  TENGGOROKAN",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "table",
+    "section": "MDC 13 TELINGA, MULUT,  TENGGOROKAN",
+    "old": "Contoh 2",
+    "new": "Contoh 2"
+  },
+  {
+    "type": "table",
+    "section": "MDC 13 TELINGA, MULUT,  TENGGOROKAN",
+    "old": "Contoh 3",
+    "new": "Contoh 3"
+  },
+  {
+    "type": "table",
+    "section": "MDC 13 TELINGA, MULUT,  TENGGOROKAN",
+    "old": "Contoh 4",
+    "new": "Contoh 4"
+  },
+  {
+    "type": "table",
+    "section": "MDC 13 TELINGA, MULUT,  TENGGOROKAN",
+    "old": "Contoh 5",
+    "new": "Contoh 5"
+  },
+  {
+    "type": "table",
+    "section": "MDC 13 TELINGA, MULUT,  TENGGOROKAN",
+    "old": "Contoh 6",
+    "new": "Contoh 6"
+  },
+  {
+    "type": "table",
+    "section": "MDC 13 TELINGA, MULUT,  TENGGOROKAN",
+    "old": "Contoh 7",
+    "new": "Contoh 7"
+  },
+  {
+    "type": "table",
+    "section": "MDC 13 TELINGA, MULUT,  TENGGOROKAN",
+    "old": "Contoh 8",
+    "new": "Contoh 8"
+  },
+  {
+    "type": "body",
+    "topic": "Influenza (J09-J11)",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Pneumonia (J12-J18, J69)",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Hypertensive Heart and Renal Disease (I11-I13)",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Hypertensive Heart and Renal Disease (I11-I13)",
+    "old": "Contoh 2: ",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Hypertensive Heart and Renal Disease (I11-I13)",
+    "old": "Contoh 3: ",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "body",
+    "topic": "Hypertensive Heart and Renal Disease (I11-I13)",
+    "old": "Contoh 4: ",
+    "new": "Contoh 4: "
+  },
+  {
+    "type": "body",
+    "topic": "Gastric Varices (I86.4)",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Circulatory Disease Procedures",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Circulatory Disease Procedures",
+    "old": "Contoh 2: ",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Circulatory Disease Procedures",
+    "old": "Contoh 3: ",
+    "new": "Contoh 3: "
+  },
+  {
+    "type": "body",
+    "topic": "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 15",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "table",
+    "section": "MDC 15 JANTUNG DAN PEMBULUH DARAH",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "body",
+    "topic": "Appendicitis (K35-K37)",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "PERHATIAN KHUSUS DALAM PENGINPUTAN iDRG MDC 16",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "table",
+    "section": "MDC 19 KULIT DAN SUBKUTAN",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "table",
+    "section": "MDC 19 KULIT DAN SUBKUTAN",
+    "old": "Contoh 2",
+    "new": "Contoh 2"
+  },
+  {
+    "type": "table",
+    "section": "MDC 19 KULIT DAN SUBKUTAN",
+    "old": "Contoh 3",
+    "new": "Contoh 3"
+  },
+  {
+    "type": "table",
+    "section": "MDC 19 KULIT DAN SUBKUTAN",
+    "old": "Contoh 4",
+    "new": "Contoh 4"
+  },
+  {
+    "type": "table",
+    "section": "MDC 21 DISEASE AND DISORDERS OF THE KIDNEY AND URINARY TRACT",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "table",
+    "section": "MDC 21 DISEASE AND DISORDERS OF THE KIDNEY AND URINARY TRACT",
+    "old": "Contoh 2",
+    "new": "Contoh 2"
+  },
+  {
+    "type": "table",
+    "section": "MDC 21 DISEASE AND DISORDERS OF THE KIDNEY AND URINARY TRACT",
+    "old": "Contoh 3",
+    "new": "Contoh 3"
+  },
+  {
+    "type": "table",
+    "section": "MDC 23 SISTEM REPRODUKSI WANITA",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "table",
+    "section": "MDC 23 SISTEM REPRODUKSI WANITA",
+    "old": "Contoh 2",
+    "new": "Contoh 2"
+  },
+  {
+    "type": "table",
+    "section": "MDC 23 SISTEM REPRODUKSI WANITA",
+    "old": "Contoh 3",
+    "new": "Contoh 3"
+  },
+  {
+    "type": "table",
+    "section": "MDC 23 SISTEM REPRODUKSI WANITA",
+    "old": "Contoh 4",
+    "new": "Contoh 4"
+  },
+  {
+    "type": "table",
+    "section": "MDC 23 SISTEM REPRODUKSI WANITA",
+    "old": "Contoh 5",
+    "new": "Contoh 5"
+  },
+  {
+    "type": "table",
+    "section": "MDC 23 SISTEM REPRODUKSI WANITA",
+    "old": "Contoh 6",
+    "new": "Contoh 6"
+  },
+  {
+    "type": "table",
+    "section": "MDC 23 SISTEM REPRODUKSI WANITA",
+    "old": "Contoh 7",
+    "new": "Contoh 7"
+  },
+  {
+    "type": "table",
+    "section": "MDC 23 SISTEM REPRODUKSI WANITA",
+    "old": "Contoh 8",
+    "new": "Contoh 8"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 2",
+    "new": "Contoh 2"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 3",
+    "new": "Contoh 3"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 4",
+    "new": "Contoh 4"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 5",
+    "new": "Contoh 5"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 6",
+    "new": "Contoh 6"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 7",
+    "new": "Contoh 7"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 8",
+    "new": "Contoh 8"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 9",
+    "new": "Contoh 9"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 10",
+    "new": "Contoh 10"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 11",
+    "new": "Contoh 11"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 12",
+    "new": "Contoh 12"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 13",
+    "new": "Contoh 13"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 14",
+    "new": "Contoh 14"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 15",
+    "new": "Contoh 15"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 16",
+    "new": "Contoh 16"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 17",
+    "new": "Contoh 17"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 18",
+    "new": "Contoh 18"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 19",
+    "new": "Contoh 19"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 20",
+    "new": "Contoh 20"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 21",
+    "new": "Contoh 21"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 22",
+    "new": "Contoh 22"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 23",
+    "new": "Contoh 23"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 24",
+    "new": "Contoh 24"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 25",
+    "new": "Contoh 25"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 26",
+    "new": "Contoh 26"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 27",
+    "new": "Contoh 27"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 28",
+    "new": "Contoh 28"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 29",
+    "new": "Contoh 29"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 30",
+    "new": "Contoh 30"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 31",
+    "new": "Contoh 31"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 32",
+    "new": "Contoh 32"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 33",
+    "new": "Contoh 33"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 34",
+    "new": "Contoh 34"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 35",
+    "new": "Contoh 35"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 36",
+    "new": "Contoh 36"
+  },
+  {
+    "type": "table",
+    "section": "MDC 24 KEHAMILAN, PERSALINAN DAN NIFAS",
+    "old": "Contoh 37",
+    "new": "Contoh 37"
+  },
+  {
+    "type": "table",
+    "section": "MDC 25 PERINATOLOGI",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "table",
+    "section": "MDC 25 PERINATOLOGI",
+    "old": "Contoh 2",
+    "new": "Contoh 2"
+  },
+  {
+    "type": "table",
+    "section": "MDC 25 PERINATOLOGI",
+    "old": "Contoh 3",
+    "new": "Contoh 3"
+  },
+  {
+    "type": "table",
+    "section": "MDC 25 PERINATOLOGI",
+    "old": "Contoh 4",
+    "new": "Contoh 4"
+  },
+  {
+    "type": "table",
+    "section": "MDC 25 PERINATOLOGI",
+    "old": "Contoh 5",
+    "new": "Contoh 5"
+  },
+  {
+    "type": "table",
+    "section": "MDC 25 PERINATOLOGI",
+    "old": "Contoh 6",
+    "new": "Contoh 6"
+  },
+  {
+    "type": "table",
+    "section": "MDC 25 PERINATOLOGI",
+    "old": "Contoh 7",
+    "new": "Contoh 7"
+  },
+  {
+    "type": "table",
+    "section": "MDC 26 PENYAKIT PADA DARAH DAN ORGAN PEMBENTUK DARAH",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "table",
+    "section": "MDC 26 PENYAKIT PADA DARAH DAN ORGAN PEMBENTUK DARAH",
+    "old": "Contoh 2",
+    "new": "Contoh 2"
+  },
+  {
+    "type": "table",
+    "section": "MDC 26 PENYAKIT PADA DARAH DAN ORGAN PEMBENTUK DARAH",
+    "old": "Contoh 3",
+    "new": "Contoh 3"
+  },
+  {
+    "type": "table",
+    "section": "MDC 26 PENYAKIT PADA DARAH DAN ORGAN PEMBENTUK DARAH",
+    "old": "Contoh 4",
+    "new": "Contoh 4"
+  },
+  {
+    "type": "table",
+    "section": "MDC 26 PENYAKIT PADA DARAH DAN ORGAN PEMBENTUK DARAH",
+    "old": "Contoh 5",
+    "new": "Contoh 5"
+  },
+  {
+    "type": "table",
+    "section": "MDC 26 PENYAKIT PADA DARAH DAN ORGAN PEMBENTUK DARAH",
+    "old": "Contoh 6",
+    "new": "Contoh 6"
+  },
+  {
+    "type": "table",
+    "section": "MDC 28 PENYAKIT INFEKSI DAN PARASIT",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "table",
+    "section": "MDC 28 PENYAKIT INFEKSI DAN PARASIT",
+    "old": "Contoh 2",
+    "new": "Contoh 2"
+  },
+  {
+    "type": "table",
+    "section": "MDC 28 PENYAKIT INFEKSI DAN PARASIT",
+    "old": "Contoh 3",
+    "new": "Contoh 3"
+  },
+  {
+    "type": "table",
+    "section": "MDC 28 PENYAKIT INFEKSI DAN PARASIT",
+    "old": "Contoh 4",
+    "new": "Contoh 4"
+  },
+  {
+    "type": "table",
+    "section": "MDC 28 PENYAKIT INFEKSI DAN PARASIT",
+    "old": "Contoh 5",
+    "new": "Contoh 5"
+  },
+  {
+    "type": "table",
+    "section": "MDC 28 PENYAKIT INFEKSI DAN PARASIT",
+    "old": "Contoh 6",
+    "new": "Contoh 6"
+  },
+  {
+    "type": "table",
+    "section": "MDC 28 PENYAKIT INFEKSI DAN PARASIT",
+    "old": "Contoh 7",
+    "new": "Contoh 7"
+  },
+  {
+    "type": "table",
+    "section": "MDC 29 PENYAKIT DAN GANGGUAN MENTAL",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "table",
+    "section": "MDC 29 PENYAKIT DAN GANGGUAN MENTAL",
+    "old": "Contoh 2",
+    "new": "Contoh 2"
+  },
+  {
+    "type": "table",
+    "section": "MDC 29 PENYAKIT DAN GANGGUAN MENTAL",
+    "old": "Contoh 3",
+    "new": "Contoh 3"
+  },
+  {
+    "type": "table",
+    "section": "MDC 29 PENYAKIT DAN GANGGUAN MENTAL",
+    "old": "Contoh 4",
+    "new": "Contoh 4"
+  },
+  {
+    "type": "table",
+    "section": "MDC 29 PENYAKIT DAN GANGGUAN MENTAL",
+    "old": "Contoh 5",
+    "new": "Contoh 5"
+  },
+  {
+    "type": "table",
+    "section": "MDC 29 PENYAKIT DAN GANGGUAN MENTAL",
+    "old": "Contoh 6",
+    "new": "Contoh 6"
+  },
+  {
+    "type": "table",
+    "section": "MDC 29 PENYAKIT DAN GANGGUAN MENTAL",
+    "old": "Contoh 7",
+    "new": "Contoh 7"
+  },
+  {
+    "type": "table",
+    "section": "MDC 29 PENYAKIT DAN GANGGUAN MENTAL",
+    "old": "Contoh 8",
+    "new": "Contoh 8"
+  },
+  {
+    "type": "table",
+    "section": "MDC 29 PENYAKIT DAN GANGGUAN MENTAL",
+    "old": "Contoh 9",
+    "new": "Contoh 9"
+  },
+  {
+    "type": "table",
+    "section": "MDC 29 PENYAKIT DAN GANGGUAN MENTAL",
+    "old": "Contoh 10",
+    "new": "Contoh 10"
+  },
+  {
+    "type": "body",
+    "topic": "Encounter For General Medical Examination (Z00-Z01)",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Encounter For General Medical Examination (Z00-Z01)",
+    "old": "Contoh 2:",
+    "new": "Contoh 2: "
+  },
+  {
+    "type": "body",
+    "topic": "Examination And Encounter For Administrative Purposes (Z02)",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "Medical Observation And Evaluation For Suspected Diseases And Conditions (Z03)",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "table",
+    "section": "MDC 30 FAKTOR YANG MEMPENGARUHI STATUS KESEHATAN",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "table",
+    "section": "MDC 30 FAKTOR YANG MEMPENGARUHI STATUS KESEHATAN",
+    "old": "Contoh 2",
+    "new": "Contoh 2"
+  },
+  {
+    "type": "table",
+    "section": "MDC 30 FAKTOR YANG MEMPENGARUHI STATUS KESEHATAN",
+    "old": "Contoh 3",
+    "new": "Contoh 3"
+  },
+  {
+    "type": "table",
+    "section": "MDC 30 FAKTOR YANG MEMPENGARUHI STATUS KESEHATAN",
+    "old": "Contoh 4",
+    "new": "Contoh 4"
+  },
+  {
+    "type": "table",
+    "section": "MDC 31 MULTIPLE SIGNIFICANT TRAUMA",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "table",
+    "section": "MDC 31 MULTIPLE SIGNIFICANT TRAUMA",
+    "old": "Contoh 2",
+    "new": "Contoh 2"
+  },
+  {
+    "type": "table",
+    "section": "MDC 31 MULTIPLE SIGNIFICANT TRAUMA",
+    "old": "Contoh 3",
+    "new": "Contoh 3"
+  },
+  {
+    "type": "table",
+    "section": "MDC 31 MULTIPLE SIGNIFICANT TRAUMA",
+    "old": "Contoh 4",
+    "new": "Contoh 4"
+  },
+  {
+    "type": "table",
+    "section": "MDC 32 LUKA BAKAR",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "table",
+    "section": "MDC 33 INJURIES, POISONING & CERTAIN OTHER CONSEQUENCES OF EXTERNAL CAUSES",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "table",
+    "section": "MDC 33 INJURIES, POISONING & CERTAIN OTHER CONSEQUENCES OF EXTERNAL CAUSES",
+    "old": "Contoh 2",
+    "new": "Contoh 2"
+  },
+  {
+    "type": "table",
+    "section": "MDC 34 NEOPLASMA",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "table",
+    "section": "MDC 34 NEOPLASMA",
+    "old": "Contoh 2",
+    "new": "Contoh 2"
+  },
+  {
+    "type": "table",
+    "section": "MDC 34 NEOPLASMA",
+    "old": "Contoh 3",
+    "new": "Contoh 3"
+  },
+  {
+    "type": "table",
+    "section": "MDC 34 NEOPLASMA",
+    "old": "Contoh 4",
+    "new": "Contoh 4"
+  },
+  {
+    "type": "table",
+    "section": "MDC 35 REHABILITASI MEDIK",
+    "old": "Contoh 1",
+    "new": "Contoh 1"
+  },
+  {
+    "type": "body",
+    "topic": "3611199Primary Diagnosis code is not valid for Female or Male",
+    "old": "Contoh 1: ",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "3611299Diagnosis code is not valid for patient's age",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  },
+  {
+    "type": "body",
+    "topic": "36002x9Ungroupable: Radiotherapy w/o Z51.0",
+    "old": "Contoh 1:",
+    "new": "Contoh 1: "
+  }
+]

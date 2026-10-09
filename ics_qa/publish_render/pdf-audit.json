@@ -1,0 +1,17 @@
+{
+  "pages": 306,
+  "outside_page_text": [],
+  "C_table_captions": 135,
+  "low_content_pages": [
+    {
+      "page": 1,
+      "payload_chars": 0,
+      "first": ""
+    },
+    {
+      "page": 25,
+      "payload_chars": 13,
+      "first": "24 GLOSARIUM"
+    }
+  ]
+}
