@@ -61,26 +61,16 @@ uploaded_excel = st.sidebar.file_uploader("Upload File Usulan (.xlsx)", type=["x
 st.sidebar.header("📁 Upload File Logika (Draw.io PDF)")
 uploaded_pdf = st.sidebar.file_uploader("Upload PDF Draw.io (.pdf)", type=["pdf"])
 
-st.sidebar.header("📁 Upload Rekap DC (Opsional)")
-uploaded_rekap_dc = st.sidebar.file_uploader("Upload Rekap DC Final (.xlsx)", type=["xlsx"])
-
 decision_tree = default_decision_tree
 flat_mapping = default_flat_mapping
 dc_desc_dict = {}
 
-if uploaded_rekap_dc:
-    with st.spinner("Membaca kamus Deskripsi DC..."):
-        try:
-            df_rekap = pd.read_excel(uploaded_rekap_dc)
-            if 'dc update' in df_rekap.columns and 'desc dc update' in df_rekap.columns:
-                for _, r in df_rekap.iterrows():
-                    if pd.notna(r['dc update']):
-                        dc_desc_dict[str(r['dc update']).strip()] = str(r['desc dc update']).strip()
-                st.sidebar.success(f"Berhasil memuat {len(dc_desc_dict)} deskripsi DC.")
-            else:
-                st.sidebar.error("Kolom 'dc update' atau 'desc dc update' tidak ditemukan di file Rekap DC.")
-        except Exception as e:
-            st.sidebar.error(f"Gagal membaca Rekap DC: {e}")
+# Muat otomatis Kamus Deskripsi DC (Tertanam)
+import json
+import os
+if os.path.exists('dc_desc.json'):
+    with open('dc_desc.json', 'r') as f:
+        dc_desc_dict = json.load(f)
 
 if uploaded_pdf:
     with st.spinner("Mengekstrak logika dari PDF Draw.io..."):
@@ -103,7 +93,7 @@ if uploaded_excel:
             sheets = xls.sheet_names
             
             # Buat TABS
-            tab1, tab2 = st.tabs(["📊 Validasi Master Data", "🏥 DRG Simulator"])
+            tab1, tab2 = st.tabs(["📊 Validasi Master Data", "🏥 DRG Batch Simulator (Kombinasi)"])
             
             with tab1:
                 st.subheader("Validasi Sinkronisasi Master Data")
@@ -173,102 +163,85 @@ if uploaded_excel:
                     st.dataframe(res_df, use_container_width=True)
 
             with tab2:
-                st.subheader("Simulasi DRG Berdasarkan Input ICD")
+                st.subheader("Simulasi DRG Batch Berdasarkan Kombinasi Kasus")
                 
-                # 3. BUILD ICD DICTIONARY FROM EXCEL
+                # Build ICD Dictionary from Kamus
                 icd_dict = {}
-                
                 for sheet in sheets:
                     if 'ICD' in sheet.upper():
-                        df = pd.read_excel(xls, sheet_name=sheet)
-                        icd_col = next((c for c in df.columns if str(c).strip().lower() in ['icd_code', 'icd 10 code', 'icd-9-cm code', 'icd-10 code', 'icd-9 code', 'icd 10', 'icd 9']), None)
-                        cluster_col = next((c for c in df.columns if str(c).strip().lower() in ['new cluster code', 'pdc_baru', 'cluster code', 'pdc']), None)
-                        desc_col = next((c for c in df.columns if str(c).strip().lower() in ['deskripsi icd', 'icd-10 description', 'icd-9-cm description', 'deskripsi icd 10']), None)
+                        df_icd = pd.read_excel(xls, sheet_name=sheet)
+                        icd_col = next((c for c in df_icd.columns if str(c).strip().lower() in ['icd_code', 'icd 10 code', 'icd-9-cm code', 'icd-10 code', 'icd-9 code', 'icd 10', 'icd 9']), None)
+                        cluster_col = next((c for c in df_icd.columns if str(c).strip().lower() in ['new cluster code', 'pdc_baru', 'cluster code', 'pdc']), None)
                         
                         if icd_col and cluster_col:
-                            for idx, row in df.iterrows():
+                            for _, row in df_icd.iterrows():
                                 icd = str(row[icd_col]).strip()
                                 cluster = str(row[cluster_col]).strip().upper()
-                                desc = str(row[desc_col]).strip() if desc_col and pd.notna(row[desc_col]) else ""
-                                
                                 if icd != 'nan' and cluster != 'NAN' and icd and cluster:
-                                    icd_dict[icd] = {"cluster": cluster, "desc": desc}
+                                    icd_dict[icd] = cluster
                 
-                icd_list = list(icd_dict.keys())
+                st.markdown("Unggah file Excel yang berisi daftar pasien / kombinasi ICD untuk dievaluasi sekaligus.")
+                st.markdown("**Format Kolom yang Dibutuhkan (Boleh salah satu atau lebih):** `Diagnosa Utama`, `Diagnosa Sekunder 1`, `Diagnosa Sekunder 2`, `Tindakan 1`, `Tindakan 2`, dst.")
                 
-                if not icd_list:
-                    st.error("Gagal mengekstrak kamus ICD dari file Excel.")
-                else:
-                    st.markdown("Silakan pilih kode Diagnosa (ICD 10) dan Tindakan (ICD 9 CM). Sistem akan otomatis mencari PDC/AX-nya dan mengevaluasi DC final.")
-                    
-                    col1, col2 = st.columns(2)
-                    with col1:
-                        st.markdown("**Diagnosa (ICD 10)**")
-                        primary_diag = st.selectbox("Diagnosa Utama:", [""] + icd_list, key="p_diag")
-                        secondary_diags = st.multiselect("Diagnosa Sekunder (Bisa lebih dari 1):", icd_list, key="s_diag")
-                    
-                    with col2:
-                        st.markdown("**Prosedur / Tindakan (ICD 9 CM)**")
-                        procedures = st.multiselect("Tindakan Utama/Sekunder:", icd_list, key="proc")
-                    
-                    if st.button("🚀 Jalankan Grouper Simulator"):
-                        st.markdown("---")
-                        st.subheader("💡 Hasil Analisis Grouper")
+                uploaded_batch = st.file_uploader("Upload File Data Kasus (.xlsx)", type=["xlsx"], key="batch_upload")
+                
+                if uploaded_batch:
+                    with st.spinner("Memproses kombinasi ICD..."):
+                        batch_df = pd.read_excel(uploaded_batch)
+                        batch_results = []
                         
-                        # A. Ekstrak Cluster dari Input
-                        pdc_candidates = []
-                        ax_candidates = []
+                        diag_utama_col = next((c for c in batch_df.columns if 'utama' in str(c).lower() and ('diag' in str(c).lower() or 'icd 10' in str(c).lower())), None)
+                        diag_sekunder_cols = [c for c in batch_df.columns if 'sekunder' in str(c).lower() and ('diag' in str(c).lower() or 'icd 10' in str(c).lower())]
+                        tindakan_cols = [c for c in batch_df.columns if 'tindakan' in str(c).lower() or 'prosedur' in str(c).lower() or 'icd 9' in str(c).lower()]
                         
-                        all_inputs = []
-                        if primary_diag: all_inputs.append(("Diagnosa Utama", primary_diag))
-                        for d in secondary_diags: all_inputs.append(("Diagnosa Sekunder", d))
-                        for p in procedures: all_inputs.append(("Prosedur", p))
-                        
-                        st.markdown("**1. Pemetaan ICD ke Cluster (Kamus):**")
-                        for label, code in all_inputs:
-                            c_info = icd_dict.get(code, {})
-                            cluster = c_info.get('cluster', 'Tidak Ditemukan')
-                            desc = c_info.get('desc', '')
+                        if not diag_utama_col:
+                            st.warning("Tidak ditemukan kolom 'Diagnosa Utama'. Mencoba memproses semua baris...")
                             
-                            st.write(f"- {label} **{code}** ({desc}) ➡️ Masuk ke Cluster: **{cluster}**")
+                        for idx, row in batch_df.iterrows():
+                            pdc_candidates = []
+                            ax_candidates = []
                             
-                            # Identifikasi apakah dia PDC (awalannya P/D) atau AX (contoh 11CX, dll)
-                            if cluster.startswith('P') or cluster.startswith('D'):
-                                pdc_candidates.append(cluster)
-                            elif cluster != 'Tidak Ditemukan':
-                                ax_candidates.append(cluster)
-                        
-                        # B. Tentukan Base PDC
-                        st.markdown("**2. Penentuan Base PDC:**")
-                        final_pdc = None
-                        if pdc_candidates:
-                            # Prioritaskan Prosedur (Surgical Partition - P) daripada Diagnosa (Medical Partition - D)
-                            surgical = [c for c in pdc_candidates if c.startswith('P')]
-                            if surgical:
-                                final_pdc = surgical[0]
-                                st.write(f"✅ Sistem mendeteksi adanya Tindakan Operasi (Surgical). Base PDC yang digunakan adalah **{final_pdc}**.")
-                            else:
-                                final_pdc = pdc_candidates[0]
-                                st.write(f"✅ Tidak ada tindakan operasi. Base PDC yang digunakan dari Diagnosa adalah **{final_pdc}**.")
-                        else:
-                            st.error("❌ Tidak ada Base PDC (D/P) yang terdeteksi dari input ICD Anda!")
-                        
-                        # C. Evaluasi Engine Draw.io
-                        if final_pdc:
-                            st.markdown("**3. Eksekusi Engine Draw.io:**")
-                            if ax_candidates:
-                                st.write(f"Menemukan AX tambahan dari diagnosa sekunder/prosedur: **{', '.join(ax_candidates)}**")
-                            else:
-                                st.write("Tidak ada AX tambahan yang terdeteksi.")
+                            # Kumpulkan semua input ICD di baris ini
+                            all_icds = []
+                            if diag_utama_col and pd.notna(row[diag_utama_col]):
+                                all_icds.append(str(row[diag_utama_col]).strip())
+                            for c in diag_sekunder_cols:
+                                if pd.notna(row[c]): all_icds.append(str(row[c]).strip())
+                            for c in tindakan_cols:
+                                if pd.notna(row[c]): all_icds.append(str(row[c]).strip())
+                                
+                            # Mapping ke Cluster
+                            for icd in all_icds:
+                                cluster = icd_dict.get(icd)
+                                if cluster:
+                                    if cluster.startswith('P') or cluster.startswith('D'):
+                                        pdc_candidates.append(cluster)
+                                    else:
+                                        ax_candidates.append(cluster)
                             
-                            dc_result, logic_note = evaluate_logic(final_pdc, ax_candidates, flat_mapping, decision_tree)
+                            # Penentuan Base PDC
+                            final_pdc = None
+                            if pdc_candidates:
+                                surgical = [c for c in pdc_candidates if c.startswith('P')]
+                                final_pdc = surgical[0] if surgical else pdc_candidates[0]
+                                
+                            # Evaluasi DC
+                            dc_result = None
+                            logic_note = "Tidak ada PDC valid."
+                            desc = ""
+                            if final_pdc:
+                                dc_result, logic_note = evaluate_logic(final_pdc, ax_candidates, flat_mapping, decision_tree)
+                                if dc_result:
+                                    desc = dc_desc_dict.get(dc_result, "")
                             
-                            if dc_result:
-                                desc = dc_desc_dict.get(dc_result, "")
-                                st.success(f"🎉 **HASIL FINAL DC: {dc_result}**" + (f" - {desc}" if desc else ""))
-                                st.info(f"Keterangan Logika: {logic_note}")
-                            else:
-                                st.error(f"❌ {logic_note}")
+                            res_row = {"Baris": idx + 2, "Input ICD": ", ".join(all_icds), "Base PDC": final_pdc, "AX Terdeteksi": ", ".join(ax_candidates)}
+                            res_row["DC Final"] = dc_result if dc_result else "GAGAL"
+                            res_row["Deskripsi DC"] = desc
+                            res_row["Keterangan Logika"] = logic_note
+                            batch_results.append(res_row)
+                            
+                        st.success(f"Berhasil memproses {len(batch_results)} kombinasi kasus!")
+                        st.dataframe(pd.DataFrame(batch_results), use_container_width=True)
 
         except Exception as e:
             st.error(f"Terjadi kesalahan: {e}")
