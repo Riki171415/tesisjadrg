@@ -63,9 +63,33 @@ def parse_drawio_xml(xml_string):
         pdc = extract_pdc(text)
         
         if pdc:
-            targets = adj[node_id]
+            # Fungsi BFS untuk mencari target signifikan (DC atau AX) dengan melompati node perantara
+            def get_significant_nodes(start_ids):
+                visited = set()
+                queue = list(start_ids)
+                significant = []
+                while queue:
+                    curr = queue.pop(0)
+                    if curr in visited: continue
+                    visited.add(curr)
+                    
+                    if curr not in nodes: continue
+                    t_text = nodes[curr]['val']
+                    
+                    # Jika itu DC atau AX, ini signifikan
+                    if is_dc(t_text) or extract_ax(t_text):
+                        significant.append(curr)
+                    # Jika itu PDC lain, JANGAN diteruskan (itu ranah PDC lain)
+                    elif extract_pdc(t_text):
+                        continue
+                    else:
+                        # Node perantara (misal "Go to MDC 34"), teruskan BFS
+                        queue.extend(adj.get(curr, []))
+                return significant
+
+            significant_targets = get_significant_nodes(adj.get(node_id, []))
             
-            for t_id in targets:
+            for t_id in significant_targets:
                 t_text = nodes[t_id]['val']
                 
                 # If target is a direct DC
@@ -75,10 +99,11 @@ def parse_drawio_xml(xml_string):
                 # If target is an AX node
                 ax_list = extract_ax(t_text)
                 if ax_list:
-                    # Find where this AX node points to
-                    ax_targets = adj[t_id]
+                    # Find where this AX node points to (again using BFS)
+                    ax_dc_targets = get_significant_nodes(adj.get(t_id, []))
+                    
                     dc_targets = []
-                    for ax_t_id in ax_targets:
+                    for ax_t_id in ax_dc_targets:
                         ax_t_text = nodes[ax_t_id]['val']
                         if is_dc(ax_t_text):
                             dc_targets.append((nodes[ax_t_id]['y'], ax_t_text.strip()))
