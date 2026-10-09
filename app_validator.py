@@ -61,8 +61,26 @@ uploaded_excel = st.sidebar.file_uploader("Upload File Usulan (.xlsx)", type=["x
 st.sidebar.header("📁 Upload File Logika (Draw.io PDF)")
 uploaded_pdf = st.sidebar.file_uploader("Upload PDF Draw.io (.pdf)", type=["pdf"])
 
+st.sidebar.header("📁 Upload Rekap DC (Opsional)")
+uploaded_rekap_dc = st.sidebar.file_uploader("Upload Rekap DC Final (.xlsx)", type=["xlsx"])
+
 decision_tree = default_decision_tree
 flat_mapping = default_flat_mapping
+dc_desc_dict = {}
+
+if uploaded_rekap_dc:
+    with st.spinner("Membaca kamus Deskripsi DC..."):
+        try:
+            df_rekap = pd.read_excel(uploaded_rekap_dc)
+            if 'dc update' in df_rekap.columns and 'desc dc update' in df_rekap.columns:
+                for _, r in df_rekap.iterrows():
+                    if pd.notna(r['dc update']):
+                        dc_desc_dict[str(r['dc update']).strip()] = str(r['desc dc update']).strip()
+                st.sidebar.success(f"Berhasil memuat {len(dc_desc_dict)} deskripsi DC.")
+            else:
+                st.sidebar.error("Kolom 'dc update' atau 'desc dc update' tidak ditemukan di file Rekap DC.")
+        except Exception as e:
+            st.sidebar.error(f"Gagal membaca Rekap DC: {e}")
 
 if uploaded_pdf:
     with st.spinner("Mengekstrak logika dari PDF Draw.io..."):
@@ -133,6 +151,11 @@ if uploaded_excel:
                             row_data = {"Sheet": sheet, "Baris Excel": idx + 2, "Kode ICD": icd_val, "Deskripsi": desc_val, "PDC Input": pdc_val}
                             if dc_col: row_data["DC (Di Excel)"] = actual_dc
                             row_data["DC Seharusnya (Draw.io)"] = ", ".join(expected_dcs) if expected_dcs else "Tidak Diketahui"
+                            
+                            if dc_desc_dict and expected_dcs:
+                                expected_descs = [dc_desc_dict.get(dc, "Deskripsi tidak ditemukan") for dc in expected_dcs]
+                                row_data["Deskripsi DC Seharusnya"] = " | ".join(expected_descs)
+                                
                             row_data["Status"] = status
                             row_data["Catatan Logika"] = notes
                             results.append(row_data)
@@ -241,7 +264,8 @@ if uploaded_excel:
                             dc_result, logic_note = evaluate_logic(final_pdc, ax_candidates, flat_mapping, decision_tree)
                             
                             if dc_result:
-                                st.success(f"🎉 **HASIL FINAL DC: {dc_result}**")
+                                desc = dc_desc_dict.get(dc_result, "")
+                                st.success(f"🎉 **HASIL FINAL DC: {dc_result}**" + (f" - {desc}" if desc else ""))
                                 st.info(f"Keterangan Logika: {logic_note}")
                             else:
                                 st.error(f"❌ {logic_note}")
