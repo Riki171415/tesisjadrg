@@ -97,6 +97,15 @@ def parse_drawio_xml(xml_string):
 
     return decision_tree, flat_mapping
 
+def extract_page_names(xml_string):
+    root = ET.fromstring(xml_string)
+    names = []
+    for diagram in root.iter('diagram'):
+        name = diagram.get('name')
+        if name:
+            names.append(name)
+    return names
+
 def extract_xml_from_pdf(pdf_file):
     import PyPDF2
     reader = PyPDF2.PdfReader(pdf_file)

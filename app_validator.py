@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import re
-from drawio_parser import extract_xml_from_pdf, parse_drawio_xml
+from drawio_parser import extract_xml_from_pdf, parse_drawio_xml, extract_page_names
 
 st.set_page_config(page_title="MDC Logic Validator & Simulator", layout="wide", page_icon="🔍")
 
@@ -93,7 +93,7 @@ if uploaded_excel:
             sheets = xls.sheet_names
             
             # Buat TABS
-            tab1, tab2 = st.tabs(["📊 Validasi Master Data", "🏥 DRG Batch Simulator (Kombinasi)"])
+            tab1, tab2, tab3 = st.tabs(["📊 Validasi Master Data", "🏥 DRG Batch Simulator", "✅ Validasi SOP Format Data"])
             
             with tab1:
                 st.subheader("Validasi Sinkronisasi Master Data")
@@ -264,6 +264,78 @@ if uploaded_excel:
                         st.warning(f"Ditemukan **{len(df_gagal):,}** skenario GAGAL dari total evaluasi. Menampilkan hasil yang GAGAL saja untuk menghemat memori.")
                         st.dataframe(df_gagal, use_container_width=True)
 
+            with tab3:
+                st.subheader("Pengecekan Kriteria & Validasi SOP Format Data")
+                
+                if st.button("🚀 Jalankan Pengecekan Kriteria (Audit Format)"):
+                    with st.spinner("Mengaudit format Excel dan Draw.io..."):
+                        audit_results = []
+                        
+                        # 1. Pengecekan Penamaan Sheet
+                        req_sheets = ['ranap cluster (icd 10)', 'ranap cluster (icd 9 cm)', 'rajal cluster (icd 10)', 'rajal cluster (icd 9 cm)']
+                        sheet_lower = [s.strip().lower() for s in sheets]
+                        for req in req_sheets:
+                            if req not in sheet_lower:
+                                audit_results.append(f"❌ **Penamaan Sheet:** Sheet '{req}' tidak ditemukan atau penulisannya salah.")
+                        
+                        if not any("Penamaan Sheet" in r for r in audit_results):
+                            audit_results.append("✅ **Penamaan Sheet:** Semua sheet Ranap & Rajal terdeteksi benar.")
+                            
+                        # Iterasi ke semua sheet ICD untuk cek aturan baris
+                        icd_sheets = [s for s in sheets if 'ICD' in s.upper()]
+                        for sheet in icd_sheets:
+                            df_audit = pd.read_excel(xls, sheet_name=sheet, dtype=str)
+                            
+                            # 2. Kolom A wajib terisi
+                            if df_audit.iloc[:, 0].isna().any():
+                                audit_results.append(f"❌ **Kolom A Kosong:** Terdapat baris kosong di Kolom A pada sheet '{sheet}'.")
+                                
+                            # 3. Klasifikasi Cluster (PDC/AX) harus ada
+                            cluster_col = next((c for c in df_audit.columns if str(c).strip().lower() in ['new cluster code', 'pdc_baru', 'cluster code', 'pdc']), None)
+                            if cluster_col:
+                                if df_audit[cluster_col].isna().any():
+                                    audit_results.append(f"❌ **Klasifikasi Cluster Kosong:** Ada kode yang tidak memiliki cluster (PDC/AX) di sheet '{sheet}'.")
+                            
+                            # 4. Konsistensi Procedures (ICD-9-CM)
+                            if '9' in sheet:
+                                desc_col = next((c for c in df_audit.columns if str(c).strip().lower() in ['new cluster description', 'desc_baru_excel']), None)
+                                if desc_col:
+                                    proc_issues = df_audit[df_audit[desc_col].astype(str).str.contains('Proc.', regex=False, na=False)]
+                                    if not proc_issues.empty:
+                                        audit_results.append(f"❌ **Konsistensi Narasi:** Ditemukan kata 'Proc.' (seharusnya 'Procedures') di sheet '{sheet}' sebanyak {len(proc_issues)} baris.")
+                                        
+                            # 5. Pengecekan Duplikat
+                            icd_col = next((c for c in df_audit.columns if str(c).strip().lower() in ['icd_code', 'icd 10 code', 'icd-9-cm code', 'icd-10 code', 'icd-9 code', 'icd 10', 'icd 9']), None)
+                            if icd_col and cluster_col:
+                                dups = df_audit[df_audit.duplicated(subset=[icd_col, cluster_col], keep=False)]
+                                if not dups.empty:
+                                    audit_results.append(f"❌ **Duplikasi Data:** Ditemukan {len(dups)} baris duplikat (Kode ICD + Cluster) di sheet '{sheet}'.")
+                                
+                        # 6. Konsistensi Draw.io (Cek Tab 'Current')
+                        if uploaded_pdf:
+                            pdf_xml = extract_xml_from_pdf(uploaded_pdf)
+                            if pdf_xml:
+                                pages = extract_page_names(pdf_xml)
+                                if 'Current' not in pages:
+                                    audit_results.append("⚠️ **Draw.io Tab:** Tidak ditemukan sheet/tab bernama 'Current' di dalam file Draw.io yang membuktikan pembaruan.")
+                                else:
+                                    audit_results.append("✅ **Draw.io Tab:** Tab 'Current' terdeteksi.")
+                                    
+                                # Pengecekan silang PDC Code / Description bisa ditambah disini (tapi Tab 1 sudah memfasilitasi pengecekan kode).
+                                audit_results.append("✅ **Konsistensi Draw.io vs Excel:** (Lihat hasil di Tab 1 'Validasi Master Data' untuk kecocokan logika PDC/AX).")
+                        else:
+                            audit_results.append("⚠️ **Draw.io:** File Draw.io tidak diunggah, pengecekan tab 'Current' dilewati.")
+                        
+                        # Tampilkan Hasil Audit
+                        for res in audit_results:
+                            if res.startswith("✅"):
+                                st.success(res)
+                            elif res.startswith("❌"):
+                                st.error(res)
+                            else:
+                                st.warning(res)
+                                
+                        st.info("💡 **Catatan Validasi Akhir:** Pastikan Anda juga mengecek silang di Web INAGROUPER setelah seluruh perbaikan di atas dilakukan.")
         except Exception as e:
             st.error(f"Terjadi kesalahan: {e}")
 else:
