@@ -107,7 +107,7 @@ if uploaded_excel:
                     has_dc_col = False
                     
                     for sheet in selected_sheets:
-                        df = pd.read_excel(xls, sheet_name=sheet)
+                        df = pd.read_excel(xls, sheet_name=sheet, dtype=str)
                         
                         pdc_col = next((c for c in df.columns if str(c).strip().lower() in ['pdc_baru', 'new cluster code', 'pdc', 'cluster code']), None)
                         dc_col = next((c for c in df.columns if str(c).strip().lower() in ['dc_baru', 'dc', 'dc output', 'dc_awal']), None)
@@ -175,7 +175,7 @@ if uploaded_excel:
                 
                 for sheet in sheets:
                     if 'ICD' in sheet.upper():
-                        df_icd = pd.read_excel(xls, sheet_name=sheet)
+                        df_icd = pd.read_excel(xls, sheet_name=sheet, dtype=str)
                         icd_col = next((c for c in df_icd.columns if str(c).strip().lower() in ['icd_code', 'icd 10 code', 'icd-9-cm code', 'icd-10 code', 'icd-9 code', 'icd 10', 'icd 9']), None)
                         cluster_col = next((c for c in df_icd.columns if str(c).strip().lower() in ['new cluster code', 'pdc_baru', 'cluster code', 'pdc']), None)
                         
