@@ -155,12 +155,11 @@ if uploaded_excel:
                     if not res_df.empty:
                         errors_df = res_df[res_df['Status'].isin(["❌ Mismatch", "⚠️ Warning"])]
                         if not errors_df.empty:
-                            # Gunakan map alih-alih applymap untuk versi pandas terbaru
-                            st.dataframe(errors_df.style.map(lambda x: "background-color: #ffcccc; color: #900" if x == "❌ Mismatch" else ("background-color: #fff3cd; color: #856404" if x == "⚠️ Warning" else ""), subset=['Status']), use_container_width=True)
+                            st.dataframe(errors_df.style.map(lambda x: "background-color: #ffcccc; color: #900" if x == "❌ Mismatch" else ("background-color: #fff3cd; color: #856404" if x == "⚠️ Warning" else ""), subset=['Status']), width='stretch')
                         else:
                             st.info("Semua data di sheet yang dipilih sesuai dengan logika Draw.io.")
                     st.markdown("### 📜 Semua Data Kombinasi")
-                    st.dataframe(res_df, use_container_width=True)
+                    st.dataframe(res_df, width='stretch')
 
             with tab2:
                 st.subheader("Simulasi DRG Batch Berdasarkan Kombinasi Kasus")
@@ -253,7 +252,7 @@ if uploaded_excel:
                             batch_results.append(res_row)
                             
                         st.success(f"Simulasi Selesai! Berhasil memproses **{len(batch_results):,}** kombinasi permutasi.")
-                        st.dataframe(pd.DataFrame(batch_results), use_container_width=True)
+                        st.dataframe(pd.DataFrame(batch_results), width='stretch')
 
         except Exception as e:
             st.error(f"Terjadi kesalahan: {e}")
