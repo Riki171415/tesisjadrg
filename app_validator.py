@@ -109,8 +109,16 @@ if uploaded_excel:
                     for sheet in selected_sheets:
                         df = pd.read_excel(xls, sheet_name=sheet, dtype=str)
                         
-                        pdc_col = next((c for c in df.columns if str(c).strip().lower() in ['pdc_baru', 'new cluster code', 'pdc', 'cluster code']), None)
-                        dc_col = next((c for c in df.columns if str(c).strip().lower() in ['dc_baru', 'dc', 'dc output', 'dc_awal']), None)
+                        cols_lower = {str(c).strip().lower(): c for c in df.columns}
+                        
+                        pdc_col = None
+                        for target in ['new cluster code', 'pdc_baru', 'pdc', 'cluster code']:
+                            if target in cols_lower: pdc_col = cols_lower[target]; break
+                            
+                        dc_col = None
+                        for target in ['dc_baru', 'dc', 'dc output', 'dc_awal']:
+                            if target in cols_lower: dc_col = cols_lower[target]; break
+                            
                         icd_col = next((c for c in df.columns if str(c).strip().lower() in ['icd_code', 'icd 10 code', 'icd-9-cm code', 'icd-10 code', 'icd-9 code', 'icd 10', 'icd 9']), None)
                         desc_col = next((c for c in df.columns if str(c).strip().lower() in ['deskripsi icd', 'icd-10 description', 'icd-9-cm description', 'deskripsi icd 10', 'desc_baru_excel', 'new cluster description']), None)
                         
@@ -170,16 +178,25 @@ if uploaded_excel:
             with tab2:
                 st.subheader("Simulasi DRG Batch Berdasarkan Kombinasi Kasus")
                 
+                st.markdown("Pilih sheet Kamus (MDC Master) yang akan digunakan. **Penting:** Pisahkan antara sheet Ranap dan Rajal agar kodenya tidak bertabrakan (karena Draw.io biasanya terpisah untuk Ranap).")
+                selected_dict_sheets = st.multiselect("Pilih Sheet Kamus untuk Simulasi:", sheets, default=[s for s in sheets if 'ranap' in s.lower() and 'icd' in s.lower()])
+                
                 # Build ICD Dictionary from Kamus
                 icd_dict = {}
                 diags_master = set()
                 tinds_master = set()
                 
-                for sheet in sheets:
+                for sheet in selected_dict_sheets:
                     if 'ICD' in sheet.upper():
                         df_icd = pd.read_excel(xls, sheet_name=sheet, dtype=str)
                         icd_col = next((c for c in df_icd.columns if str(c).strip().lower() in ['icd_code', 'icd 10 code', 'icd-9-cm code', 'icd-10 code', 'icd-9 code', 'icd 10', 'icd 9']), None)
-                        cluster_col = next((c for c in df_icd.columns if str(c).strip().lower() in ['new cluster code', 'pdc_baru', 'cluster code', 'pdc']), None)
+                        
+                        cols_lower = {str(c).strip().lower(): c for c in df_icd.columns}
+                        cluster_col = None
+                        for target in ['new cluster code', 'pdc_baru', 'cluster code', 'pdc']:
+                            if target in cols_lower:
+                                cluster_col = cols_lower[target]
+                                break
                         
                         if icd_col and cluster_col:
                             # Tentukan tipe berdasarkan nama sheet atau kolom
@@ -291,7 +308,10 @@ if uploaded_excel:
                                 audit_results.append(f"❌ **Kolom A Kosong:** Terdapat baris kosong di Kolom A pada sheet '{sheet}'.")
                                 
                             # 3. Klasifikasi Cluster (PDC/AX) harus ada
-                            cluster_col = next((c for c in df_audit.columns if str(c).strip().lower() in ['new cluster code', 'pdc_baru', 'cluster code', 'pdc']), None)
+                            cols_lower = {str(c).strip().lower(): c for c in df_audit.columns}
+                            cluster_col = None
+                            for target in ['new cluster code', 'pdc_baru', 'cluster code', 'pdc']:
+                                if target in cols_lower: cluster_col = cols_lower[target]; break
                             if cluster_col:
                                 if df_audit[cluster_col].isna().any():
                                     audit_results.append(f"❌ **Klasifikasi Cluster Kosong:** Ada kode yang tidak memiliki cluster (PDC/AX) di sheet '{sheet}'.")
