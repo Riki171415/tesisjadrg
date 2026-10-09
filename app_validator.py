@@ -217,71 +217,84 @@ if uploaded_excel:
                                     else:
                                         diags_master.add(icd) # Default fallback
                 
-                diags_list = list(diags_master) if diags_master else [""]
-                tinds_list = list(tinds_master) if tinds_master else [""]
-                
-                st.markdown(f"Aplikasi telah mendeteksi **{len(diags_list)} Diagnosa (ICD-10)** dan **{len(tinds_list)} Tindakan (ICD-9)** langsung dari file Kamus Master yang diunggah di panel kiri.")
-                st.markdown("Klik tombol di bawah ini untuk menyilangkan seluruh Diagnosa dan Tindakan tersebut menjadi simulasi kombinasi pasien.")
-                
-                if st.button("🚀 Mulai Simulasi Permutasi Otomatis (Semua Kombinasi)"):
-                    with st.spinner("Menyilangkan ribuan kode ICD dan mengevaluasi algoritma Draw.io..."):
-                        import itertools
-                        permutations = list(itertools.product(diags_list, tinds_list))
+                cluster_to_icd = {}
+                for icd, clusters in icd_dict.items():
+                    for cluster in clusters:
+                        if cluster not in cluster_to_icd:
+                            cluster_to_icd[cluster] = []
+                        cluster_to_icd[cluster].append(icd)
                         
-                        # Limit the number of permutations to avoid browser crash/memory error
-                        if len(permutations) > 100000:
-                            st.warning(f"Total kombinasi permutasi sangat besar ({len(permutations):,}). Hanya memproses 100.000 skenario pertama untuk mencegah crash.")
-                            permutations = permutations[:100000]
-                            
-                        batch_results = []
-                        for idx, (diag, tind) in enumerate(permutations):
-                            pdc_candidates = []
-                            ax_candidates = []
-                            
-                            inputs_used = []
-                            if diag: inputs_used.append(diag)
-                            if tind: inputs_used.append(tind)
-                            
-                            for icd in inputs_used:
-                                clusters = icd_dict.get(icd, set())
-                                for cluster in clusters:
-                                    if cluster.startswith('P') or cluster.startswith('D'):
-                                        pdc_candidates.append(cluster)
-                                    else:
-                                        ax_candidates.append(cluster)
-                            
-                            # Penentuan Base PDC (Prioritaskan Surgical P)
-                            final_pdc = None
-                            if pdc_candidates:
-                                surgical = [c for c in pdc_candidates if c.startswith('P')]
-                                final_pdc = surgical[0] if surgical else pdc_candidates[0]
-                            
-                            dc_result = None
-                            logic_note = "Tidak ada PDC valid."
-                            desc = ""
-                            if final_pdc:
-                                dc_result, logic_note = evaluate_logic(final_pdc, ax_candidates, flat_mapping, decision_tree)
-                                if dc_result:
-                                    desc = dc_desc_dict.get(dc_result, "")
-                            
-                            res_row = {
-                                "No": idx + 1, 
-                                "Diagnosa Utama": diag if diag else "-", 
-                                "Tindakan": tind if tind else "-", 
-                                "Base PDC": final_pdc if final_pdc else "-", 
-                                "AX Terdeteksi": ", ".join(ax_candidates) if ax_candidates else "-"
-                            }
-                            res_row["DC Final"] = dc_result if dc_result else "GAGAL"
-                            res_row["Deskripsi DC"] = desc
-                            res_row["Keterangan Logika"] = logic_note
-                            batch_results.append(res_row)
-                            
-                        df_batch = pd.DataFrame(batch_results)
-                        df_gagal = df_batch[df_batch["DC Final"] == "GAGAL"]
+                st.markdown(f"Aplikasi telah memetakan total **{len(cluster_to_icd)} Cluster Code** dari file Kamus Master yang dipilih.")
+                st.markdown("Klik tombol di bawah ini untuk melahirkan Skenario Test Cases (Pasien Dummy) yang 100% mewakili seluruh jalur logika Draw.io.")
+                
+                if st.button("🚀 Generate Test Cases dari Draw.io (Reverse Engineering)"):
+                    with st.spinner("Membaca rute Draw.io dan menyusun skenario pasien..."):
+                        test_cases = []
                         
-                        st.success(f"Simulasi Selesai! Berhasil memproses **{len(batch_results):,}** kombinasi permutasi.")
-                        st.warning(f"Ditemukan **{len(df_gagal):,}** skenario GAGAL dari total evaluasi. Menampilkan hasil yang GAGAL saja untuk menghemat memori.")
-                        st.dataframe(df_gagal, use_container_width=True)
+                        # 1. Jalur Flat Mapping (Tanpa AX)
+                        for pdc, dc in flat_mapping.items():
+                            pdc_icds = cluster_to_icd.get(pdc, ["KODE_ICD_TIDAK_ADA_DI_KAMUS"])
+                            desc = dc_desc_dict.get(dc, "")
+                            test_cases.append({
+                                "Skenario Logika": f"Jalur Lurus (PDC -> DC)",
+                                "Input Kode ICD": pdc_icds[0],
+                                "Cluster Code Dibutuhkan": pdc,
+                                "Expected DC": dc,
+                                "Deskripsi DC": desc
+                            })
+                            
+                        # 2. Jalur Decision Tree (Dengan AX)
+                        for pdc, branches in decision_tree.items():
+                            pdc_icds = cluster_to_icd.get(pdc, ["KODE_ICD_TIDAK_ADA_DI_KAMUS"])
+                            
+                            # Jalur Default (PDC Saja)
+                            default_dc = branches.get('default')
+                            if default_dc:
+                                desc = dc_desc_dict.get(default_dc, "")
+                                test_cases.append({
+                                    "Skenario Logika": f"Jalur Default (Tanpa AX)",
+                                    "Input Kode ICD": pdc_icds[0],
+                                    "Cluster Code Dibutuhkan": pdc,
+                                    "Expected DC": default_dc,
+                                    "Deskripsi DC": desc
+                                })
+                                
+                            # Jalur AX (PDC + 1 atau Lebih AX)
+                            for ax_cond, dc in branches.items():
+                                if ax_cond == 'default': continue
+                                
+                                # ax_cond bisa berisi multiple AX (misal: "11PEX & 11PFX")
+                                required_axs = ax_cond.split('&')
+                                icd_inputs = [pdc_icds[0]]
+                                cluster_inputs = [pdc]
+                                
+                                for req_ax in required_axs:
+                                    req_ax = req_ax.strip()
+                                    ax_icds = cluster_to_icd.get(req_ax, ["KODE_ICD_TIDAK_ADA_DI_KAMUS"])
+                                    icd_inputs.append(ax_icds[0])
+                                    cluster_inputs.append(req_ax)
+                                    
+                                desc = dc_desc_dict.get(dc, "")
+                                test_cases.append({
+                                    "Skenario Logika": f"Jalur Bersyarat ({ax_cond})",
+                                    "Input Kode ICD": " + ".join(icd_inputs),
+                                    "Cluster Code Dibutuhkan": " + ".join(cluster_inputs),
+                                    "Expected DC": dc,
+                                    "Deskripsi DC": desc
+                                })
+                                
+                        if test_cases:
+                            st.success(f"Berhasil me-reverse-engineer **{len(test_cases)} Jalur Logika** dari Draw.io menjadi Skenario Uji Coba.")
+                            df_tests = pd.DataFrame(test_cases)
+                            
+                            # Cek jika ada kamus yang bolong (KODE_ICD_TIDAK_ADA_DI_KAMUS)
+                            missing_df = df_tests[df_tests["Input Kode ICD"].str.contains("KODE_ICD_TIDAK_ADA_DI_KAMUS")]
+                            if not missing_df.empty:
+                                st.warning(f"⚠️ Perhatian: Ditemukan {len(missing_df)} jalur Draw.io yang terputus karena Cluster Code-nya tidak ada di file Excel Kamus yang Anda pilih.")
+                                
+                            st.dataframe(df_tests, use_container_width=True)
+                        else:
+                            st.error("Tidak ada jalur logika yang bisa diekstrak. Pastikan PDF Draw.io sudah diunggah dan terbaca.")
 
             with tab3:
                 st.subheader("Pengecekan Kriteria & Validasi SOP Format Data")
