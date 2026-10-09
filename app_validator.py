@@ -76,6 +76,8 @@ if uploaded_excel:
                     # Coba deteksi kolom yang relevan (Fleksibel)
                     pdc_col = next((c for c in df.columns if str(c).strip().lower() in ['pdc_baru', 'new cluster code', 'pdc', 'cluster code']), None)
                     dc_col = next((c for c in df.columns if str(c).strip().lower() in ['dc_baru', 'dc', 'dc output', 'dc_awal']), None)
+                    icd_col = next((c for c in df.columns if str(c).strip().lower() in ['icd_code', 'icd 10 code', 'icd-9-cm code', 'icd-10 code', 'icd-9 code', 'icd 10', 'icd 9']), None)
+                    desc_col = next((c for c in df.columns if str(c).strip().lower() in ['deskripsi icd', 'icd-10 description', 'icd-9-cm description', 'deskripsi icd 10', 'desc_baru_excel', 'new cluster description']), None)
                     
                     if dc_col: has_dc_col = True
                     
@@ -83,10 +85,10 @@ if uploaded_excel:
                         st.error(f"Tidak dapat menemukan kolom PDC (Cluster Code) di sheet '{sheet}'.")
                         continue
                         
-                    # st.success(f"Ditemukan kolom PDC: `{pdc_col}`" + (f" dan DC: `{dc_col}`" if dc_col else "") + f" di '{sheet}'")
-                    
                     for idx, row in df.iterrows():
                         pdc_val = str(row[pdc_col]).strip().upper() if pd.notna(row[pdc_col]) else ""
+                        icd_val = str(row[icd_col]).strip() if icd_col and pd.notna(row[icd_col]) else "-"
+                        desc_val = str(row[desc_col]).strip() if desc_col and pd.notna(row[desc_col]) else "-"
                         
                         if not pdc_val or pdc_val == 'NAN':
                             continue
@@ -102,7 +104,6 @@ if uploaded_excel:
                             notes = "PDC ini tidak ada di pakem Draw.io."
                             error_count += 1
                         elif dc_col and actual_dc and actual_dc != 'nan':
-                            # Cek apakah actual_dc ada di dalam expected_dcs
                             if any(actual_dc == e_dc for e_dc in expected_dcs) or actual_dc in ",".join(expected_dcs):
                                 valid_count += 1
                             else:
@@ -110,12 +111,13 @@ if uploaded_excel:
                                 notes = f"Draw.io mengharuskan DC: {', '.join(expected_dcs)}."
                                 error_count += 1
                         else:
-                            # Jika tidak ada kolom DC di excel
                             notes = f"Seharusnya mengarah ke DC: {', '.join(expected_dcs)} (Tergantung AX jika ada)."
                     
                         row_data = {
                             "Sheet": sheet,
                             "Baris Excel": idx + 2,
+                            "Kode ICD": icd_val,
+                            "Deskripsi": desc_val,
                             "PDC Input": pdc_val,
                         }
                         if dc_col:
