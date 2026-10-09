@@ -191,19 +191,34 @@ if uploaded_excel:
                         
                         diag_col = next((c for c in batch_df.columns if 'diagnosa' in str(c).lower() or 'icd 10' in str(c).lower()), None)
                         tind_col = next((c for c in batch_df.columns if 'tindakan' in str(c).lower() or 'prosedur' in str(c).lower() or 'icd 9' in str(c).lower()), None)
+                        sab_col = next((c for c in batch_df.columns if 'sab' in str(c).lower()), None)
+                        icd_all_col = next((c for c in batch_df.columns if 'icd10 / icd9' in str(c).lower()), None)
                         
-                        if not diag_col and not tind_col:
-                            st.error("Gagal mendeteksi kolom Diagnosa atau Tindakan di file tersebut.")
+                        diags, tinds = [], []
+                        
+                        # Support untuk format MRCONSO Master
+                        if sab_col and icd_all_col:
+                            diags = batch_df[batch_df[sab_col].astype(str).str.contains('ICD10', case=False, na=False)][icd_all_col].dropna().astype(str).str.strip().unique().tolist()
+                            tinds = batch_df[batch_df[sab_col].astype(str).str.contains('ICD9', case=False, na=False)][icd_all_col].dropna().astype(str).str.strip().unique().tolist()
                         else:
-                            diags = batch_df[diag_col].dropna().astype(str).str.strip().unique().tolist() if diag_col else [""]
-                            tinds = batch_df[tind_col].dropna().astype(str).str.strip().unique().tolist() if tind_col else [""]
-                            
+                            if not diag_col and not tind_col:
+                                st.error("Gagal mendeteksi kolom Diagnosa atau Tindakan di file tersebut.")
+                            else:
+                                diags = batch_df[diag_col].dropna().astype(str).str.strip().unique().tolist() if diag_col else []
+                                tinds = batch_df[tind_col].dropna().astype(str).str.strip().unique().tolist() if tind_col else []
+                        
+                        if diags or tinds:
                             if not diags: diags = [""]
                             if not tinds: tinds = [""]
                             
                             import itertools
                             permutations = list(itertools.product(diags, tinds))
                             
+                            # Limit the number of permutations to avoid browser crash/memory error
+                            if len(permutations) > 100000:
+                                st.warning(f"Jumlah kombinasi permutasi terlalu besar ({len(permutations):,}). Hanya memproses 100,000 baris pertama untuk mencegah crash.")
+                                permutations = permutations[:100000]
+                                
                             batch_results = []
                             for idx, (diag, tind) in enumerate(permutations):
                                 pdc_candidates = []
@@ -247,7 +262,7 @@ if uploaded_excel:
                                 res_row["Keterangan Logika"] = logic_note
                                 batch_results.append(res_row)
                                 
-                            st.success(f"Berhasil membuat dan mengevaluasi **{len(batch_results)}** kombinasi permutasi!")
+                            st.success(f"Berhasil membuat dan mengevaluasi **{len(batch_results):,}** kombinasi permutasi!")
                             st.dataframe(pd.DataFrame(batch_results), use_container_width=True)
 
         except Exception as e:
