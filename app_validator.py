@@ -1,21 +1,21 @@
 import streamlit as st
 import pandas as pd
 import re
+from drawio_parser import extract_xml_from_pdf, parse_drawio_xml
 
-st.set_page_config(page_title="MDC 11 Logic Validator & Simulator", layout="wide", page_icon="🔍")
+st.set_page_config(page_title="MDC Logic Validator & Simulator", layout="wide", page_icon="🔍")
 
 # ==========================================
 # 1. CORE LOGIC & MAPPING
 # ==========================================
-# Draw.io Logic Translation
-decision_tree = {
+# Default fallback (MDC 11) jika tidak ada PDF yang diunggah
+default_decision_tree = {
     'P11AA': {'11CX': '11031', 'default': '11032'},
     'D11AP': {'11PDX': '11742', 'default': '11741'},
     'D11AD': {'11PCX': '11641', 'default': '11642'},
     'P11AR': {'11PEX': '11181', '11PFX': '11181', 'default': '11182'}
 }
-
-flat_mapping = {
+default_flat_mapping = {
     'P11AG': '11141', 'P11AH': '11071', 'P11AB': '11041', 'P11AC': '11021',
     'P11AK': '11091', 'P11AE': '11131', 'P11AF': '11051', 'P11AJ': '11151',
     'P11AP': '11161', 'P11AN': '11101', 'P11AL': '11081', 'P11AM': '11121',
@@ -26,41 +26,57 @@ flat_mapping = {
     'D11AE': '11651', 'D11AG': '11671', 'D11AT': '11781'
 }
 
-def get_expected_dc(pdc):
+def get_expected_dc(pdc, flat_map, dec_tree):
     if pd.isna(pdc) or not str(pdc).strip():
         return []
     pdc = str(pdc).strip().upper()
-    if pdc in flat_mapping:
-        return [flat_mapping[pdc]]
-    if pdc in decision_tree:
-        return list(set(decision_tree[pdc].values()))
+    if pdc in flat_map:
+        return [flat_map[pdc]]
+    if pdc in dec_tree:
+        return list(set(dec_tree[pdc].values()))
     return []
 
-def evaluate_logic(pdc, ax_list):
-    """Evaluasi PDC + AX(s) ke DC final menggunakan Draw.io"""
-    if pdc in flat_mapping:
-        return flat_mapping[pdc], "Jalur langsung (tanpa AX)"
+def evaluate_logic(pdc, ax_list, flat_map, dec_tree):
+    if pdc in flat_map:
+        return flat_map[pdc], "Jalur langsung (tanpa AX)"
     
-    if pdc in decision_tree:
-        logic_branch = decision_tree[pdc]
-        # Cek apakah ada AX dari input yang cocok dengan percabangan
+    if pdc in dec_tree:
+        logic_branch = dec_tree[pdc]
         for ax in ax_list:
             if ax in logic_branch:
                 return logic_branch[ax], f"Masuk cabang AX: {ax}"
-        
-        # Jika tidak ada AX yang cocok, masuk default
-        return logic_branch['default'], "Masuk cabang default (tanpa AX terkait)"
+        return logic_branch.get('default'), "Masuk cabang default (tanpa AX terkait)"
     
     return None, "PDC tidak ditemukan di Draw.io"
 
 # ==========================================
 # 2. UI & DATA LOADING
 # ==========================================
-st.title("🏥 Sistem Validasi & Simulator Logika MDC 11")
+st.title("🏥 Sistem Validasi & Simulator Logika MDC")
 st.markdown("Aplikasi ini menggunakan **Draw.io Logic Engine** untuk memvalidasi master data dan menyimulasikan *DRG Grouping* pasien berdasarkan input **Kode ICD**.")
 
 st.sidebar.header("📁 Upload File Kamus (Excel)")
 uploaded_excel = st.sidebar.file_uploader("Upload File Usulan (.xlsx)", type=["xlsx"])
+
+st.sidebar.header("📁 Upload File Logika (Draw.io PDF)")
+uploaded_pdf = st.sidebar.file_uploader("Upload PDF Draw.io (.pdf)", type=["pdf"])
+
+decision_tree = default_decision_tree
+flat_mapping = default_flat_mapping
+
+if uploaded_pdf:
+    with st.spinner("Mengekstrak logika dari PDF Draw.io..."):
+        try:
+            xml_data = extract_xml_from_pdf(uploaded_pdf)
+            if xml_data:
+                decision_tree, flat_mapping = parse_drawio_xml(xml_data)
+                st.sidebar.success(f"Logika berhasil diekstrak! ({len(flat_mapping)} PDC langsung, {len(decision_tree)} PDC bercabang)")
+            else:
+                st.sidebar.error("Tidak ditemukan metadata Draw.io di dalam PDF ini.")
+        except Exception as e:
+            st.sidebar.error(f"Gagal mem-parsing PDF: {e}")
+else:
+    st.sidebar.info("Menggunakan logika MDC 11 (Bawaan). Unggah PDF untuk MDC lain.")
 
 if uploaded_excel:
     with st.spinner('Membaca file Excel...'):
@@ -100,7 +116,7 @@ if uploaded_excel:
                             
                             if not pdc_val or pdc_val == 'NAN': continue
                                 
-                            expected_dcs = get_expected_dc(pdc_val)
+                            expected_dcs = get_expected_dc(pdc_val, flat_mapping, decision_tree)
                             actual_dc = str(row[dc_col]).strip() if dc_col and pd.notna(row[dc_col]) else ""
                             status, notes = "✅ Valid", ""
                             
@@ -221,7 +237,7 @@ if uploaded_excel:
                             else:
                                 st.write("Tidak ada AX tambahan yang terdeteksi.")
                             
-                            dc_result, logic_note = evaluate_logic(final_pdc, ax_candidates)
+                            dc_result, logic_note = evaluate_logic(final_pdc, ax_candidates, flat_mapping, decision_tree)
                             
                             if dc_result:
                                 st.success(f"🎉 **HASIL FINAL DC: {dc_result}**")
