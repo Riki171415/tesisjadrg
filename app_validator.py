@@ -180,68 +180,75 @@ if uploaded_excel:
                                 if icd != 'nan' and cluster != 'NAN' and icd and cluster:
                                     icd_dict[icd] = cluster
                 
-                st.markdown("Unggah file Excel yang berisi daftar pasien / kombinasi ICD untuk dievaluasi sekaligus.")
-                st.markdown("**Format Kolom yang Dibutuhkan (Boleh salah satu atau lebih):** `Diagnosa Utama`, `Diagnosa Sekunder 1`, `Diagnosa Sekunder 2`, `Tindakan 1`, `Tindakan 2`, dst.")
+                st.markdown("Unggah file Excel yang berisi daftar **Kode Diagnosa** dan **Kode Tindakan**. Sistem akan otomatis melakukan **Permutasi (Kombinasi Silang)** dari seluruh kode tersebut dan mengevaluasinya.")
+                st.markdown("**Format Kolom yang Dibutuhkan:** `Diagnosa Utama` (atau `ICD 10`), dan `Tindakan` (atau `ICD 9`).")
                 
-                uploaded_batch = st.file_uploader("Upload File Data Kasus (.xlsx)", type=["xlsx"], key="batch_upload")
+                uploaded_batch = st.file_uploader("Upload File Skenario Permutasi (.xlsx)", type=["xlsx"], key="batch_upload")
                 
                 if uploaded_batch:
-                    with st.spinner("Memproses kombinasi ICD..."):
+                    with st.spinner("Melakukan permutasi otomatis & mengevaluasi logika..."):
                         batch_df = pd.read_excel(uploaded_batch)
-                        batch_results = []
                         
-                        diag_utama_col = next((c for c in batch_df.columns if 'utama' in str(c).lower() and ('diag' in str(c).lower() or 'icd 10' in str(c).lower())), None)
-                        diag_sekunder_cols = [c for c in batch_df.columns if 'sekunder' in str(c).lower() and ('diag' in str(c).lower() or 'icd 10' in str(c).lower())]
-                        tindakan_cols = [c for c in batch_df.columns if 'tindakan' in str(c).lower() or 'prosedur' in str(c).lower() or 'icd 9' in str(c).lower()]
+                        diag_col = next((c for c in batch_df.columns if 'diagnosa' in str(c).lower() or 'icd 10' in str(c).lower()), None)
+                        tind_col = next((c for c in batch_df.columns if 'tindakan' in str(c).lower() or 'prosedur' in str(c).lower() or 'icd 9' in str(c).lower()), None)
                         
-                        if not diag_utama_col:
-                            st.warning("Tidak ditemukan kolom 'Diagnosa Utama'. Mencoba memproses semua baris...")
+                        if not diag_col and not tind_col:
+                            st.error("Gagal mendeteksi kolom Diagnosa atau Tindakan di file tersebut.")
+                        else:
+                            diags = batch_df[diag_col].dropna().astype(str).str.strip().unique().tolist() if diag_col else [""]
+                            tinds = batch_df[tind_col].dropna().astype(str).str.strip().unique().tolist() if tind_col else [""]
                             
-                        for idx, row in batch_df.iterrows():
-                            pdc_candidates = []
-                            ax_candidates = []
+                            if not diags: diags = [""]
+                            if not tinds: tinds = [""]
                             
-                            # Kumpulkan semua input ICD di baris ini
-                            all_icds = []
-                            if diag_utama_col and pd.notna(row[diag_utama_col]):
-                                all_icds.append(str(row[diag_utama_col]).strip())
-                            for c in diag_sekunder_cols:
-                                if pd.notna(row[c]): all_icds.append(str(row[c]).strip())
-                            for c in tindakan_cols:
-                                if pd.notna(row[c]): all_icds.append(str(row[c]).strip())
+                            import itertools
+                            permutations = list(itertools.product(diags, tinds))
+                            
+                            batch_results = []
+                            for idx, (diag, tind) in enumerate(permutations):
+                                pdc_candidates = []
+                                ax_candidates = []
                                 
-                            # Mapping ke Cluster
-                            for icd in all_icds:
-                                cluster = icd_dict.get(icd)
-                                if cluster:
-                                    if cluster.startswith('P') or cluster.startswith('D'):
-                                        pdc_candidates.append(cluster)
-                                    else:
-                                        ax_candidates.append(cluster)
-                            
-                            # Penentuan Base PDC
-                            final_pdc = None
-                            if pdc_candidates:
-                                surgical = [c for c in pdc_candidates if c.startswith('P')]
-                                final_pdc = surgical[0] if surgical else pdc_candidates[0]
+                                inputs_used = []
+                                if diag: inputs_used.append(diag)
+                                if tind: inputs_used.append(tind)
                                 
-                            # Evaluasi DC
-                            dc_result = None
-                            logic_note = "Tidak ada PDC valid."
-                            desc = ""
-                            if final_pdc:
-                                dc_result, logic_note = evaluate_logic(final_pdc, ax_candidates, flat_mapping, decision_tree)
-                                if dc_result:
-                                    desc = dc_desc_dict.get(dc_result, "")
-                            
-                            res_row = {"Baris": idx + 2, "Input ICD": ", ".join(all_icds), "Base PDC": final_pdc, "AX Terdeteksi": ", ".join(ax_candidates)}
-                            res_row["DC Final"] = dc_result if dc_result else "GAGAL"
-                            res_row["Deskripsi DC"] = desc
-                            res_row["Keterangan Logika"] = logic_note
-                            batch_results.append(res_row)
-                            
-                        st.success(f"Berhasil memproses {len(batch_results)} kombinasi kasus!")
-                        st.dataframe(pd.DataFrame(batch_results), use_container_width=True)
+                                for icd in inputs_used:
+                                    cluster = icd_dict.get(icd)
+                                    if cluster:
+                                        if cluster.startswith('P') or cluster.startswith('D'):
+                                            pdc_candidates.append(cluster)
+                                        else:
+                                            ax_candidates.append(cluster)
+                                
+                                # Penentuan Base PDC (Prioritaskan Surgical P)
+                                final_pdc = None
+                                if pdc_candidates:
+                                    surgical = [c for c in pdc_candidates if c.startswith('P')]
+                                    final_pdc = surgical[0] if surgical else pdc_candidates[0]
+                                
+                                dc_result = None
+                                logic_note = "Tidak ada PDC valid."
+                                desc = ""
+                                if final_pdc:
+                                    dc_result, logic_note = evaluate_logic(final_pdc, ax_candidates, flat_mapping, decision_tree)
+                                    if dc_result:
+                                        desc = dc_desc_dict.get(dc_result, "")
+                                
+                                res_row = {
+                                    "No": idx + 1, 
+                                    "Diagnosa Utama": diag if diag else "-", 
+                                    "Tindakan": tind if tind else "-", 
+                                    "Base PDC": final_pdc if final_pdc else "-", 
+                                    "AX Terdeteksi": ", ".join(ax_candidates) if ax_candidates else "-"
+                                }
+                                res_row["DC Final"] = dc_result if dc_result else "GAGAL"
+                                res_row["Deskripsi DC"] = desc
+                                res_row["Keterangan Logika"] = logic_note
+                                batch_results.append(res_row)
+                                
+                            st.success(f"Berhasil membuat dan mengevaluasi **{len(batch_results)}** kombinasi permutasi!")
+                            st.dataframe(pd.DataFrame(batch_results), use_container_width=True)
 
         except Exception as e:
             st.error(f"Terjadi kesalahan: {e}")
