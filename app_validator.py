@@ -142,7 +142,8 @@ if uploaded_excel:
                     if not res_df.empty:
                         errors_df = res_df[res_df['Status'].isin(["❌ Mismatch", "⚠️ Warning"])]
                         if not errors_df.empty:
-                            st.dataframe(errors_df.style.applymap(lambda x: "background-color: #ffcccc; color: #900" if x == "❌ Mismatch" else ("background-color: #fff3cd; color: #856404" if x == "⚠️ Warning" else ""), subset=['Status']), use_container_width=True)
+                            # Gunakan map alih-alih applymap untuk versi pandas terbaru
+                            st.dataframe(errors_df.style.map(lambda x: "background-color: #ffcccc; color: #900" if x == "❌ Mismatch" else ("background-color: #fff3cd; color: #856404" if x == "⚠️ Warning" else ""), subset=['Status']), use_container_width=True)
                         else:
                             st.info("Semua data di sheet yang dipilih sesuai dengan logika Draw.io.")
                     st.markdown("### 📜 Semua Data Kombinasi")
