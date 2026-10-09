@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import re
 
-st.set_page_config(page_title="MDC 11 Logic Validator", layout="wide", page_icon="🔍")
+st.set_page_config(page_title="MDC 11 Logic Validator & Simulator", layout="wide", page_icon="🔍")
 
 # ==========================================
 # 1. CORE LOGIC & MAPPING
@@ -27,133 +27,209 @@ flat_mapping = {
 }
 
 def get_expected_dc(pdc):
-    """Mengembalikan daftar kemungkinan DC untuk PDC tertentu berdasarkan Draw.io"""
     if pd.isna(pdc) or not str(pdc).strip():
         return []
     pdc = str(pdc).strip().upper()
     if pdc in flat_mapping:
         return [flat_mapping[pdc]]
     if pdc in decision_tree:
-        # Mengembalikan semua kemungkinan DC dari cabang AX
         return list(set(decision_tree[pdc].values()))
     return []
 
-# ==========================================
-# 2. UI LAYOUT
-# ==========================================
-st.title("🏥 Sistem Validasi Logika MDC 11")
-st.markdown("""
-Aplikasi ini secara otomatis memvalidasi file Excel usulan terhadap standar logika percabangan di **Draw.io**.
-Silakan unggah file Excel yang sudah di-generate (contoh: `MDC_11_Terstruktur_DC_V4.xlsx`) atau file *Usulan* yang memiliki kolom `PDC_Baru` dan `DC_Baru`.
-""")
+def evaluate_logic(pdc, ax_list):
+    """Evaluasi PDC + AX(s) ke DC final menggunakan Draw.io"""
+    if pdc in flat_mapping:
+        return flat_mapping[pdc], "Jalur langsung (tanpa AX)"
+    
+    if pdc in decision_tree:
+        logic_branch = decision_tree[pdc]
+        # Cek apakah ada AX dari input yang cocok dengan percabangan
+        for ax in ax_list:
+            if ax in logic_branch:
+                return logic_branch[ax], f"Masuk cabang AX: {ax}"
+        
+        # Jika tidak ada AX yang cocok, masuk default
+        return logic_branch['default'], "Masuk cabang default (tanpa AX terkait)"
+    
+    return None, "PDC tidak ditemukan di Draw.io"
 
-st.sidebar.header("📁 Upload File")
-uploaded_excel = st.sidebar.file_uploader("Upload File Excel (.xlsx)", type=["xlsx"])
-uploaded_pdf = st.sidebar.file_uploader("Upload File Draw.io (.pdf) [Referensi/Opsional]", type=["pdf"])
+# ==========================================
+# 2. UI & DATA LOADING
+# ==========================================
+st.title("🏥 Sistem Validasi & Simulator Logika MDC 11")
+st.markdown("Aplikasi ini menggunakan **Draw.io Logic Engine** untuk memvalidasi master data dan menyimulasikan *DRG Grouping* pasien berdasarkan input **Kode ICD**.")
 
-if uploaded_pdf:
-    st.sidebar.success("PDF berhasil dimuat sebagai referensi!")
+st.sidebar.header("📁 Upload File Kamus (Excel)")
+uploaded_excel = st.sidebar.file_uploader("Upload File Usulan (.xlsx)", type=["xlsx"])
 
 if uploaded_excel:
-    with st.spinner('Menganalisis logika data...'):
+    with st.spinner('Membaca file Excel...'):
         try:
             xls = pd.ExcelFile(uploaded_excel)
             sheets = xls.sheet_names
             
-            selected_sheets = st.multiselect("Pilih Sheet untuk dianalisis:", sheets, default=[s for s in sheets if 'ICD' in s.upper() and ('10' in s or '9' in s)])
+            # Buat TABS
+            tab1, tab2 = st.tabs(["📊 Validasi Master Data", "🏥 DRG Simulator"])
             
-            if not selected_sheets:
-                st.warning("Silakan pilih minimal satu sheet.")
-            else:
-                results = []
-                error_count = 0
-                valid_count = 0
-                has_dc_col = False
+            with tab1:
+                st.subheader("Validasi Sinkronisasi Master Data")
+                selected_sheets = st.multiselect("Pilih Sheet untuk divalidasi:", sheets, default=[s for s in sheets if 'ICD' in s.upper() and ('10' in s or '9' in s)])
                 
-                for sheet in selected_sheets:
-                    df = pd.read_excel(xls, sheet_name=sheet)
+                if not selected_sheets:
+                    st.warning("Silakan pilih minimal satu sheet.")
+                else:
+                    results = []
+                    error_count, valid_count = 0, 0
+                    has_dc_col = False
                     
-                    # Coba deteksi kolom yang relevan (Fleksibel)
-                    pdc_col = next((c for c in df.columns if str(c).strip().lower() in ['pdc_baru', 'new cluster code', 'pdc', 'cluster code']), None)
-                    dc_col = next((c for c in df.columns if str(c).strip().lower() in ['dc_baru', 'dc', 'dc output', 'dc_awal']), None)
-                    icd_col = next((c for c in df.columns if str(c).strip().lower() in ['icd_code', 'icd 10 code', 'icd-9-cm code', 'icd-10 code', 'icd-9 code', 'icd 10', 'icd 9']), None)
-                    desc_col = next((c for c in df.columns if str(c).strip().lower() in ['deskripsi icd', 'icd-10 description', 'icd-9-cm description', 'deskripsi icd 10', 'desc_baru_excel', 'new cluster description']), None)
-                    
-                    if dc_col: has_dc_col = True
-                    
-                    if not pdc_col:
-                        st.error(f"Tidak dapat menemukan kolom PDC (Cluster Code) di sheet '{sheet}'.")
-                        continue
+                    for sheet in selected_sheets:
+                        df = pd.read_excel(xls, sheet_name=sheet)
                         
-                    for idx, row in df.iterrows():
-                        pdc_val = str(row[pdc_col]).strip().upper() if pd.notna(row[pdc_col]) else ""
-                        icd_val = str(row[icd_col]).strip() if icd_col and pd.notna(row[icd_col]) else "-"
-                        desc_val = str(row[desc_col]).strip() if desc_col and pd.notna(row[desc_col]) else "-"
+                        pdc_col = next((c for c in df.columns if str(c).strip().lower() in ['pdc_baru', 'new cluster code', 'pdc', 'cluster code']), None)
+                        dc_col = next((c for c in df.columns if str(c).strip().lower() in ['dc_baru', 'dc', 'dc output', 'dc_awal']), None)
+                        icd_col = next((c for c in df.columns if str(c).strip().lower() in ['icd_code', 'icd 10 code', 'icd-9-cm code', 'icd-10 code', 'icd-9 code', 'icd 10', 'icd 9']), None)
+                        desc_col = next((c for c in df.columns if str(c).strip().lower() in ['deskripsi icd', 'icd-10 description', 'icd-9-cm description', 'deskripsi icd 10', 'desc_baru_excel', 'new cluster description']), None)
                         
-                        if not pdc_val or pdc_val == 'NAN':
-                            continue
+                        if dc_col: has_dc_col = True
+                        if not pdc_col: continue
                             
-                        expected_dcs = get_expected_dc(pdc_val)
-                        actual_dc = str(row[dc_col]).strip() if dc_col and pd.notna(row[dc_col]) else ""
-                        
-                        status = "✅ Valid"
-                        notes = ""
-                        
-                        if not expected_dcs:
-                            status = "⚠️ Warning"
-                            notes = "PDC ini tidak ada di pakem Draw.io."
-                            error_count += 1
-                        elif dc_col and actual_dc and actual_dc != 'nan':
-                            if any(actual_dc == e_dc for e_dc in expected_dcs) or actual_dc in ",".join(expected_dcs):
-                                valid_count += 1
+                        for idx, row in df.iterrows():
+                            pdc_val = str(row[pdc_col]).strip().upper() if pd.notna(row[pdc_col]) else ""
+                            icd_val = str(row[icd_col]).strip() if icd_col and pd.notna(row[icd_col]) else "-"
+                            desc_val = str(row[desc_col]).strip() if desc_col and pd.notna(row[desc_col]) else "-"
+                            
+                            if not pdc_val or pdc_val == 'NAN': continue
+                                
+                            expected_dcs = get_expected_dc(pdc_val)
+                            actual_dc = str(row[dc_col]).strip() if dc_col and pd.notna(row[dc_col]) else ""
+                            status, notes = "✅ Valid", ""
+                            
+                            if not expected_dcs:
+                                status, notes, error_count = "⚠️ Warning", "PDC ini tidak ada di Draw.io.", error_count + 1
+                            elif dc_col and actual_dc and actual_dc != 'nan':
+                                if any(actual_dc == e_dc for e_dc in expected_dcs) or actual_dc in ",".join(expected_dcs):
+                                    valid_count += 1
+                                else:
+                                    status, notes, error_count = "❌ Mismatch", f"Draw.io mengharuskan DC: {', '.join(expected_dcs)}.", error_count + 1
                             else:
-                                status = "❌ Mismatch"
-                                notes = f"Draw.io mengharuskan DC: {', '.join(expected_dcs)}."
-                                error_count += 1
-                        else:
-                            notes = f"Seharusnya mengarah ke DC: {', '.join(expected_dcs)} (Tergantung AX jika ada)."
-                    
-                        row_data = {
-                            "Sheet": sheet,
-                            "Baris Excel": idx + 2,
-                            "Kode ICD": icd_val,
-                            "Deskripsi": desc_val,
-                            "PDC Input": pdc_val,
-                        }
-                        if dc_col:
-                            row_data["DC (Di Excel)"] = actual_dc
+                                notes = f"Seharusnya mengarah ke DC: {', '.join(expected_dcs)} (Tergantung AX jika ada)."
                         
-                        row_data["DC Seharusnya (Draw.io)"] = ", ".join(expected_dcs) if expected_dcs else "Tidak Diketahui"
-                        row_data["Status"] = status
-                        row_data["Catatan Logika"] = notes
-                        
-                        results.append(row_data)
+                            row_data = {"Sheet": sheet, "Baris Excel": idx + 2, "Kode ICD": icd_val, "Deskripsi": desc_val, "PDC Input": pdc_val}
+                            if dc_col: row_data["DC (Di Excel)"] = actual_dc
+                            row_data["DC Seharusnya (Draw.io)"] = ", ".join(expected_dcs) if expected_dcs else "Tidak Diketahui"
+                            row_data["Status"] = status
+                            row_data["Catatan Logika"] = notes
+                            results.append(row_data)
 
-                # ==============================
-                # 3. MENAMPILKAN HASIL
-                # ==============================
-                st.markdown("### 📊 Ringkasan Validasi Gabungan")
-                col1, col2, col3 = st.columns(3)
-                col1.metric("Total Data Diperiksa", len(results))
-                if has_dc_col:
-                    col2.metric("✅ Logika Sesuai", valid_count)
-                    col3.metric("❌ Logika Meleset", error_count)
+                    res_df = pd.DataFrame(results)
+                    st.markdown("### 📋 Detail Ketidaksesuaian (Mismatch)")
+                    if not res_df.empty:
+                        errors_df = res_df[res_df['Status'].isin(["❌ Mismatch", "⚠️ Warning"])]
+                        if not errors_df.empty:
+                            st.dataframe(errors_df.style.applymap(lambda x: "background-color: #ffcccc; color: #900" if x == "❌ Mismatch" else ("background-color: #fff3cd; color: #856404" if x == "⚠️ Warning" else ""), subset=['Status']), use_container_width=True)
+                        else:
+                            st.info("Semua data di sheet yang dipilih sesuai dengan logika Draw.io.")
+                    st.markdown("### 📜 Semua Data Kombinasi")
+                    st.dataframe(res_df, use_container_width=True)
+
+            with tab2:
+                st.subheader("Simulasi DRG Berdasarkan Input ICD")
                 
-                res_df = pd.DataFrame(results)
+                # 3. BUILD ICD DICTIONARY FROM EXCEL
+                icd_dict = {}
                 
-                st.markdown("### 📋 Detail Ketidaksesuaian (Mismatch)")
-                if not res_df.empty:
-                    # Filter hanya yang bermasalah jika ada
-                    errors_df = res_df[res_df['Status'].isin(["❌ Mismatch", "⚠️ Warning"])]
-                    if not errors_df.empty:
-                        st.dataframe(errors_df.style.applymap(lambda x: "background-color: #ffcccc; color: #900" if x == "❌ Mismatch" else ("background-color: #fff3cd; color: #856404" if x == "⚠️ Warning" else ""), subset=['Status']), use_container_width=True)
-                    else:
-                        st.info("Luar biasa! Semua data di sheet yang dipilih sesuai dengan logika Draw.io.")
+                for sheet in sheets:
+                    if 'ICD' in sheet.upper():
+                        df = pd.read_excel(xls, sheet_name=sheet)
+                        icd_col = next((c for c in df.columns if str(c).strip().lower() in ['icd_code', 'icd 10 code', 'icd-9-cm code', 'icd-10 code', 'icd-9 code', 'icd 10', 'icd 9']), None)
+                        cluster_col = next((c for c in df.columns if str(c).strip().lower() in ['new cluster code', 'pdc_baru', 'cluster code', 'pdc']), None)
+                        desc_col = next((c for c in df.columns if str(c).strip().lower() in ['deskripsi icd', 'icd-10 description', 'icd-9-cm description', 'deskripsi icd 10']), None)
+                        
+                        if icd_col and cluster_col:
+                            for idx, row in df.iterrows():
+                                icd = str(row[icd_col]).strip()
+                                cluster = str(row[cluster_col]).strip().upper()
+                                desc = str(row[desc_col]).strip() if desc_col and pd.notna(row[desc_col]) else ""
+                                
+                                if icd != 'nan' and cluster != 'NAN' and icd and cluster:
+                                    icd_dict[icd] = {"cluster": cluster, "desc": desc}
                 
-                st.markdown("### 📜 Semua Data Kombinasi")
-                st.dataframe(res_df, use_container_width=True)
+                icd_list = list(icd_dict.keys())
                 
+                if not icd_list:
+                    st.error("Gagal mengekstrak kamus ICD dari file Excel.")
+                else:
+                    st.markdown("Silakan pilih kode Diagnosa (ICD 10) dan Tindakan (ICD 9 CM). Sistem akan otomatis mencari PDC/AX-nya dan mengevaluasi DC final.")
+                    
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        st.markdown("**Diagnosa (ICD 10)**")
+                        primary_diag = st.selectbox("Diagnosa Utama:", [""] + icd_list, key="p_diag")
+                        secondary_diags = st.multiselect("Diagnosa Sekunder (Bisa lebih dari 1):", icd_list, key="s_diag")
+                    
+                    with col2:
+                        st.markdown("**Prosedur / Tindakan (ICD 9 CM)**")
+                        procedures = st.multiselect("Tindakan Utama/Sekunder:", icd_list, key="proc")
+                    
+                    if st.button("🚀 Jalankan Grouper Simulator"):
+                        st.markdown("---")
+                        st.subheader("💡 Hasil Analisis Grouper")
+                        
+                        # A. Ekstrak Cluster dari Input
+                        pdc_candidates = []
+                        ax_candidates = []
+                        
+                        all_inputs = []
+                        if primary_diag: all_inputs.append(("Diagnosa Utama", primary_diag))
+                        for d in secondary_diags: all_inputs.append(("Diagnosa Sekunder", d))
+                        for p in procedures: all_inputs.append(("Prosedur", p))
+                        
+                        st.markdown("**1. Pemetaan ICD ke Cluster (Kamus):**")
+                        for label, code in all_inputs:
+                            c_info = icd_dict.get(code, {})
+                            cluster = c_info.get('cluster', 'Tidak Ditemukan')
+                            desc = c_info.get('desc', '')
+                            
+                            st.write(f"- {label} **{code}** ({desc}) ➡️ Masuk ke Cluster: **{cluster}**")
+                            
+                            # Identifikasi apakah dia PDC (awalannya P/D) atau AX (contoh 11CX, dll)
+                            if cluster.startswith('P') or cluster.startswith('D'):
+                                pdc_candidates.append(cluster)
+                            elif cluster != 'Tidak Ditemukan':
+                                ax_candidates.append(cluster)
+                        
+                        # B. Tentukan Base PDC
+                        st.markdown("**2. Penentuan Base PDC:**")
+                        final_pdc = None
+                        if pdc_candidates:
+                            # Prioritaskan Prosedur (Surgical Partition - P) daripada Diagnosa (Medical Partition - D)
+                            surgical = [c for c in pdc_candidates if c.startswith('P')]
+                            if surgical:
+                                final_pdc = surgical[0]
+                                st.write(f"✅ Sistem mendeteksi adanya Tindakan Operasi (Surgical). Base PDC yang digunakan adalah **{final_pdc}**.")
+                            else:
+                                final_pdc = pdc_candidates[0]
+                                st.write(f"✅ Tidak ada tindakan operasi. Base PDC yang digunakan dari Diagnosa adalah **{final_pdc}**.")
+                        else:
+                            st.error("❌ Tidak ada Base PDC (D/P) yang terdeteksi dari input ICD Anda!")
+                        
+                        # C. Evaluasi Engine Draw.io
+                        if final_pdc:
+                            st.markdown("**3. Eksekusi Engine Draw.io:**")
+                            if ax_candidates:
+                                st.write(f"Menemukan AX tambahan dari diagnosa sekunder/prosedur: **{', '.join(ax_candidates)}**")
+                            else:
+                                st.write("Tidak ada AX tambahan yang terdeteksi.")
+                            
+                            dc_result, logic_note = evaluate_logic(final_pdc, ax_candidates)
+                            
+                            if dc_result:
+                                st.success(f"🎉 **HASIL FINAL DC: {dc_result}**")
+                                st.info(f"Keterangan Logika: {logic_note}")
+                            else:
+                                st.error(f"❌ {logic_note}")
+
         except Exception as e:
-            st.error(f"Terjadi kesalahan saat memproses file: {e}")
+            st.error(f"Terjadi kesalahan: {e}")
 else:
-    st.info("⬅️ Silakan unggah file Excel di panel sebelah kiri untuk memulai.")
+    st.info("⬅️ Silakan unggah file Excel Master/Usulan di panel sebelah kiri untuk memulai.")
