@@ -162,8 +162,10 @@ if uploaded_excel:
                             st.dataframe(styled_df, use_container_width=True)
                         else:
                             st.info("Semua data di sheet yang dipilih sesuai dengan logika Draw.io.")
-                    st.markdown("### 📜 Semua Data Kombinasi")
-                    st.dataframe(res_df, use_container_width=True)
+                    
+                    if st.checkbox("Tampilkan seluruh data kombinasi (Berpotensi berat untuk data besar)"):
+                        st.markdown("### 📜 Semua Data Kombinasi")
+                        st.dataframe(res_df, use_container_width=True)
 
             with tab2:
                 st.subheader("Simulasi DRG Batch Berdasarkan Kombinasi Kasus")
@@ -209,7 +211,7 @@ if uploaded_excel:
                         
                         # Limit the number of permutations to avoid browser crash/memory error
                         if len(permutations) > 100000:
-                            st.warning(f"Total kombinasi permutasi sangat besar ({len(permutations):,}). Hanya menampilkan 100.000 skenario pertama untuk mencegah crash.")
+                            st.warning(f"Total kombinasi permutasi sangat besar ({len(permutations):,}). Hanya memproses 100.000 skenario pertama untuk mencegah crash.")
                             permutations = permutations[:100000]
                             
                         batch_results = []
@@ -255,8 +257,12 @@ if uploaded_excel:
                             res_row["Keterangan Logika"] = logic_note
                             batch_results.append(res_row)
                             
+                        df_batch = pd.DataFrame(batch_results)
+                        df_gagal = df_batch[df_batch["DC Final"] == "GAGAL"]
+                        
                         st.success(f"Simulasi Selesai! Berhasil memproses **{len(batch_results):,}** kombinasi permutasi.")
-                        st.dataframe(pd.DataFrame(batch_results), use_container_width=True)
+                        st.warning(f"Ditemukan **{len(df_gagal):,}** skenario GAGAL dari total evaluasi. Menampilkan hasil yang GAGAL saja untuk menghemat memori.")
+                        st.dataframe(df_gagal, use_container_width=True)
 
         except Exception as e:
             st.error(f"Terjadi kesalahan: {e}")
