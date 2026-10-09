@@ -207,7 +207,9 @@ if uploaded_excel:
                                 icd = str(row[icd_col]).strip()
                                 cluster = str(row[cluster_col]).strip().upper()
                                 if icd != 'nan' and cluster != 'NAN' and icd and cluster:
-                                    icd_dict[icd] = cluster
+                                    if icd not in icd_dict:
+                                        icd_dict[icd] = set()
+                                    icd_dict[icd].add(cluster)
                                     if is_icd10:
                                         diags_master.add(icd)
                                     elif is_icd9:
@@ -241,8 +243,8 @@ if uploaded_excel:
                             if tind: inputs_used.append(tind)
                             
                             for icd in inputs_used:
-                                cluster = icd_dict.get(icd)
-                                if cluster:
+                                clusters = icd_dict.get(icd, set())
+                                for cluster in clusters:
                                     if cluster.startswith('P') or cluster.startswith('D'):
                                         pdc_candidates.append(cluster)
                                     else:
